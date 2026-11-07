@@ -103,11 +103,13 @@
 - 2026-11-07：P2 ⑥ 功能 A（用户自己改）：速度缩放做成 launch 参数 velocity_scaling（默认 0.2，std::clamp 到 [0.05, 1.0]，速度和加速度同用）。改了 3 轮：else(...) 语法、旧的写死行覆盖参数、默认值 10.0（不安全）、clamp 参数类型 int/double、把函数当变量赋值；在 WSL 而非容器里 colcon build。AI 测试（mock）：0.1→81 s、0.2（不传）→40 s、0.5→21 s、5→限制为 1.00、18 s，全部完成。
 - 2026-11-07：P2 ⑥ 功能 B 按编号分拣两个方块：用户自己写了 Point2 / Cube 结构体、vector + map 数据、场景循环、detach 循环、find 查规则的大部分代码（第一次组合结构体 + 容器，看例子后能写出）；AI 收尾修正：场景在 frame 定义前就搭了、find 后少分号、查到的值作用域在 else 里、Point2 写成 string、approachAndDescend 多传参数且用了旧常量、detach("cube")、旧的 && 链没删。mock 测试 3/3 完成。**P2 ⑥ 完成**（功能 A 速度参数 + 功能 B 分拣）。
 - 2026-11-07：用户决定不录 P2 演示视频；docs/P2-arm.md 补 6.9 节（⑥ 两个功能）和 Q22–Q23。**P2 完成。**
+- 2026-11-07：P3 ① 预习：真机链路 MoveIt → FollowJointTrajectory → action_move_server → ServoJ 逐点 → dobot_bringup_v4 → TCP（IP 192.168.5.1，控制端口 29999、反馈端口 30004）；反馈 /joint_states_robot → joint_state_relay → /joint_states。讲了 7 条安全规则（待用户在实验室确认）。真机不在手边：先在容器里编译 dobot_bringup_v4 + dobot_moveit（action_move_server）通过；param.json 默认 robot_type=cr5、IP 192.168.5.1（DOBOT_TYPE=me6 由 compose 环境变量覆盖）。
 
 ## 🔖 交接（给下一个对话）
 - **P1 已完成**（快速搭建 M1–M5、项目文档、核心手写、改一个功能：到达后转到目标朝向）。双向提问持续复测中：每课开始前从 docs/interview-notes.md 抽 3 道（P1 + P2 错题）
 - **P2 已完成**（M1–M5、项目文档、双向提问 65%、FK 手写 15/15、改功能：速度参数 + 按编号分拣；演示视频暂不录）
-- **下一步：P3 E6 真机**：第一次上真机前先讲 PLAN 第 4 节安全规则并确认 → M0 官方软件 DobotStudio Pro 点动、确认固件版本 → M1 网线直连 + WSL 镜像网络 + ping
+- **下一步：P3 M0（在实验室）**：确认 7 条安全规则 → 检查急停、配件、摆放（半径 50 cm 清空）→ 通电、练习急停 → DobotStudio Pro 低速点动各关节、回零 → 记下控制器固件版本、机械臂 IP。之后 M1：网线直连 + 电脑同网段静态 IP + WSL 镜像网络 + ping 192.168.5.1。真机驱动已编译（容器里 dobot_bringup_v4、action_move_server）
 - 间隔复习：11 月底从空白重写 A* 和 FK（practice/）
 - 先读本地 PRIVATE.md（个人背景、待议的计划调整）
+- 仓库已公开：github.com/tdgcdtd/robot-navigation-lab（2026-11-07，单个干净提交，作者用 GitHub 匿名邮箱）。**PRIVATE.md 和 docs/interview-notes.md（错题本）只在本地、已 gitignore**；旧的 27 个提交备份在本地分支 archive/pre-public（不推送）。以后推送前先检查新增内容里没有个人信息
 - 教学方式见 PLAN.md 第 1 节；用户是初学者：一步一步、一次一个概念、多用类比和小题、不要一次讲太多。**讲解按用户的提问思路组织**：为什么用 A 不用 B、各部分怎么分工、程序怎么分层组织（带行号）、机制一步步怎么运作、看似矛盾处；原理配真实数字的例子（比喻不够）。全程中文；AI 自测调试要及时汇报进度
