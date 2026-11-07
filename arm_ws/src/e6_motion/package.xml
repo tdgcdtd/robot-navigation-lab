@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>e6_motion</name>
+  <version>0.1.0</version>
+  <description>P2: control the Dobot E6 with MoveIt 2 MoveGroupInterface (preset poses, pose targets, obstacles, pick-and-place sequence)</description>
+  <maintainer email="221798772+tdgcdtd@users.noreply.github.com">tdgcdtd</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_msgs</depend>
+  <depend>shape_msgs</depend>
+
+  <exec_depend>me6_moveit</exec_depend>
+  <exec_depend>moveit_configs_utils</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

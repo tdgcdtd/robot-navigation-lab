@@ -1,0 +1,52 @@
+# 导航场景 nav_world 的规划参数（path_publisher 节点读取）
+# 注意：障碍物必须和 worlds/nav_world.sdf 里的模型一一对应（中心、尺寸都一致）
+path_publisher:
+  ros__parameters:
+    # 启动后自动规划到的默认目标
+    goal_x: 4.0
+    goal_y: 4.0
+    plan_on_start: true
+
+    # 小车外接圆半径 + 安全余量 = 膨胀半径
+    robot_radius: 0.47
+    safety_margin: 0.1
+
+    # A* 搜索方式：true = 8 邻域（可以斜着走），false = 只走上下左右
+    allow_diagonal: true
+
+    # 栅格地图：100 x 100 格，每格 0.1 m，左下角在 world 的 (-5, -5)，覆盖 10 x 10 m
+    # （M4 之前是 20 x 20、每格 0.5 m：太粗，障碍物和膨胀区都被放大，窄通道容易被误堵）
+    map:
+      width: 100
+      height: 100
+      resolution: 0.1
+      origin_x: -5.0
+      origin_y: -5.0
+
+    # 障碍物列表：先列出名字，再给每个名字写 center [x, y] 和 size [长, 宽]（单位 m）
+    obstacle_names: ["obstacle_1", "wall_north", "wall_south", "box_southwest", "wall_west"]
+
+    # 原来的方块障碍物
+    obstacle_1:
+      center: [2.0, 1.0]
+      size: [1.0, 1.0]
+
+    # 北墙：x 从 -1 到 5，右端贴着地图边缘，逼小车从左侧绕行
+    wall_north:
+      center: [2.0, 2.5]
+      size: [6.0, 0.3]
+
+    # 南墙：x = 1，y 从 -4 到 -1
+    wall_south:
+      center: [1.0, -2.5]
+      size: [0.3, 3.0]
+
+    # 西南角的大箱子
+    box_southwest:
+      center: [-2.5, -2.5]
+      size: [1.5, 1.5]
+
+    # 西墙：x = -3，y 从 -0.5 到 2.5
+    wall_west:
+      center: [-3.0, 1.0]
+      size: [0.3, 3.0]

@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug CMake Target",
+            "type": "cppdbg",
+            "request": "launch",
+
+            "program": "${workspaceFolder}/build/${input:targetName}",
+
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+
+            "environment": [],
+            "externalConsole": false,
+
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+
+            "preLaunchTask": "CMake: build"
+        }
+    ],
+
+    "inputs": [
+        {
+            "id": "targetName",
+            "type": "promptString",
+            "description": "输入要调试的 CMake target 名称",
+            "default": "robot_state_test"
+        }
+    ]
+}

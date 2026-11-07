@@ -1,0 +1,22 @@
+# 用法（在 docker/ 目录下）：
+#   docker compose up -d --build     第一次：做镜像并在后台启动容器
+#   docker compose exec arm bash     进入容器（每多开一个终端就再执行一次）
+#   docker compose down              关闭并删除容器（代码在挂载目录里，不会丢）
+services:
+  arm:
+    build: .
+    image: rnl-arm:humble
+    container_name: rnl-arm
+    command: sleep infinity          # 容器启动后一直待机，等我们 exec 进去
+    init: true                       # 加一个小 init 进程：自动回收退出的子进程，避免僵尸进程越积越多
+    network_mode: host               # 和 WSL 共用网络：P3 连真机时直接能访问机械臂 IP
+    environment:
+      - DISPLAY=:0                   # 图形窗口画到 WSLg 的 X 服务器上
+      - QT_QPA_PLATFORM=xcb          # 和 P1 同一个坑：RViz 要走 X11，不走 Wayland
+      # 用 CPU 软件渲染：22.04 自带的 Mesa 太旧，走 WSL 的 GPU（D3D12）时 RViz 一启动就崩溃（exit code -11）
+      - LIBGL_ALWAYS_SOFTWARE=1
+      - DOBOT_TYPE=me6               # 官方包靠这个变量选型号：E6
+      - ROS_DOMAIN_ID=42             # 和主系统（Lyrical）的 ROS 隔开，避免两个版本互相收到消息
+    volumes:
+      - /mnt/wslg/.X11-unix:/tmp/.X11-unix  # WSLg 的显示通道
+      - ../arm_ws:/home/dev/arm_ws   # 挂载：WSL 里的 arm_ws 和容器里的是同一个目录

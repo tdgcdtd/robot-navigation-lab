@@ -1,0 +1,32 @@
+#C++ build artifacts
+hello
+distance_cal
+vector_test
+*.o
+build/
+.vscode/c_cpp_properties.json
+
+#ROS2 / colcon generated files
+build/
+install/
+log/
+# 练习目录：只提交源代码，不提交编译出的程序
+practice/*
+!practice/*.cpp
+
+# 演示视频原片太大（GitHub 单文件上限 100 MB），只提交 GIF
+docs/media/*.mp4
+
+# P2 越疆官方包：不提交，按 README 克隆
+arm_ws/src/DOBOT_6Axis_ROS2_V4/
+# view_frames 生成的坐标树图
+arm_ws/frames_*
+
+# 个人信息（只留本地）
+PRIVATE.md
+
+# 编辑器个人设置（含本机路径）
+ros2_ws/.vscode/
+
+# 错题本（只留本地）
+docs/interview-notes.md

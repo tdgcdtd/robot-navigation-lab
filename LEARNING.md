@@ -1,0 +1,113 @@
+# Robot Navigation Lab 学习进度
+
+> 用途：记录学习进度和下一步，新会话（无论哪个 AI 导师）先读这个文件即可接上。
+> 个人信息在本地的 PRIVATE.md（已加入 .gitignore，不上传）。
+
+## 目标
+- 系统学习机器人软件开发（ROS 2 / 导航 / 机械臂），以项目驱动。
+- 用 5–6 个项目覆盖"移动机器人导航 + 机械臂操作"两条线，其中机械臂用真机（Dobot Magician E6）。
+
+## 学习方式
+项目制，每个项目 6 步：预习 → 快速搭建 → 项目文档 → 双向提问 → 核心手写 → 改一个功能。详见 [PLAN.md](PLAN.md) 第 1 节。
+
+**我是初学者**：操作要一步一步讲清楚（在哪个终端、执行什么命令、命令每部分什么意思、应该看到什么结果）。
+
+## 环境
+- Windows + WSL Ubuntu 26.04，VS Code (WSL)
+- ROS 2 Lyrical，Gazebo Sim 10.5.0，ros_gz
+- 环境初始化：`ros2on` + `source ~/project/robot-navigation-lab/ros2_ws/install/setup.bash`
+
+## 已完成
+- C++ 基础（vector、引用、头/源文件拆分）、CMake、Git、GDB
+- ROS 2：C++ 包、Publisher/Subscriber、Twist、命令行工具、Gazebo 仿真
+- `path_planner`：GridMap（尺寸/分辨率/原点、矩形障碍物、栅格↔世界坐标）、四邻域 A*、路径重建
+- `path_publisher`：A* 结果 → `nav_msgs/Path`，以 1 Hz 发布到 `/planned_path`（frame `world`）✅
+
+## 已知事实（2026-10-12 从文件核对）
+- 仿真：`robot_sim/launch/sim.launch.py` + `worlds/robot_world.sdf`
+- 机器人模型 `my_robot`，出生位姿 (0, 0)，yaw = 0；diff-drive，轮距 0.60，轮半径 0.10；车身 0.8 × 0.5 m
+- 桥接话题：`/cmd_vel`（Twist，ROS→GZ），`/model/my_robot/odometry`（Odometry，GZ→ROS）——待运行时核实
+- 障碍物 `obstacle_1`：中心 (2, 1)，1×1 m，与 GridMap `setOccupiedRect(1.5, 0.5, 2.5, 1.5)` 一致
+- 问题：测试路径起点 (1.25, 0.75) ≠ 机器人位置 (0, 0)；规划未考虑车身尺寸（无障碍物膨胀），路径会擦碰障碍物
+
+## 路线图
+完整计划见 [PLAN.md](PLAN.md)：P1 增强版(10/31) → P2 机械臂仿真(11/9) → P3 真机(11/20) → P4 SLAM+Nav2(11/30) → 作品整理(12/7) → P5 视觉抓取 → P6 Nav2 插件。
+
+### P1 进度
+- [x] 第 0 课：启动仿真，核实话题与初始位姿；理解 ros_gz_bridge 方向
+- [x] 第 1 课：world / odom 坐标关系；四元数 → yaw；角度归一化
+- [x] 第 2 课 A：go_to_goal 节点计算 distance / angle_error
+- [x] 控制器发布速度、到达停车（controller.cpp 的 computeVelocity）
+- [x] 起点用机器人真实位置；障碍物膨胀（GridMap::inflate）；路径简化（simplifyPath）
+- [x] 订阅 /planned_path 跟踪整条路径到终点（path_follower）；一键启动 nav_demo.launch.py
+- [x] 在自己电脑上用 GUI 运行确认（2026-10-18，到达 (3.42, 1.05)）
+- [x] M1 RViz 可视化
+- [x] M2 RViz 交互设目标 + 重规划
+- [x] M3 复杂环境（多障碍物 + YAML）
+- [x] M4 A* 工程优化（优先队列、8 邻域、性能测试、gtest）
+- [x] M5 收尾（RViz 配置、README、演示视频）
+- [x] 项目文档（docs/P1-navigation.md，待用户阅读并提问）
+- [~] 双向提问（首轮 2026-10-20 约 54%；复测 2026-10-24 8 题 50%：2 ✅ 4 🔶 2 ❌，R3/R5 进步；持续复测中：P2 每课开始前抽 3 道错题，目标 ≥ 80%）
+- [ ] 核心手写：✅ computeVelocity（2026-10-20，无提示一次通过 6/6）；✅ A*（优先队列版，2026-10-23，6/6 通过；a–c 段有代码联想、d 段 4 个错误经指点改正 → 2–3 周后从空白独立重写一次）
+- [x] 改一个功能：B 到达后转到 RViz 指定的朝向（2026-10-24；规划节点 3 处在逐行指导下完成，跟踪节点转向阶段自己写，自己推演找到漏写 abs 的 bug）。A（YAML 生成 SDF）留作可选
+
+### P2 进度
+- [x] ① 预习（2026-10-24，复述通过；P1↔P2 对照：A*↔move_group、路径↔轨迹、跟踪节点↔轨迹控制器、odom↔joint_states）
+- [x] M1 Docker 环境：✅ 小课① 镜像 vs 容器（类 vs 对象）；✅ 小课② Dockerfile（FROM / RUN、CACHED、清理 apt 列表）；✅ 小课③ 层（layer，答对"改第一个 RUN → 它和后面的层都重建"）；✅ Dockerfile + compose.yaml（AI 写，镜像 rnl-arm:humble 已构建、官方包已编译、RViz 无界面测试不崩溃）；✅ 用户自己运行看到 E6 模型 + gui:=true 拖滑块；✅ 小课④ 挂载 / compose / exec（实验：容器 down 后挂载目录里的文件仍在）
+- [x] M2 认识机器人模型（URDF link/joint、TF 树、2D 旋转 / 齐次矩阵 / 两节臂 FK；3D 4×4 留到 FK 手写时讲）　- [x] M3 MoveIt 交互规划　- [x] M4 Gazebo 联合仿真　- [x] M5 用代码控制（move_demo / scene_demo / pick_place）
+
+## 硬件
+- 机械臂：Dobot Magician E6（型号 DT-MG-6R075-02E），6 轴，负载 750 g，臂展 450 mm，DC 48 V，2026-04 生产；自己的，可随时使用
+- 官方 ROS 2 包：github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4（官方支持 Humble）；机械臂环境用 Docker 容器（Humble），见 PLAN.md P2
+- 小车：只有仿真
+
+## 学习日志
+- 2026-10-12：从 ChatGPT 交接到 Claude，核对仓库现状。
+- 2026-10-12：第 0 课完成。学会 underlay/overlay（新终端要 source 两次）；核实话题 /cmd_vel、/model/my_robot/odometry；odom frame = my_robot/odom，child = my_robot/chassis；手动 pub /cmd_vel 让小车前进约 4 m 并停下。
+- 2026-10-13：第 1 课完成。理解 world/odom 坐标系（本项目出生点在原点，两者重合）、yaw、四元数→yaw（atan2）、角度归一化；在 robot_control 中实现 angle_utils（quaternionToYaw、normalizeAngle）+ test_angle_utils。踩坑：VS Code 未保存导致 No executable found（已开自动保存）。
+- 2026-10-13：第 2 课 A 部分完成。类形式的 ROS 2 节点 go_to_goal（订阅 odom 存状态 + 100ms 定时器计算 distance / angle_error，暂不发布速度）。踩坑：y_ 误取 position.z，原地转的测试覆盖不到 → 教训：测试要覆盖每个可能出错的量。
+- 2026-10-18：切换为项目制。P1 闭环代码由 AI 完成：障碍物膨胀 + 拐点简化 + 从里程计取起点的规划节点、P 控制器 computeVelocity、path_follower、nav_demo 一键启动；Ctrl+C 自动停车。无界面仿真测试：小车绕过障碍物到达 (3.42, 1.05)，目标 (3.5, 1.0)。
+- 2026-10-18：用户 GUI 运行 nav_demo 成功。发现 Reset 后节点不再工作（只规划一次 + 跟踪完成后锁定）→ 纳入 P1 增强版 M2。制定完整计划 PLAN.md。
+- 2026-10-18：P1 增强版 M1 代码完成（/map OccupancyGrid + transient_local、TF 桥接 + world→odom 静态变换、RViz 配置）。踩坑：WSLg 下 rviz2 启动即崩溃（Invalid parentWindowHandle），原因是 Qt 走 Wayland 而 OGRE 走 X11 → 设置 QT_QPA_PLATFORM=xcb 解决（已写入 nav_demo.launch.py）。
+- 2026-10-18：M1 用户验收通过（RViz 显示地图/路径/小车），已提交 6f5b391。**下次从 M2 开始**：/goal_pose 点目标 + 从当前位置重规划，跟踪节点支持切换新路径。
+- 2026-10-19：M2 代码完成：规划节点订阅 /goal_pose，从当前位置重规划，无效目标发布空路径取消任务；跟踪节点按内容判断新路径并切换，空路径停车。无界面测试 5 个场景全部通过（默认目标、点目标、途中换目标、无效目标停车、Gazebo Reset 后点目标）。Gazebo Reset 会把里程计清零。
+- 2026-10-19：M2 用户验收通过（提交 b125fb3）。M3 代码完成：nav_world.sdf（5 个障碍物）+ config/nav_world.yaml（地图尺寸、障碍物、默认目标）；规划节点从参数读取障碍物；sim.launch.py 新增 world 启动参数。无界面测试 3 个目标全部到达，车身与障碍物最近距离 0.24 m。
+- 2026-10-19：M3 用户验收通过。小实验：safety_margin 0.1→0.3 后膨胀区把小车围死、哪都去不了（膨胀半径 vs 通道宽度、粗分辨率放大效应）。思考题 2 用户自己提出"让 SDF 由 YAML 生成"（单一数据源原则）。
+- 2026-10-19：M4 代码完成。新 A*：priority_queue + 懒惰删除、数组索引、8 邻域 + octile、禁止斜穿拐角；路径拉直 smoothPath（视线检查用 Amanatides-Woo 精确格子遍历——代码审查发现原来每 0.2 格采样会漏掉擦角的格子，已修复并加测试）；地图 0.5 m → 0.1 m；Release 编译。benchmark：100x100 快 30 倍（3.75→0.13 ms），200x200 快 101 倍，随机 200x200 快 421 倍；8 邻域路径短 14–17%。gtest 15 个全部通过。仿真：之前被误堵的 (-4,-4) 现在可达，车身最小间隙 0.12 m。
+- 2026-10-19：M4 用户验收通过（fc2b340），并完成 4 节小课（启发函数/可采纳性、优先队列/堆的层、数组索引 O(1)、懒惰删除 + 真实搜索过程讲解）。教训：一次讲 6 个新概念太多 → 拆成小课、每课一个概念 + 小题。M5：README、docs/media 录制指南、package.xml 描述已完成，待用户录制演示视频。
+- 2026-10-19：Bug（用户录屏时发现）：Gazebo Reset 后小车直线冲向旧路径点、撞上北墙卡在墙里，之后点目标被拒（机器人在障碍物格子里）。原因：两个节点不知道仿真被重置。修复：检测里程计时间戳倒退 → 规划节点重新规划当前目标，跟踪节点停车并清空旧路径。无界面测试：途中 Reset 后重新规划并到达 (3.90, 4.00)，车身最小间隙 0.14 m。
+- 2026-10-20：M5 完成（8845d29）：README、48 秒 4 倍速演示 GIF（1.6 MB），mp4 原片不提交。**P1 快速搭建（M1–M5）全部完成**，比计划（10/31）提前约 11 天。下一步：P1 第③步项目文档 docs/P1-navigation.md。
+- 2026-10-20：P1 项目文档 docs/P1-navigation.md 完成（10 节：介绍/简历写法、架构、话题参数、数据流、7 个模块讲解、调参经验、12 个踩坑、局限、15 道面试问答）。
+- 2026-10-20：P1 第④步双向提问首轮完成：概念题扎实，设计题 / 追问题偏弱（只说"是什么"，少说"为什么 / 如果…会怎样"）。教了"像跑代码一样推演"的答题方法。错题全部记入 docs/interview-notes.md。
+- 2026-10-20：核心手写 ① computeVelocity 完成：无提示、6 个测试一次全过（限幅用 if + min/max，已讲 std::clamp）。口头讲解通过（补充：大弧线会离开 A* 检查过的安全直线）。下次：核心手写 ② A*。
+- 2026-10-23：核心手写 ② A* 通过 6/6。过程：0–3 步自写（起点编号写成 1，提醒后改对）；4a–c 有 VS Code 代码联想（已关闭联想，讲解题答对）；4d 自写，4 个错误（邻居编号 nr*nc、new_g 用了邻居的 g、比较号写反、push 位置与 f 值）经指点改正。讲了 || 短路避免越界。
+- 2026-10-24：P1 第⑥步完成（功能 B：到达后转到目标朝向）。无界面测试 4 个朝向（90°/180°/-90°/0°，含顺时针转向），最终误差均 < 3°。文档与 README 已更新。P1 剩余：用错题本复测第④步（目标 ≥ 80%）。
+- 2026-10-24：思考题推演发现：只比较路径点会漏掉"同一位置只换朝向"（第三次点击才出现）。用户自己修改 pathCallback：同时比较路径点和目标 yaw（理解了成员变量 = 旧任务、局部变量 = 新消息，先比较后更新）。测试：同一位置连续 3 次换朝向，每次都转到位（误差 < 3°）。
+- 2026-10-24：第④步复测 50%。规律：答案太短（只有结论，缺原因 / 具体现象 / 风险）；两个顽固混淆：成员变量存订阅者是为"让它活着"（不是"记住值"）、突然出现的箱子是"变化"（要传感器）不是"写错"（文件一致）。决定：P1 其余全部完成，进入 P2，错题在 P2 期间间隔复测。
+- 2026-10-24：用户不想装第二个 Ubuntu。验证：Lyrical 有 MoveIt 2.15 / ros2_control / gz_ros2_control；官方包中模型、RViz、消息直接编译通过，真机驱动改一处 CMake（ament_target_dependencies）即可编译；只有 Gazebo Classic 包不可用。决定：单系统 + 移植，兜底用 Docker。
+- 2026-10-24：改为 Docker 方案（用户想顺便学 Docker）。Docker Desktop 更新后引擎卡在 starting，原因是 WSL 服务卡死，重启电脑解决；Ubuntu 里 `docker` 可用（29.9.2）。
+- 2026-10-24：P2 第 1 课。错题复测 3/3 ✅（订阅者成员变量、突然出现的箱子、无效目标）。P2 预习复述通过。Docker 小课①：`docker run -it --rm`，实验证明容器删除后文件消失、镜像不变。小课②：自己敲 Dockerfile 做 my-tree 镜像（练习目录 ~/docker-practice/first，不在仓库里）。易错：以为 CACHED = "镜像做过了"（实际是逐步判断：这一行没改才复用）；以为多出的大小是 tree（实测 tree 80 KB，apt 列表 78 MB → 同一行 RUN 末尾 `rm -rf /var/lib/apt/lists/*`，省下约 50 MB）。实测：不加 -y 不会卡住而是立刻 Abort 失败；无额外依赖的包（tree）不加 -y 也能装。
+- 2026-10-24：小课③ 层（答对）。M1 环境由 AI 搭好：拉 osrf/ros 大镜像反复失败 → FROM ubuntu:22.04 + 清华源（http 超时改 https）；镜像 5.85 GB；官方包 7 个编译通过；RViz GPU 渲染崩溃 → 软件渲染。
+- 2026-10-24：**M1 完成**。用户自己在容器里启动 RViz 看到 E6，gui:=true 拖动 6 个滑块。关节题 🔶：joint2 是肩（水平轴抬放手臂），joint4 属于手腕；讲了"前 3 轴定位置、后 3 轴定姿态 = 6 自由度"（URDF 核对：joint2/3/4 轴平行，大臂 0.189 m、小臂 0.16 m）。小课④ 挂载：容器 down 后文件仍在 ✅；exec vs run ✅（同一个容器；补充：新容器出生时环境相同，但运行中的改动互不可见，且 compose 省掉一长串参数）。
+- 2026-10-26：M2 第 1 课 URDF link/joint：joint3 读对，问出好问题（origin 相对 parent link 坐标系，而 link 坐标系原点就在其关节上）；限位原因 🔶（要说自碰撞）。第 2 课 TF：view_frames 画出 dummy_link→base_link→Link1…Link6；归零时 Link6 在 base_link 下 (-0.133, 0, 0.617)（FK 手写的验收数据）；推演对 joint6 不改位置、joint2 改位置。纠正"后 3 轴只定姿态"过于绝对：E6 手腕三轴不交于一点，joint4/5 也会移动 Link6 原点。踩坑：在 WSL 而非容器里运行 launch（看提示符 dev@docker-desktop）。
+- 2026-10-26：M2 第 3 课坐标变换：2D 旋转矩阵 4 题全对；齐次矩阵一开始没懂原理（"为什么补 1"）→ 用数字逐行重讲后懂了（用户学过线性代数，缺的是原理不是算法）；两节臂 FK 两组关节角得到同一末端 (1,1)，自己得出 IK 多解。**M2 完成**。
+- 2026-10-26：**M3 完成**。预习 MoveIt 架构（move_group / KDL IK / 规划场景 / OMPL RRTConnect / me6_group_controller / mock 硬件；6 维关节空间无法用 A* 网格）。RViz 拖末端 Plan（14 ms）+ Execute。够不着时跳回上一个有效 IK 解 ✅；两次 Plan 轨迹差不多 → 解释：空场景下 RRT 结果经路径简化后收敛（类比 P1 smoothPath）。M4 预测试：控制器加载失败是 AI 的测试与用户运行中的 MoveIt 撞车 + 残留僵尸进程 / ros2 daemon 坏掉；compose 加 init: true、重建容器后 Gazebo 两个控制器均 active。
+- 2026-10-28：错题复测 2.5/3（回调 ✅、两个节点 ✅、k_angular 调小缺后果 🔶）。**M4 完成**：预习 ros2_control（只换硬件接口 mock→GazeboSystem→真机）、话题 / 服务 / 动作。RViz Plan + Execute，Gazebo 里机械臂动起来。换了什么 ✅；为什么用 action 🔶（说了耗时 + 反馈，漏了"可取消 = 急停"和服务会阻塞）。踩坑（AI 造成）：测试残留的 gzserver 没随 timeout 退出 → 用户的 Gazebo 端口冲突崩溃 → 不能 Plan；重建容器解决。以后测试前先确认用户没在运行，测完 `docker compose restart` 清干净。`frame 'world' was expected` 报错在正常环境也有，不影响规划（来源待查）。
+- 2026-10-28：M5 第一步：AI 写 e6_motion 包（move_demo：setNamedTarget home → setPoseTarget (0.25,0.15,0.25)，独立线程 spin），mock + Gazebo 均通过，用户运行通过。为什么单独线程 spin 🔶（说成"卡住其他进程 / 安全"，正解：plan/execute 阻塞等结果，结果靠回调送回，单线程没法 spin → 死锁）。改 x=0.60：预测两种可能 👍，实际是规划失败停止，但用户结论说成"停在最近位置"（与日志矛盾）；代码追踪对（plan≠SUCCESS → return false → ok=false）。VS Code 报 moveit include 错：IntelliSense 只查 WSL 的 /opt/ros/lyrical，MoveIt 头文件在容器里（不影响编译）。
+- 2026-10-28：M5 第二步 scene_demo：规划场景加桌子 + 箱子墙，A→B 翻过箱子（末端最高 0.462 m > 箱顶 0.32 m，用 RobotState 对轨迹逐点 FK 算出）。用户运行通过。两题 ✅：翻越过程；Gazebo 无箱子（规划场景 ≠ 仿真世界），真机上场景缺箱子会撞 → 场景对齐现实或加传感器实时检测（错题"突然出现的箱子"这次答对）。AI 测试时出现一次运行无输出，未复现。
+- 2026-10-28：M5 第三步 pick_place（AI 写，调试较久）：接近 → 笛卡尔直线下降 → attach → 抬起 → 翻箱子 → 下降 → detach → 抬起 → home。踩坑：① IK 多解：setPoseTarget 随机挑姿态，部分姿态直线下降会中途卡住或 IK 跳到另一组解（某关节转 360°/233°）→ 先试算候选姿态（/compute_ik 随机起点 + computeCartesianPath 只算不执行），挑能直线下降的再规划过去；直线段加"关节转动 > 90° 拒绝执行"安全检查。② 箱子墙 4 cm 太薄，规划器分段碰撞检查漏掉 → 加厚到 8 cm + 规划失败重试 3 次。③ PlanningSceneInterface::applyCollisionObjects 偶尔卡死（"运行无输出"的真凶）→ 自己的 /apply_planning_scene 客户端 + 超时重试（scene_utils.hpp）。排除的猜测：四元数符号、状态过时、IK 超时。mock 5/5、Gazebo 1/1 成功。
+- 2026-11-06：回顾 P2 要点。**M5 完成**：用户 Gazebo 运行 pick_place 成功。三题：直线 vs 普通规划 🔶（因果反了：用直线是因为必须直线，不是没障碍）、先试算 ❌（答成避障，正解 IK 多解）、attach ❌（答成防掉落，正解规划时把手中物体纳入碰撞检测）→ 记入错题本 P2。**P2 快速搭建 M1–M5 全部完成**（比计划 11/9 略早，但 P2 整体预计晚约一周）。P2 ③ 项目文档 docs/P2-arm.md 已写完（AI），待用户阅读提问。
+- 2026-11-07：P2 ③ 完成：读文档提 4 问（100 Hz 插值、"来自"、RRT、IK 随机起点 → 用两节臂迭代 IK 实际数字讲懂）。P2 ④ 双向提问 10 题：Q1–4 概念 🔶×4、Q5–7 设计 ✅×3、Q8–10 追问 🔶×3，约 65%。规律：机制能说对，缺"为什么 / 具体风险"、易混概念（服务才阻塞、RRT≠IK、确定性算法重试无用）。用户好问题：动作不阻塞为何 execute() 阻塞（通信方式 vs 函数是否等待，asyncExecute）。
+- 2026-11-07：追问专题：KDL vs RRT 分工、直线为何不用 RRT、分段任务如何规划、RRT 如何排除穿箱路径、pick_place 三层结构讲解；用户提的 7 个问题整理进 docs/P2-arm.md 第 10 节 Q15–Q21。用户要求以后讲解按这些问题点组织。
+- 2026-11-07：**P2 ⑤ FK 手写通过 15/15**（practice/p2_fk.cpp：multiply、rotX/Y/Z、fromXyzRpy、forwardKinematics；5 个姿态误差 < 0.1 mm，期望值经 tf2_echo + MoveIt 核对）。过程：先用真实数字逐关节推导归零位和 joint2=90°（手臂放平，末端 0.45 m = 臂展）；讲了 3D 旋转矩阵 3×3 vs 齐次 4×4、Ry 负号、rpy=(90°,0,−90°) 用右手逐步转。卡点：矩阵乘法想不出第三层循环（展开一个格子后自己找到规律）、下标从 1 开始、乘积没接住；左乘/右乘困惑（走法 A 从底座往外右乘 vs 走法 B 从末端往里左乘），初版写成左乘顺序反了，自己改对。讲解：循环 ✅、Rz·Ry·Rx 🔶（是 URDF 规定）、axis=1 0 0 时用 rotX ✅（补充：数据里记轴、任意轴用 Rodrigues）。
+- 2026-11-07：P2 ⑥ 功能 A（用户自己改）：速度缩放做成 launch 参数 velocity_scaling（默认 0.2，std::clamp 到 [0.05, 1.0]，速度和加速度同用）。改了 3 轮：else(...) 语法、旧的写死行覆盖参数、默认值 10.0（不安全）、clamp 参数类型 int/double、把函数当变量赋值；在 WSL 而非容器里 colcon build。AI 测试（mock）：0.1→81 s、0.2（不传）→40 s、0.5→21 s、5→限制为 1.00、18 s，全部完成。
+- 2026-11-07：P2 ⑥ 功能 B 按编号分拣两个方块：用户自己写了 Point2 / Cube 结构体、vector + map 数据、场景循环、detach 循环、find 查规则的大部分代码（第一次组合结构体 + 容器，看例子后能写出）；AI 收尾修正：场景在 frame 定义前就搭了、find 后少分号、查到的值作用域在 else 里、Point2 写成 string、approachAndDescend 多传参数且用了旧常量、detach("cube")、旧的 && 链没删。mock 测试 3/3 完成。**P2 ⑥ 完成**（功能 A 速度参数 + 功能 B 分拣）。
+- 2026-11-07：用户决定不录 P2 演示视频；docs/P2-arm.md 补 6.9 节（⑥ 两个功能）和 Q22–Q23。**P2 完成。**
+
+## 🔖 交接（给下一个对话）
+- **P1 已完成**（快速搭建 M1–M5、项目文档、核心手写、改一个功能：到达后转到目标朝向）。双向提问持续复测中：每课开始前从 docs/interview-notes.md 抽 3 道（P1 + P2 错题）
+- **P2 已完成**（M1–M5、项目文档、双向提问 65%、FK 手写 15/15、改功能：速度参数 + 按编号分拣；演示视频暂不录）
+- **下一步：P3 E6 真机**：第一次上真机前先讲 PLAN 第 4 节安全规则并确认 → M0 官方软件 DobotStudio Pro 点动、确认固件版本 → M1 网线直连 + WSL 镜像网络 + ping
+- 间隔复习：11 月底从空白重写 A* 和 FK（practice/）
+- 先读本地 PRIVATE.md（个人背景、待议的计划调整）
+- 教学方式见 PLAN.md 第 1 节；用户是初学者：一步一步、一次一个概念、多用类比和小题、不要一次讲太多。**讲解按用户的提问思路组织**：为什么用 A 不用 B、各部分怎么分工、程序怎么分层组织（带行号）、机制一步步怎么运作、看似矛盾处；原理配真实数字的例子（比喻不够）。全程中文；AI 自测调试要及时汇报进度
