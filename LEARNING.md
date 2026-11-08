@@ -56,6 +56,10 @@
 - [x] M1 Docker 环境：✅ 小课① 镜像 vs 容器（类 vs 对象）；✅ 小课② Dockerfile（FROM / RUN、CACHED、清理 apt 列表）；✅ 小课③ 层（layer，答对"改第一个 RUN → 它和后面的层都重建"）；✅ Dockerfile + compose.yaml（AI 写，镜像 rnl-arm:humble 已构建、官方包已编译、RViz 无界面测试不崩溃）；✅ 用户自己运行看到 E6 模型 + gui:=true 拖滑块；✅ 小课④ 挂载 / compose / exec（实验：容器 down 后挂载目录里的文件仍在）
 - [x] M2 认识机器人模型（URDF link/joint、TF 树、2D 旋转 / 齐次矩阵 / 两节臂 FK；3D 4×4 留到 FK 手写时讲）　- [x] M3 MoveIt 交互规划　- [x] M4 Gazebo 联合仿真　- [x] M5 用代码控制（move_demo / scene_demo / pick_place）
 
+### P3 进度
+- [x] ① 预习（2026-11-07：真机通信链路、安全规则；容器里真机驱动编译通过）
+- [x] **标记完成（2026-11-08）**：和导师讨论后认为真机部分只是验证、意义不大，P2 仿真已经覆盖完整流程，所以不做 M0–M5 真机实操。**真机没有实际连接和运动过**；以后要上真机，从 PLAN.md 第 4 节 M0 开始（第一次运动速度缩放 0.05–0.1）
+
 ## 硬件
 - 机械臂：Dobot Magician E6（型号 DT-MG-6R075-02E），6 轴，负载 750 g，臂展 450 mm，DC 48 V，2026-04 生产；自己的，可随时使用
 - 官方 ROS 2 包：github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4（官方支持 Humble）；机械臂环境用 Docker 容器（Humble），见 PLAN.md P2
@@ -104,11 +108,17 @@
 - 2026-11-07：P2 ⑥ 功能 B 按编号分拣两个方块：用户自己写了 Point2 / Cube 结构体、vector + map 数据、场景循环、detach 循环、find 查规则的大部分代码（第一次组合结构体 + 容器，看例子后能写出）；AI 收尾修正：场景在 frame 定义前就搭了、find 后少分号、查到的值作用域在 else 里、Point2 写成 string、approachAndDescend 多传参数且用了旧常量、detach("cube")、旧的 && 链没删。mock 测试 3/3 完成。**P2 ⑥ 完成**（功能 A 速度参数 + 功能 B 分拣）。
 - 2026-11-07：用户决定不录 P2 演示视频；docs/P2-arm.md 补 6.9 节（⑥ 两个功能）和 Q22–Q23。**P2 完成。**
 - 2026-11-07：P3 ① 预习：真机链路 MoveIt → FollowJointTrajectory → action_move_server → ServoJ 逐点 → dobot_bringup_v4 → TCP（IP 192.168.5.1，控制端口 29999、反馈端口 30004）；反馈 /joint_states_robot → joint_state_relay → /joint_states。讲了 7 条安全规则（待用户在实验室确认）。真机不在手边：先在容器里编译 dobot_bringup_v4 + dobot_moveit（action_move_server）通过；param.json 默认 robot_type=cr5、IP 192.168.5.1（DOBOT_TYPE=me6 由 compose 环境变量覆盖）。
+- 2026-11-08：和导师交流后决定 P3 不做真机实操（导师认为难度太低、没必要大动干戈；仿真已经很完备，真机只是验证）。**P3 标记完成**，真机 M0–M5 没有做。
+- 2026-11-08：调研北京实习岗位要求（具身算法 / 机械臂规控 / 导航 SLAM / 数据平台），共同缺口是真机 + 视觉感知 + 大模型 → 选定项目 C（一句话指挥机械臂抓取）。**C 第 1 步（文字指令）代码完成（AI 写）**：e6_llm 包（command_parser 校验大模型 JSON + 20 个 pytest；llm_client 用 OpenAI 兼容接口，密钥放 docker/.env；planner_node；text_input）+ e6_motion/task_executor（指令队列 + 主线程执行，物体位置随放置更新，目标被占则拒绝）；PickPlace 类挪到 pick_place_skills.hpp 与 pick_place 共用；world.yaml 两个节点共用。mock 测试（规则版）：红→左完成、听不懂不执行、左边被占拒绝、蓝→右完成、回 home 完成。踩坑（AI）：上一轮测试的进程还没超时退出，两套节点同时控制机械臂 → 测试前先 `docker compose restart`。假大模型服务器测试（本地模拟 OpenAI 格式）：3 步指令按顺序完成；第 1 步被拒后第 2 步自动取消；编造的 green_cube 被校验拒绝、一条指令都没发。**待用户自己运行 + 申请 API 密钥用真大模型试**。
+- 2026-11-08：用户用 DeepSeek 真大模型运行：绿色方块（不存在）、放到非区域位置都正确拒绝；但"两个方块换个位置"失败 → 原因：① 大模型不知道当前位置（只知道你告诉它的）② 只允许两个区域名，桌上空地对它"不存在"。用户提出"先挪到一边再交换"。改法（分工：大模型决定做什么，代码决定放哪）：执行端发布 /world_state（transient_local），planner 每次调用前把当前状态写进提示词；新增目标 aside，由执行端按网格找空地（离物体和区域中心 ≥ 8 cm + IK 试算能直线下降，先找好再抓）。pytest 26 个通过、编译通过；讲了 VLA（RT-2 动作离散成 256 格、OpenVLA 7B、π0 动作块；分层 vs 端到端的取舍）。**待用户运行交换测试**。
+- 2026-11-08：**交换测试通过（用户运行，真大模型）**："把两个方块换个位置" → DeepSeek 1.3 s 规划出 3 步（红 → aside、蓝 → 右、红 → 左），执行端选空地 (0.20, −0.12)，3 步约 42 s 全部完成，/world_state 每步更新。**C 第 1 步（文字指令）完成**。下一步：C 第 2 步语音输入。思考题"找不到空地会怎样" ✅（报告 + 取消后面的步骤；补充：先找空地再抓，所以机械臂根本不动、方块都在原处）。讲了用 VLA 做同一任务的流程（遥操作采数据 → 微调 → 闭环部署；长任务用"大模型拆子任务 + VLA 执行"的分层结构）。
 
 ## 🔖 交接（给下一个对话）
 - **P1 已完成**（快速搭建 M1–M5、项目文档、核心手写、改一个功能：到达后转到目标朝向）。双向提问持续复测中：每课开始前从 docs/interview-notes.md 抽 3 道（P1 + P2 错题）
 - **P2 已完成**（M1–M5、项目文档、双向提问 65%、FK 手写 15/15、改功能：速度参数 + 按编号分拣；演示视频暂不录）
-- **下一步：P3 M0（在实验室）**：确认 7 条安全规则 → 检查急停、配件、摆放（半径 50 cm 清空）→ 通电、练习急停 → DobotStudio Pro 低速点动各关节、回零 → 记下控制器固件版本、机械臂 IP。之后 M1：网线直连 + 电脑同网段静态 IP + WSL 镜像网络 + ping 192.168.5.1。真机驱动已编译（容器里 dobot_bringup_v4、action_move_server）
+- **P3 已标记完成**（2026-11-08，只做了预习 + 驱动编译，真机没连过）。以后想上真机的备忘：DobotStudio Pro 里要切到 TCP/IP 远程控制模式；驱动协议是 V4.6.5，而 DobotStudio Pro 4.6.5.1 适配控制器 V4.5–V4.6.4，要先核对控制器固件版本；电脑静态 IP 192.168.5.100/24
+- **下一步（2026-11-08 决定）：项目 C「语音 / 一句话指挥机械臂抓取」**：语音识别 → 大模型解析成结构化指令 → 摄像头识别物体 + 手眼标定 → MoveIt 抓放（复用 P2 pick_place）→ 真机。选它的原因：对照北京实习岗位要求，一次补上真机、视觉感知、大模型三个缺口。目标 12 月初投递前做出简化版；手势遥操作 + 模仿学习（B）放到投递之后。P4（SLAM）视时间再定
+- （旧计划，已取消）P3 M0（在实验室）：确认 7 条安全规则 → 检查急停、配件、摆放（半径 50 cm 清空）→ 通电、练习急停 → DobotStudio Pro 低速点动各关节、回零 → 记下控制器固件版本、机械臂 IP。之后 M1：网线直连 + 电脑同网段静态 IP + WSL 镜像网络 + ping 192.168.5.1。真机驱动已编译（容器里 dobot_bringup_v4、action_move_server）
 - 间隔复习：11 月底从空白重写 A* 和 FK（practice/）
 - 先读本地 PRIVATE.md（个人背景、待议的计划调整）
 - 仓库已公开：github.com/tdgcdtd/robot-navigation-lab（2026-11-07，单个干净提交，作者用 GitHub 匿名邮箱）。**PRIVATE.md 和 docs/interview-notes.md（错题本）只在本地、已 gitignore**；旧的 27 个提交备份在本地分支 archive/pre-public（不推送）。以后推送前先检查新增内容里没有个人信息

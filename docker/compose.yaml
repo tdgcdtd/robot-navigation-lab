@@ -17,6 +17,10 @@ services:
       - LIBGL_ALWAYS_SOFTWARE=1
       - DOBOT_TYPE=me6               # 官方包靠这个变量选型号：E6
       - ROS_DOMAIN_ID=42             # 和主系统（Lyrical）的 ROS 隔开，避免两个版本互相收到消息
+      # C 项目：大模型 API。值从 docker/.env 读取（这个文件已 gitignore，密钥不进仓库）；没写就是空的
+      - LLM_API_KEY=${LLM_API_KEY:-}
+      - LLM_BASE_URL=${LLM_BASE_URL:-https://api.deepseek.com}
+      - LLM_MODEL=${LLM_MODEL:-deepseek-chat}
     volumes:
       - /mnt/wslg/.X11-unix:/tmp/.X11-unix  # WSLg 的显示通道
       - ../arm_ws:/home/dev/arm_ws   # 挂载：WSL 里的 arm_ws 和容器里的是同一个目录

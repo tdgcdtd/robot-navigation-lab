@@ -1,0 +1,11 @@
+# 桌上的世界：物体在哪、可以放到哪。planner_node 和 task_executor 读同一份（单一数据源，P1 M3 学过）
+# 坐标系 dummy_link（机械臂底座），单位米：x 朝前，y 朝左（"左""右"都是从机械臂的角度看）
+# 以后加了摄像头，objects 的位置改由识别结果给出，targets 还是写在这里
+/**:
+  ros__parameters:
+    objects:
+      red_cube:  {label: "红色方块", xy: [0.30, 0.06],  color: [0.9, 0.1, 0.1]}
+      blue_cube: {label: "蓝色方块", xy: [0.30, -0.06], color: [0.1, 0.3, 0.9]}
+    targets:
+      left_zone:  {label: "左边区域", xy: [0.22, 0.20]}
+      right_zone: {label: "右边区域", xy: [0.22, -0.20]}

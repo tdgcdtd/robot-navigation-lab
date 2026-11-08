@@ -7,6 +7,7 @@
 
 #include <geometry_msgs/msg/pose.hpp>
 #include <moveit_msgs/msg/collision_object.hpp>
+#include <moveit_msgs/msg/object_color.hpp>
 #include <moveit_msgs/msg/planning_scene.hpp>
 #include <moveit_msgs/srv/apply_planning_scene.hpp>
 #include <rclcpp/rclcpp.hpp>
@@ -45,8 +46,10 @@ inline moveit_msgs::msg::CollisionObject makeBox(
 // 为什么不用 MoveIt 自带的 PlanningSceneInterface::applyCollisionObjects()？
 // 它内部用自己的方式等待回复，测试中偶尔一直等不到、程序卡住不动（表现为"运行后没有任何输出"）。
 // 这里改用我们自己节点上的服务客户端：回复由 spinner 线程处理，我们只等 5 秒，超时就重试。
+// colors（可选）：给物体上色，只影响 RViz 里的显示，不影响规划。
 inline bool applyCollisionObjects(
-  const rclcpp::Node::SharedPtr & node, const std::vector<moveit_msgs::msg::CollisionObject> & objects)
+  const rclcpp::Node::SharedPtr & node, const std::vector<moveit_msgs::msg::CollisionObject> & objects,
+  const std::vector<moveit_msgs::msg::ObjectColor> & colors = {})
 {
   auto client = node->create_client<moveit_msgs::srv::ApplyPlanningScene>("/apply_planning_scene");
   if (!client->wait_for_service(std::chrono::seconds(10))) {
@@ -57,6 +60,7 @@ inline bool applyCollisionObjects(
   auto request = std::make_shared<moveit_msgs::srv::ApplyPlanningScene::Request>();
   request->scene.is_diff = true;  // 只是"增加"这些物体，不替换整个场景
   request->scene.world.collision_objects = objects;
+  request->scene.object_colors = colors;
 
   for (int attempt = 1; attempt <= 3; ++attempt) {
     auto future = client->async_send_request(request);

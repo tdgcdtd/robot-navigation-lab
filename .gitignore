@@ -30,3 +30,9 @@ ros2_ws/.vscode/
 
 # 错题本（只留本地）
 docs/interview-notes.md
+
+# 大模型 API 密钥（只留本地）
+docker/.env
+
+# Python 缓存
+__pycache__/
