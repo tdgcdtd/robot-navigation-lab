@@ -36,3 +36,18 @@ docker/.env
 
 # Python 缓存
 __pycache__/
+
+# ML 学习：虚拟环境、训练产物（可重新生成）
+ml/.venv/
+ml/.bootstrap/
+ml/**/runs/
+ml/**/checkpoints/
+ml/**/videos/
+ml/**/*.zip
+__pycache__/
+
+# macOS 自动生成
+.DS_Store
+
+# 本机 Claude 预览配置（含本机路径）
+.claude/launch.json
