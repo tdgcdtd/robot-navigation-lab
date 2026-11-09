@@ -51,3 +51,8 @@ __pycache__/
 
 # 本机 Claude 预览配置（含本机路径）
 .claude/launch.json
+ml/**/*.png
+ml/**/data/
+ml/**/ckpt/
+MUJOCO_LOG.TXT
+ml/**/results/log_*.txt

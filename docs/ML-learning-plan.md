@@ -28,7 +28,7 @@
 |---|---|---|---|
 | 1 | MuJoCo 倒立摆 + Stable-Baselines3 PPO，先找感觉 | Mac | 倒立摆平衡视频 |
 | 2 | 自己写最小 PyTorch 训练循环（数据→前向→loss→反向→更新） | Mac | 能读懂微调脚本和 loss 曲线 |
-| 3 | 开放词汇感知：Grounding DINO / SAM 2·3 用文字找方块 + 深度→3D 坐标 | Mac 先验证 MPS 能否跑，不行转 3060 | 不用标注就能定位方块 |
+| 3 | 开放词汇感知：Grounding DINO / SAM 2·3 用文字找方块 + 深度→3D 坐标；**再微调**：先量出零样本在我们场景里的失败情况，用 MuJoCo 自动标注的数据微调 Grounding DINO，前后对比（学习者 11-09 要求：开源模型不能适配所有场景，要微调到我们的任务场景） | Mac 先验证 MPS 能否跑/能否微调，不行转 3060 或云 GPU | 不用标注就能定位方块；微调前后准确率对比 |
 | 4 | 用 MLX 在 Mac 上 LoRA 微调小型 VLM（Qwen-VL 2–3B），看桌面截图输出固定 JSON | Mac | 学会微调全流程 |
 | 5 | **方案 A**：本地 VLM 看桌面 + LLM 规划多步动作（如"先挪开红色、拿来蓝色、红色放回"）→ 局域网发给 WSL 里的 ROS2/MoveIt 执行 | Mac + 3060 | **给导师的主 demo**：离线、免 API 费 |
 | 6 | 二级倒立摆 / 仿真颠球 RL；之后模仿学习（LeRobot ACT）与 VLA（SmolVLA 推理在 Mac，训练用云 GPU） | Mac + 云 | 进阶 demo |

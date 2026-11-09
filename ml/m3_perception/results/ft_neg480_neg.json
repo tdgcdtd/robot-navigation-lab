@@ -1,0 +1,1402 @@
+[
+ {
+  "scenario": "分开",
+  "seed": 10000,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10000,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10001,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10001,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10002,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10002,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10003,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10003,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10004,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10004,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10005,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10005,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10006,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10006,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10007,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10007,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10008,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10008,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10009,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10009,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10010,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10010,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10011,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10011,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10012,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10012,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10013,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10013,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10014,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10014,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10015,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10015,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10016,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10016,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10017,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10017,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10018,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10018,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10019,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "分开",
+  "seed": 10019,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10000,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10000,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10001,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10001,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10002,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10002,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10003,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10003,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10004,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10004,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10005,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10005,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10006,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10006,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10007,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10007,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10008,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10008,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10009,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10009,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10010,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10010,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10011,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10011,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10012,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10012,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10013,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10013,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10014,
+  "kind": "不存在的颜色",
+  "text": "red cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10014,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10015,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10015,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10016,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10016,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10017,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10017,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10018,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10018,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10019,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "挨在一起",
+  "seed": 10019,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10000,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10000,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10001,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10001,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10002,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10002,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10003,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10003,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10004,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10004,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10005,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10005,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10006,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10006,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10007,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10007,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10008,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10008,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10009,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10009,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10010,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10010,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10011,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10011,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10012,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10012,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10013,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10013,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10014,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10014,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10015,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10015,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10016,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10016,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10017,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10017,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10018,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10018,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10019,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "相近颜色",
+  "seed": 10019,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10000,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10000,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10001,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10001,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10002,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10002,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10003,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10003,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10004,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10004,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10005,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10005,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10006,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10006,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10007,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10007,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10008,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10008,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10009,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10009,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10010,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10010,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10011,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10011,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10012,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10012,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10013,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10013,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10014,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10014,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10015,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10015,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10016,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10016,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10017,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10017,
+  "kind": "无关物体",
+  "text": "tennis ball.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10018,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10018,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10019,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "暗光",
+  "seed": 10019,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10000,
+  "kind": "不存在的颜色",
+  "text": "red cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10000,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10001,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10001,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10002,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10002,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.05572105199098587
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10003,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10003,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10004,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10004,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10005,
+  "kind": "不存在的颜色",
+  "text": "red cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10005,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10006,
+  "kind": "不存在的颜色",
+  "text": "green cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10006,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10007,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10007,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10008,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10008,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.08880539238452911
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10009,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10009,
+  "kind": "无关物体",
+  "text": "spoon.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10010,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10010,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10011,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10011,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10012,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10012,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10013,
+  "kind": "不存在的颜色",
+  "text": "blue cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10013,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10014,
+  "kind": "不存在的颜色",
+  "text": "yellow cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10014,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.05236541107296944
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10015,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10015,
+  "kind": "无关物体",
+  "text": "hammer.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10016,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10016,
+  "kind": "无关物体",
+  "text": "keyboard.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10017,
+  "kind": "不存在的颜色",
+  "text": "purple cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10017,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10018,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10018,
+  "kind": "无关物体",
+  "text": "remote control.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10019,
+  "kind": "不存在的颜色",
+  "text": "orange cube.",
+  "score": 0.0
+ },
+ {
+  "scenario": "遮挡",
+  "seed": 10019,
+  "kind": "无关物体",
+  "text": "pen.",
+  "score": 0.0
+ }
+]
