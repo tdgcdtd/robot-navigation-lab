@@ -56,3 +56,4 @@ ml/**/data/
 ml/**/ckpt/
 MUJOCO_LOG.TXT
 ml/**/results/log_*.txt
+ml/**/adapters/

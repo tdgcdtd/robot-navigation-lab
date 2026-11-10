@@ -1,0 +1,5790 @@
+[
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   11.195427638102968,
+   11.706271823257815
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10000,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [350, 575], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [450, 480], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      367,
+      584
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      459,
+      500
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   0.960000000000008,
+   37.547878768313915,
+   21.89195285944129
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10001,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [380, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [380, 500],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 480],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      409,
+      568
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      505
+     ],
+     "on": "red"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      680,
+      482
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "point_err": [
+   14.382211234716294,
+   8.76502139187349,
+   7.706620530427066,
+   15.22019710779068,
+   7.497839688870388
+  ],
+  "point_match": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": false,
+  "seed": 10002,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [375, 530],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [675, 430],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 300],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 330],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 360],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      394,
+      546
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      555,
+      391
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      555,
+      347
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      559,
+      290
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      667,
+      442
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 1,
+  "point_err": [
+   17.386339465223838,
+   17.926427418758053,
+   18.55172229201377
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10003,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [350, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 550],\n      \"on\": \"green\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      377,
+      504
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      528,
+      560
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      528,
+      499
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   8.443695873253601,
+   24.286292430093177,
+   30.379782751033588
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10004,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [420, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [420, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [620, 500],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      433,
+      497
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      439,
+      558
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      632,
+      548
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   10.880000000000022,
+   1.5758172482873691,
+   2.307552816296951
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10005,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 490],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 470],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      288,
+      510
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      551,
+      383
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      598,
+      474
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 3,
+  "point_err": [
+   18.113243773548703,
+   6.22356810840852,
+   9.308920452984871
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10006,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [410, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [470, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [470, 350],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      425,
+      632
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      477,
+      567
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      477,
+      359
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 0,
+  "point_err": [
+   17.316258256332425,
+   18.522030126311737
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10007,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [600, 500], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [600, 550], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      615,
+      583
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      623,
+      519
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   12.34490988221461,
+   15.716691763854135
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10008,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [250, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [700, 450],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      270,
+      619
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      677,
+      486
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      687,
+      431
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [
+   "orange"
+  ],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   10.41844518150383,
+   13.745108220745296,
+   9.621309682158655,
+   14.916943386632543
+  ],
+  "point_match": 4,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10009,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [250, 525],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [400, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [600, 480],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [675, 350],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      271,
+      531
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      282,
+      588
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      399,
+      400
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      611,
+      496
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      656,
+      368
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   26.349527509995323,
+   11.914361082324138,
+   12.739858711932396
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10010,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [520, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 300],\n      \"on\": \"blue\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      558,
+      671
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      561,
+      605
+     ],
+     "on": "green"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      684,
+      376
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      687,
+      323
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "point_err": [
+   25.033737235978172,
+   8.5865010335992,
+   2.950254226333717,
+   16.197975182102223
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": false,
+  "seed": 10011,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [375, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [725, 525],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [725, 550],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [725, 575],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      381,
+      466
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      704,
+      619
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      715,
+      581
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      726,
+      519
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 2,
+  "point_err": [
+   22.66415672377861,
+   22.92024432679546,
+   21.50438094900663,
+   20.30487626162743
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10012,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [480, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [480, 450],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [530, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 600],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      511,
+      409
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      514,
+      465
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      550,
+      536
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      622,
+      637
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [
+   "yellow",
+   "green",
+   "red"
+  ],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 0,
+  "point_err": [],
+  "point_match": 0,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10013,
+  "dim": true,
+  "output": "{\n  \"objects\": []\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      534,
+      621
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      542,
+      583
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      545,
+      510
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   4.5817027402484465,
+   14.914368910550685
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10014,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [500, 400], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [700, 550], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      523,
+      405
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      693,
+      548
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 4,
+  "point_err": [
+   17.603635988056563,
+   1.367040599250786,
+   5.318646444350295,
+   2.6046112953759586,
+   5.779965397820292
+  ],
+  "point_match": 5,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10015,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [275, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [275, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [430, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 470],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 620],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      284,
+      501
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      302,
+      557
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      434,
+      379
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      642,
+      473
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      648,
+      619
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 1,
+  "point_err": [
+   8.071678883602832,
+   34.310581458203245,
+   52.841680518318114,
+   4.7274517448621305
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10016,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [398, 283],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [398, 283],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [398, 283],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [475, 525],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      406,
+      296
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      412,
+      352
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      391
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      478,
+      534
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 5,
+  "point_err": [
+   24.076677511650168,
+   9.275861146006857,
+   12.672363631146336,
+   35.8014077935491,
+   29.307528043149585
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": false,
+  "seed": 10017,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [400, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [700, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [700, 500],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [400, 500],\n      \"on\": \"red\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      495
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      424,
+      552
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      465,
+      396
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      693,
+      574
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      712,
+      521
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 4,
+  "point_err": [
+   15.479534876733217,
+   13.073086858121894,
+   16.273659699035136,
+   21.56678928352571
+  ],
+  "point_match": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10018,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 420],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [420, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [480, 420],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      322,
+      437
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      328,
+      625
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      439,
+      610
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      501,
+      404
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 1,
+  "point_err": [
+   21.274585777401175,
+   25.62848415337903,
+   12.447136216817098,
+   7.463618425401991
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10019,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 312],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 342],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 372],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [666, 512],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      343,
+      320
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      352,
+      419
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      356,
+      374
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      680,
+      530
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   26.869045386838767,
+   13.599999999999989
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10020,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 600],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 480],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      320,
+      617
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      510,
+      505
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 2,
+  "point_err": [
+   2.0238577025077915,
+   9.732420048477124
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10021,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [420, 410], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [560, 390], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      431,
+      424
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      561,
+      394
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 3,
+  "point_err": [
+   10.890583088154642,
+   12.27002852482422,
+   28.316383949932597,
+   18.316331510430818
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": false,
+  "seed": 10022,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [630, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [630, 340],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [630, 310],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [630, 280],\n      \"on\": \"orange\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      634,
+      335
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      637,
+      377
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      646,
+      430
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      647,
+      281
+     ],
+     "on": "orange"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   7.297122720634487,
+   3.4613292244454033
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10023,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [562, 356], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [718, 548], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      569,
+      368
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      715,
+      554
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   9.056621886774352,
+   6.840818664458246,
+   10.16472331153191
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10024,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [310, 375], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [380, 375], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [420, 575], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      324,
+      385
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      392,
+      385
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      422,
+      589
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "purple"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   19.138568389511267,
+   2.307552816296951,
+   3.420409332229123
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10025,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [250, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [425, 475],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [550, 550],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      278,
+      536
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      293,
+      592
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      426,
+      468
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      548,
+      554
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   9.665112518744932,
+   3.853310265213533,
+   4.2932505167995805,
+   26.187264080082915
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10026,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [275, 440],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [275, 440],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [425, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [500, 360],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      279,
+      434
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      297,
+      486
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      420,
+      569
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      503,
+      368
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   8.5865010335992,
+   2.715290039756345
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10027,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 425], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 475], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      563,
+      483
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      572,
+      429
+     ],
+     "on": "purple"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [
+   "brown"
+  ],
+  "pos_ok": 3,
+  "on_ok": 0,
+  "point_err": [
+   46.96919841768648,
+   31.018549289094747,
+   26.259992383852666
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10028,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [400, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 500],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [400, 575],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"brown\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [350, 600],\n      \"on\": \"orange\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      421,
+      597
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      425,
+      667
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      468,
+      560
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [
+   "yellow"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 0,
+  "point_err": [
+   2.937209560109732
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10029,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [683, 500], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      670,
+      549
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      687,
+      497
+     ],
+     "on": "yellow"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [
+   "brown"
+  ],
+  "pos_ok": 2,
+  "on_ok": 0,
+  "point_err": [
+   31.143744155126914,
+   27.926761358954614
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10030,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 550],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"brown\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 575],\n      \"on\": \"red\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      481,
+      553
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      491,
+      614
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [
+   "brown"
+  ],
+  "pos_ok": 2,
+  "on_ok": 0,
+  "point_err": [
+   96.05331852674325,
+   40.25423207564638
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10031,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 450],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"brown\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 400],\n      \"on\": \"yellow\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      504,
+      650
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      508,
+      583
+     ],
+     "on": "yellow"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   14.131723178721002,
+   15.413241060854121,
+   9.748189575505812,
+   2.715290039756345
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10032,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [450, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [450, 380],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 450],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      294,
+      408
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      299,
+      465
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      452,
+      412
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      453,
+      354
+     ],
+     "on": "orange"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [
+   "purple"
+  ],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 3,
+  "point_err": [
+   4.800000000000011,
+   11.141561829474355,
+   19.454973657139703,
+   8.25978207944981
+  ],
+  "point_match": 4,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10033,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [250, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [425, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [525, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 525],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      276,
+      521
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      288,
+      577
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      436,
+      384
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      525,
+      510
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      633,
+      530
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 1,
+  "point_err": [
+   29.568848472674752,
+   16.896484841528398,
+   10.119288512538827,
+   36.36226615600298,
+   43.2189588028217
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10034,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 380],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 400],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [320, 420],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [440, 480],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      288,
+      455
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      293,
+      392
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      328,
+      449
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      340,
+      506
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      456,
+      508
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 1,
+  "point_err": [
+   20.67903285939648,
+   14.7278240076394,
+   12.672363631146315
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10035,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [375, 530],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 530],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 560],\n      \"on\": \"orange\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      405,
+      546
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      512,
+      581
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      522,
+      521
+     ],
+     "on": "yellow"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "point_err": [
+   9.096109058273223,
+   7.443010143752319,
+   4.480000000000018,
+   13.33674622987181
+  ],
+  "point_match": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": true,
+  "seed": 10036,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 525],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 400],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 450],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 500],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      351,
+      539
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      595,
+      486
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      607,
+      450
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      611,
+      388
+     ],
+     "on": "yellow"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [
+   "purple"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 0,
+  "point_err": [
+   3.073499633967782
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10037,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [700, 350], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      682,
+      407
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      697,
+      355
+     ],
+     "on": "purple"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "point_err": [
+   6.750407395113302,
+   10.86116015902536,
+   10.78665842603723,
+   18.65904606350497
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10038,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [375, 360],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [425, 580],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 340],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 300],\n      \"on\": \"green\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      387,
+      376
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      426,
+      594
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      589,
+      376
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      591,
+      319
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   20.590327826433462,
+   6.840818664458246,
+   14.644152416579136
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10039,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [430, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [430, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [620, 550],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      449,
+      417
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      455,
+      477
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      622,
+      564
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   10.918754507726591,
+   2.734081198501605
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10040,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [420, 350], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [580, 600], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      434,
+      363
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      584,
+      602
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 4,
+  "point_err": [
+   7.437849151468466,
+   3.235799746585057,
+   33.632365364333225,
+   6.071573107523285
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "all_ok": false,
+  "seed": 10041,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [450, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [450, 550],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 400],\n      \"on\": \"blue\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      461,
+      555
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      473,
+      613
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      595,
+      401
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      462
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 4,
+  "point_err": [
+   9.895453501482402,
+   22.704783636934312,
+   14.11722352305864,
+   6.988905493709301
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10042,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [410, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [410, 320],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [530, 380],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      298,
+      467
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      397
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      416,
+      339
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      533,
+      394
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   9.6,
+   21.19320645867443,
+   6.840818664458246
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10043,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 312],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [416, 583],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      342,
+      328
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      355,
+      383
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      418,
+      597
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   4.705741174352867,
+   2.3075528162969277
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10044,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [375, 475], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [530, 430], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      382,
+      478
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      528,
+      434
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 3,
+  "point_err": [
+   9.056621886774352,
+   8.586501033599212,
+   11.801016905334906
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10045,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [312, 398], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [312, 583], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [375, 612], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      324,
+      591
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      324,
+      408
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      389,
+      628
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 1,
+  "point_err": [
+   19.767609870695065,
+   25.7376300385253,
+   11.322755848290644,
+   34.56333317259782
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10046,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 280],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 310],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 340],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [380, 510],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      313,
+      296
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      325,
+      352
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      333,
+      397
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      407,
+      530
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   6.3032689931495,
+   5.900508452667464
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10047,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [375, 425], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [500, 400], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      379,
+      437
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      507,
+      408
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 3,
+  "point_err": [
+   6.4715994931701175,
+   12.093502387646017,
+   18.43336106085921,
+   50.165805086732156,
+   41.59999999999998
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10048,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [288, 638],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 310],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 345],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 380],\n      \"on\": \"red\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      316,
+      647
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      510,
+      377
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      517,
+      321
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      552,
+      397
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      553,
+      457
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   14.644152416579097,
+   8.095430810031031
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10049,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [375, 585], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [550, 485], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      394,
+      602
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      554,
+      501
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "point_err": [
+   10.694895978923771,
+   4.998559792580254,
+   17.545369759569066,
+   6.52870584419301
+  ],
+  "point_match": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10050,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 630],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [440, 430],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [640, 610],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 380],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      305,
+      645
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      453,
+      444
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      643,
+      623
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      675,
+      388
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 2,
+  "point_err": [
+   15.179776019427962,
+   27.926761358954593,
+   55.7250392552576,
+   47.6748990560022
+  ],
+  "point_match": 1,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10051,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [420, 300],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [420, 320],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [420, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [420, 470],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      438,
+      373
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      440,
+      317
+     ],
+     "on": "green"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      475,
+      560
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      483,
+      503
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 0,
+  "point_err": [
+   16.03835403026135,
+   40.26694922638168,
+   31.111258412349706
+  ],
+  "point_match": 1,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10052,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [300, 400], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [310, 420], \"on\": \"red\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [320, 440], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      322,
+      416
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      340,
+      471
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      351,
+      513
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   11.735757325371043,
+   24.57602083332449,
+   10.694895978923771
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10053,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [490, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 420],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      513,
+      391
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      513,
+      336
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      642,
+      442
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "point_err": [
+   6.4715994931701175,
+   10.41844518150383,
+   20.321889675913503,
+   17.76000000000001,
+   26.573972228479505
+  ],
+  "point_match": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10054,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [400, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 475],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 425],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 475],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      410,
+      373
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      454,
+      467
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      462,
+      528
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      639,
+      491
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      659,
+      410
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 2,
+  "point_err": [
+   21.337666226651876,
+   7.706620530427087,
+   5.16975821484914,
+   26.232681906354912,
+   6.146999267935528
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10055,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [410, 340],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [410, 370],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [410, 400],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [600, 520],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [700, 520],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      418,
+      352
+     ],
+     "on": "green"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      420,
+      453
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      426,
+      409
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      530
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      706,
+      530
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "blue"
+  ],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   2.307552816296951,
+   12.672363631146332,
+   20.590327826433462
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10056,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [350, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [700, 400],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      368,
+      411
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      552,
+      546
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      668,
+      429
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      675,
+      373
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   23.044999457582964,
+   42.549171554802314,
+   18.560000000000002,
+   29.62420631848219,
+   46.8250872930313
+  ],
+  "point_match": 1,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10057,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [380, 340],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [385, 350],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [395, 360],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [440, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [445, 400],\n      \"on\": \"yellow\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      403,
+      448
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      406,
+      389
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      409,
+      340
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      458,
+      496
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      461,
+      435
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   3.3600000000000136,
+   10.651722865339666,
+   5.900508452667464
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10058,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [733, 610],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [545, 520],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [585, 390],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      559,
+      532
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      592,
+      398
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      733,
+      617
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [
+   "red",
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 0,
+  "point_err": [],
+  "point_match": 0,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10059,
+  "dim": true,
+  "output": "{\n  \"objects\": []\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      505,
+      443
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      508,
+      386
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [
+   "brown"
+  ],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   24.762810825913935,
+   26.361183584960695
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10060,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 450],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"brown\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 400],\n      \"on\": \"orange\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      479,
+      539
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      482,
+      479
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 1,
+  "point_err": [
+   3.235799746585089,
+   11.94011725235562
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10061,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [398, 438], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [398, 478], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      403,
+      437
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      408,
+      499
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   3.3408980828513593,
+   7.916362801185891,
+   20.65177958433607
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10062,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 388], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 420], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [675, 388], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      578,
+      404
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      582,
+      462
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      670,
+      390
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [
+   "blue"
+  ],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 0,
+  "point_err": [
+   7.228388478768994
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10063,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [610, 360], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      616,
+      424
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      620,
+      367
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   20.412388395285873,
+   3.853310265213533
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10064,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [430, 550], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [600, 420], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      461,
+      560
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      596,
+      426
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   22.322723848132878,
+   14.622284363258698
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10065,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [280, 380], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [280, 420], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      301,
+      392
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      306,
+      451
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   22.040544457884884,
+   4.293250516799606
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10066,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [350, 480], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [520, 390], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      381,
+      500
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      523,
+      398
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   10.78665842603723,
+   4.319999999999993,
+   17.892121171063,
+   8.586501033599149,
+   4.305159695063576
+  ],
+  "point_match": 5,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10067,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [280, 540],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [370, 420],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [370, 470],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [490, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 360],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      302,
+      563
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      370,
+      429
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      379,
+      489
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      502,
+      458
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      605,
+      366
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 4,
+  "point_err": [
+   15.413241060854132,
+   14.271425997425768,
+   16.516464512721853,
+   9.056621886774352,
+   6.589203290231667
+  ],
+  "point_match": 5,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10068,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [375, 425],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [425, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [400, 475],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [410, 525],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [575, 590],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      387,
+      435
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      421,
+      485
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      431,
+      545
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      441,
+      404
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      580,
+      602
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [
+   "yellow"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 1,
+  "point_err": [
+   11.00283599805067,
+   13.745108220745287
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10069,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [333, 300], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [375, 500], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      346,
+      315
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      348,
+      368
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      384,
+      526
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   13.349217205514314,
+   16.79999999999999
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10070,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [333, 550], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [733, 550], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      354,
+      571
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      728,
+      577
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "yellow"
+  ],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   15.479534876733199,
+   7.497839688870388,
+   13.920000000000003
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10071,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [320, 480],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 620],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 370],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      343,
+      547
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      344,
+      484
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      565,
+      641
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      641,
+      380
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 4,
+  "point_err": [
+   10.752190474503333,
+   7.681666485860957,
+   12.739858711932396,
+   8.89116415324789,
+   9.997119585160526
+  ],
+  "point_match": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10072,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [298, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [430, 460],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [510, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [570, 350],\n      \"on\": \"yellow\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [580, 310],\n      \"on\": \"orange\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      308,
+      466
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      440,
+      478
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      517,
+      396
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      566,
+      376
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      573,
+      323
+     ],
+     "on": "orange"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 0,
+  "point_err": [
+   33.024015503872334,
+   23.81421424275846,
+   24.615052305449208,
+   9.163405480496861,
+   25.033737235978172
+  ],
+  "point_match": 2,
+  "n_stacked": 3,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10073,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 275],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 300],\n      \"on\": \"yellow cube\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 325],\n      \"on\": \"purple cube\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [667, 475],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [667, 500],\n      \"on\": \"orange cube\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      346,
+      283
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      356,
+      339
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      364,
+      380
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      688,
+      544
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      704,
+      489
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [
+   "blue"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 0,
+  "point_err": [
+   1.9790907002964901
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10074,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [725, 500], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      714,
+      558
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      728,
+      501
+     ],
+     "on": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "red"
+  ],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   9.997119585160526,
+   3.8698837191832776,
+   19.627898512066952
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10075,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [275, 480],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [400, 480],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 350],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      285,
+      496
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      420,
+      511
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      637,
+      407
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      644,
+      351
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 5,
+  "point_err": [
+   18.18377298582447,
+   25.033737235978172,
+   17.623257360658393,
+   19.127864491364427,
+   24.58799707174214
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10076,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 450],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [550, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 400],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      321,
+      494
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      325,
+      418
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      524,
+      418
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      580,
+      382
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      609,
+      438
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [
+   "brown"
+  ],
+  "pos_ok": 3,
+  "on_ok": 2,
+  "point_err": [
+   21.158752326165175,
+   12.169469996676133,
+   15.571872077563457
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10077,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 425],\n      \"on\": \"orange\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 475],\n      \"on\": \"brown\"\n    },\n    {\n      \"color\": \"brown\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [450, 525],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      446,
+      457
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      448,
+      519
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      469,
+      374
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 3,
+  "point_err": [
+   4.874094787752887,
+   9.988152982408701,
+   19.46484009695429,
+   7.199999999999989
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10078,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [467, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [467, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 600],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      340,
+      379
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      472,
+      415
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      476,
+      358
+     ],
+     "on": "red"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      600,
+      615
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 4,
+  "point_err": [
+   7.018147903827611,
+   14.382211234716317,
+   11.537764081484763,
+   16.765679228710084
+  ],
+  "point_match": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10079,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [300, 375], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [400, 410], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [550, 380], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [750, 575], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      317,
+      383
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      419,
+      426
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      558,
+      390
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      726,
+      589
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   1.2800000000000296,
+   15.54636935107359
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10080,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 625],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [499, 480],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      475,
+      630
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      497,
+      480
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   19.49178288407706,
+   12.093502387646017,
+   5.102469990112603
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10081,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [333, 433],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [533, 533],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [666, 383],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      363,
+      440
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      550,
+      522
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      672,
+      390
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "point_err": [
+   3.8698837191832776,
+   13.977810987418586
+  ],
+  "point_match": 2,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10082,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 530], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 560], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      569,
+      588
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      581,
+      531
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 2,
+  "point_err": [
+   10.95620372209279,
+   5.102469990112622,
+   31.452923552509382,
+   19.210663705348637,
+   21.106056002958013
+  ],
+  "point_match": 5,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10083,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 300],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 350],\n      \"on\": \"green\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [300, 400],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [500, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 350],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      315,
+      311
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      326,
+      370
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      331,
+      415
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      535,
+      396
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      606,
+      357
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   8.850762679001162,
+   6.840818664458218
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10084,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [630, 430], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [650, 370], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      627,
+      448
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      652,
+      384
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 4,
+  "point_err": [
+   8.61031939012717,
+   8.552145929531397,
+   0.6399999999999864,
+   14.622284363258698
+  ],
+  "point_match": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10085,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [450, 480],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [520, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [600, 420],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 580],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      471,
+      492
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      519,
+      380
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      610,
+      432
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      676,
+      597
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 3,
+  "point_err": [
+   24.606730786514504,
+   12.29399853587107,
+   26.068218197644455,
+   10.880000000000022,
+   25.914567331908138
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10086,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [500, 380],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [580, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [580, 420],\n      \"on\": \"purple\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [580, 480],\n      \"on\": \"blue\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 580],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      536,
+      398
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      592,
+      370
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      594,
+      429
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      469
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      608,
+      600
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "point_err": [
+   10.974880409371206,
+   7.606313167363034
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10087,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [288, 488], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [688, 538], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      305,
+      485
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      677,
+      544
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 2,
+  "point_err": [
+   5.839452029086283,
+   19.491782884077086
+  ],
+  "point_match": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10088,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [500, 550], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [650, 420], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      524,
+      575
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      659,
+      422
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   8.019177015130662,
+   1.2799999999999727,
+   9.895453501482375
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10089,
+  "dim": true,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [350, 400],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [375, 625],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [600, 500],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      361,
+      408
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      390,
+      630
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      602,
+      500
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   8.850762679001166,
+   23.602033810669784,
+   15.806833965092435,
+   11.195427638102968
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10090,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [533, 333],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [533, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [583, 450],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [583, 483],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      542,
+      347
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      546,
+      403
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      591,
+      531
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      592,
+      470
+     ],
+     "on": "red"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 1,
+  "point_err": [
+   13.934704876673912,
+   6.303268993149502
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10091,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [598, 348], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [598, 388], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      417
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      602,
+      360
+     ],
+     "on": "orange"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   3.853310265213533,
+   21.68516543630691,
+   2.0238577025077467,
+   12.310645799469652
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "all_ok": false,
+  "seed": 10092,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"blue\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [298, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [600, 375],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [610, 375],\n      \"on\": \"red\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [650, 375],\n      \"on\": \"purple\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      315,
+      387
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      420
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      606,
+      369
+     ],
+     "on": "red"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      651,
+      371
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 1,
+  "point_err": [
+   3.073499633967782,
+   9.732420048477145,
+   4.967735902803211
+  ],
+  "point_match": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10093,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [283, 523], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [630, 333], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [630, 383], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      294,
+      537
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      627,
+      378
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      628,
+      323
+     ],
+     "on": "purple"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 5,
+  "point_err": [
+   0.6399999999999864,
+   4.293250516799632,
+   7.739767438366594,
+   5.768882040742386,
+   15.987995496621808
+  ],
+  "point_match": 5,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10094,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"red\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [420, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [520, 470],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [670, 490],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [690, 430],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [680, 600],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      443,
+      563
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      521,
+      470
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      664,
+      494
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      685,
+      610
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      696,
+      444
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 5,
+  "missed": [
+   "red",
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 1,
+  "point_err": [
+   9.472486473994042,
+   1.4399999999999977,
+   24.972817221931567
+  ],
+  "point_match": 3,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10095,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [380, 590],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [490, 490],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [670, 490],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      415,
+      613
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      494,
+      509
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      502,
+      570
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      660,
+      552
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      670,
+      493
+     ],
+     "on": "green"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 1,
+  "point_err": [
+   10.575745836582891,
+   23.133698364074867
+  ],
+  "point_match": 1,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10096,
+  "dim": false,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [388, 300], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [388, 330], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      393,
+      321
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      396,
+      377
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 4,
+  "missed": [
+   "orange",
+   "blue"
+  ],
+  "extra": [],
+  "pos_ok": 1,
+  "on_ok": 0,
+  "point_err": [
+   16.84869134384034,
+   2.7200000000000055
+  ],
+  "point_match": 2,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10097,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"purple\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [250, 550],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [380, 350],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      252,
+      585
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      274,
+      639
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      378,
+      355
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      381,
+      410
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "point_err": [
+   8.811628680329209,
+   7.606313167363034,
+   10.956203722092829
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": false,
+  "seed": 10098,
+  "dim": true,
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [367, 512], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [575, 612], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [667, 520], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      379,
+      521
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      590,
+      623
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      656,
+      526
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ },
+ {
+  "parsed": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "point_err": [
+   11.748838240438928,
+   9.947059867116492,
+   10.879999999999997
+  ],
+  "point_match": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "all_ok": true,
+  "seed": 10099,
+  "dim": false,
+  "output": "{\n  \"objects\": [\n    {\n      \"color\": \"yellow\",\n      \"shape\": \"cube\",\n      \"position\": \"left\",\n      \"point\": [312, 350],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"orange\",\n      \"shape\": \"cube\",\n      \"position\": \"center\",\n      \"point\": [412, 500],\n      \"on\": \"table\"\n    },\n    {\n      \"color\": \"green\",\n      \"shape\": \"cube\",\n      \"position\": \"right\",\n      \"point\": [588, 380],\n      \"on\": \"table\"\n    }\n  ]\n}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      326,
+      359
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      428,
+      512
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      580,
+      400
+     ],
+     "on": "table"
+    }
+   ]
+  }
+ }
+]
