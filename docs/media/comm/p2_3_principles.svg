@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="600" viewBox="0 0 680 600" role="img"><title>ROS 2 话题、服务、动作的工作原理</title><desc>话题一对多广播；服务一问一答；动作五个步骤</desc><style>.k-t{font:400 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-ts{font:400 12px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#5F5E5A}.k-th{font:500 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-box{fill:#F1EFE8;stroke:#B4B2A9}.k-arr{fill:none;stroke:#888780;stroke-width:1.5}.k-badge{font:500 11px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#FFFFFF}.k-purple>rect,rect.k-purple{fill:#EEEDFE;stroke:#534AB7}.k-purple>.k-th{fill:#3C3489}.k-purple>.k-ts{fill:#534AB7}.k-teal>rect,rect.k-teal{fill:#E1F5EE;stroke:#0F6E56}.k-teal>.k-th{fill:#085041}.k-teal>.k-ts{fill:#0F6E56}.k-coral>rect,rect.k-coral{fill:#FAECE7;stroke:#993C1D}.k-coral>.k-th{fill:#712B13}.k-coral>.k-ts{fill:#993C1D}.k-gray>rect,rect.k-gray{fill:#F1EFE8;stroke:#5F5E5A}.k-gray>.k-th{fill:#444441}.k-gray>.k-ts{fill:#5F5E5A}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#D85A30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="0" y="0" width="680" height="600" rx="12" fill="#FFFFFF"/>
+
+<rect x="40" y="30" width="600" height="146" rx="12" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-th" x="56" y="50" dominant-baseline="central">话题：一对多广播</text>
+<g class="k-purple"><rect x="60" y="80" width="170" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="145" y="102" text-anchor="middle" dominant-baseline="central">Gazebo 桥（发布）</text></g>
+<text class="k-ts" x="340" y="72" text-anchor="middle" dominant-baseline="central">/model/my_robot/odometry</text>
+<line x1="230" y1="96" x2="448" y2="92" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#aT)"/>
+<line x1="230" y1="110" x2="448" y2="138" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#aT)"/>
+<g class="k-purple"><rect x="450" y="70" width="170" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="535" y="92" text-anchor="middle" dominant-baseline="central">规划节点（订阅）</text></g>
+<g class="k-purple"><rect x="450" y="120" width="170" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="535" y="142" text-anchor="middle" dominant-baseline="central">跟踪节点（订阅）</text></g>
+<text class="k-ts" x="60" y="146" dominant-baseline="central">发了就不管，不等回复</text>
+<text class="k-ts" x="60" y="164" dominant-baseline="central">例：/cmd_vel、/joint_states</text>
+<rect x="40" y="192" width="600" height="132" rx="12" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-th" x="56" y="212" dominant-baseline="central">服务：一问一答</text>
+<g class="k-purple"><rect x="60" y="236" width="170" height="52" rx="8" stroke-width="0.5"/><text class="k-th" x="145" y="254" text-anchor="middle" dominant-baseline="central">客户端</text><text class="k-ts" x="145" y="272" text-anchor="middle" dominant-baseline="central">pick_place</text></g>
+<g class="k-purple"><rect x="450" y="236" width="170" height="52" rx="8" stroke-width="0.5"/><text class="k-th" x="535" y="254" text-anchor="middle" dominant-baseline="central">服务端</text><text class="k-ts" x="535" y="272" text-anchor="middle" dominant-baseline="central">move_group</text></g>
+<text class="k-ts" x="340" y="234" text-anchor="middle" dominant-baseline="central">请求：位姿 + IK 起点</text>
+<line x1="230" y1="248" x2="448" y2="248" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<line x1="450" y1="276" x2="232" y2="276" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<text class="k-ts" x="340" y="292" text-anchor="middle" dominant-baseline="central">回复：一组关节角</text>
+<text class="k-ts" x="60" y="310" dominant-baseline="central">调用方等到回复才继续 · 例：/compute_ik</text>
+<rect x="40" y="340" width="600" height="230" rx="12" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-th" x="56" y="360" dominant-baseline="central">动作：长任务，有进度、能取消</text>
+<g class="k-purple"><rect x="60" y="380" width="170" height="140" rx="8" stroke-width="0.5"/><text class="k-th" x="145" y="440" text-anchor="middle" dominant-baseline="central">动作客户端</text><text class="k-ts" x="145" y="460" text-anchor="middle" dominant-baseline="central">move_group</text></g>
+<g class="k-purple"><rect x="450" y="380" width="170" height="140" rx="8" stroke-width="0.5"/><text class="k-th" x="535" y="440" text-anchor="middle" dominant-baseline="central">动作服务端</text><text class="k-ts" x="535" y="460" text-anchor="middle" dominant-baseline="central">轨迹控制器</text></g>
+<text class="k-ts" x="340" y="390" text-anchor="middle" dominant-baseline="central">① 发送目标：整条轨迹（服务）</text>
+<line x1="230" y1="402" x2="448" y2="402" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<text class="k-ts" x="340" y="416" text-anchor="middle" dominant-baseline="central">② 接受 / 拒绝</text>
+<line x1="450" y1="428" x2="232" y2="428" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<text class="k-ts" x="340" y="442" text-anchor="middle" dominant-baseline="central">③ 反馈：当前进度（话题，多次）</text>
+<line x1="450" y1="454" x2="232" y2="454" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#aT)"/>
+<text class="k-ts" x="340" y="468" text-anchor="middle" dominant-baseline="central">④ 可选：取消 = 急停（服务）</text>
+<line x1="230" y1="480" x2="448" y2="480" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<text class="k-ts" x="340" y="494" text-anchor="middle" dominant-baseline="central">⑤ 结果：成功 / 中止（服务）</text>
+<line x1="450" y1="506" x2="232" y2="506" stroke="#D85A30" stroke-width="1.5" marker-end="url(#aC)"/>
+<text class="k-ts" x="60" y="548" dominant-baseline="central">底层 = 3 个服务 + 2 个话题拼起来 · 例：FollowJointTrajectory</text>
+<circle cx="72" cy="80" r="9" fill="#444441"/><text class="k-badge" x="72" y="80" text-anchor="middle" dominant-baseline="central">1</text><circle cx="72" cy="236" r="9" fill="#444441"/><text class="k-badge" x="72" y="236" text-anchor="middle" dominant-baseline="central">2</text><circle cx="72" cy="380" r="9" fill="#444441"/><text class="k-badge" x="72" y="380" text-anchor="middle" dominant-baseline="central">3</text></svg>

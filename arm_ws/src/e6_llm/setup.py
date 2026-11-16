@@ -25,6 +25,7 @@ setup(
         "console_scripts": [
             "planner_node = e6_llm.planner_node:main",
             "text_input = e6_llm.text_input:main",
+            "voice_input = e6_llm.voice_input:main",
         ],
     },
 )

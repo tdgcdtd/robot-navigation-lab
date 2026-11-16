@@ -14,6 +14,7 @@
 8. [踩过的坑](#8-踩过的坑)
 9. [局限与改进方向](#9-局限与改进方向)
 10. [面试问答](#10-面试问答)
+11. [通信图解](#11-通信图解)
 
 ---
 
@@ -350,6 +351,63 @@ MoveIt 给的轨迹点很稀疏（约 0.1 s 一个、间隔不均），电机需
 
 **Q21. KDL 迭代求 IK 时，"初始猜测"有什么影响？**
 迭代法从初始猜测出发，每步只在当前角度附近修正误差，所以收敛到离初始猜测最近的那组解。两节臂到 (1, 1)：从 (20°, 60°) 出发收敛到 (0°, 90°)，从 (70°, −60°) 出发收敛到 (90°, −90°)。默认用当前姿态作初始猜测；pick_place 里第 1 次用当前姿态、之后随机，就是为了找出多组不同的解来试算。
+
+---
+
+## 11. 通信图解
+
+> 图中的数字徽章对应下面的同号问答。图在 `docs/media/comm/`。
+
+### 11.1 谁和谁在通信：话题、服务、动作
+
+![P2 通信图](media/comm/p2_1_graph.svg)
+
+1. **pick_place 里，MoveGroupInterface 的函数分别对应哪个通信？**
+   `plan()` → `/move_action` 动作（只规划不执行）；`execute()` → `/execute_trajectory` 动作；`computeCartesianPath()` → `/compute_cartesian_path` 服务；`attachObject()` / `detachObject()` → `/attached_collision_object` 话题。我们自己写的试算和布置场景，直接调 `/compute_ik`、`/apply_planning_scene` 服务。
+2. **`/move_action` 的目标、反馈、结果分别是什么？**
+   目标：规划组 `me6_group`、起点（当前状态）、目标约束（关节角或位姿）、速度比例、规划时间，以及"只规划"标志。反馈：当前阶段（规划中、监控中……）。结果：错误码（1 = SUCCESS）、规划出的轨迹、用时。
+3. **`/execute_trajectory` 是怎么把轨迹交给控制器的？**
+   我们把 plan 得到的轨迹作为目标发给 move_group；move_group 的轨迹执行管理器按 `moveit_controllers.yaml` 找到负责这 6 个关节的控制器 `me6_group_controller`，向它发 FollowJointTrajectory 动作、监控执行，结束后把结果传回给我们。
+4. **三个服务的请求和回复里分别有什么？**
+   `/compute_ik`：请求 = 规划组 + 末端位姿 + 初始猜测 + 是否检查碰撞 + 超时；回复 = 错误码 + 一组关节角。`/compute_cartesian_path`：请求 = 起始状态 + 路点 + 步长（5 mm）；回复 = 轨迹 + fraction（直线中可行的比例）。`/apply_planning_scene`：请求 = 要加入的物体（形状、尺寸、位置）；回复 = success。
+5. **move_group 内部是怎么组织的？**
+   一个节点里拼装了一组插件：KDL 插件做 IK，OMPL 插件做规划（RRTConnect），规划前后有一串"请求适配器"（修正起点、加时间参数等）；PlanningSceneMonitor 维护规划场景（订阅 `/joint_states` 更新姿态、接收我们加的物体）并做碰撞检测；TrajectoryExecutionManager 管执行。插件和参数都来自 `me6_moveit` 配置包。
+6. **FollowJointTrajectory 的目标、反馈、结果是什么？为什么急停要靠取消？**
+   目标：关节名 + 一串轨迹点（每点 6 个角度、速度、到达时刻）。反馈：期望位置、实际位置、误差。结果：错误码（成功、跟踪误差过大、被取消等）。执行要好几秒，只有动作能在中途取消：发出取消后控制器停止跟随轨迹、保持当前位置，这就是软件层面的"急停"。
+7. **给 RViz 的话题 `/display_planned_path` 和 `/monitored_planning_scene` 是什么？**
+   `/display_planned_path`：每次规划成功，move_group 把轨迹发出来，RViz 播放成半透明机械臂动画（"白色虚影"之一）。`/monitored_planning_scene`：move_group 维护的整个场景（机器人当前姿态 + 桌子、箱子、方块 + 抓着的物体），RViz 照着画出来。
+8. **轨迹控制器怎么 100 Hz 插值、驱动 Gazebo 里的电机？**
+   controller_manager 每 10 ms 调用一次 `me6_group_controller`：按当前时刻在相邻两个轨迹点之间做样条插值，算出 6 个关节此刻应在的角度，写入 position 命令接口；`gazebo_ros2_control` 插件把命令交给 Gazebo 里的关节，再把实际角度和速度读回状态接口。P3 换成越疆的 `action_move_server`，逐点发 ServoJ 指令给真机。
+9. **RViz 显示的机械臂姿态是从哪来的？**
+   实际姿态：`/joint_states` → robot_state_publisher → `/tf`，再加上 move_group 的规划场景。规划动画来自 `/display_planned_path`。拖动小球时的橙色目标，是 RViz 的 MotionPlanning 插件自己求 IK 得到的，和我们的程序无关。
+10. **`/joint_states` 里有什么？move_group 为什么必须订阅它？**
+    6 个关节的名字、角度、速度，由 `joint_state_broadcaster` 从硬件状态接口读出后发布（P3 里由驱动从 30004 端口解析）。move_group 靠它知道"现在在哪"：规划的起点、直线路径的起点、`getCurrentPose()` 都依赖它；收不到的话，规划会从错误的起点开始。
+11. **robot_state_publisher 怎么用 URDF 和关节角算出 TF？**
+    启动时读 URDF，记下每个关节的固定 origin 和转轴；每收到一次 `/joint_states`，就对每个关节算"origin × 绕轴转关节角"，把每一节相对父节点的变换发到 `/tf`（fixed 关节只发一次到 `/tf_static`）。这正是手写 FK 里每个关节的那一步；它不做连乘，连乘由使用 TF 的一方去做。
+
+### 11.2 抓一个方块的消息时序
+
+![P2 时序](media/comm/p2_2_sequence.svg)
+
+1. **move_group 收到规划目标后，"RRT 规划 + 加时间"具体做了什么？**
+   RRTConnect 在 6 维关节空间里从起点、终点各长一棵随机树，连上后得到一串关节角（还没有时间）；接着简化路径，剪掉多余拐点；最后做"时间参数化"（AddTimeOptimalParameterization）：按关节速度、加速度上限 × 我们设的缩放比例，给每个点算出到达时刻和速度，轨迹才能执行。
+2. **执行中的反馈是什么？中途取消会怎样？**
+   反馈里有每个关节的期望角度、实际角度和误差，move_group 用它监控执行（误差太大会判定失败）。取消时控制器停止跟随轨迹、保持当前位置，结果返回"已取消"，我们的 `execute()` 返回失败，`&&` 链后面的步骤都不再执行。
+3. **抓住之后，抬起、翻箱子、放下、detach 各用了哪种通信？**
+   抬起和放下：`computeCartesianPath`（服务）+ `execute`（动作）。翻箱子：先试算（`/compute_ik`、`/compute_cartesian_path` 服务），再 `plan`（`/move_action`）+ `execute`（`/execute_trajectory` → FollowJointTrajectory）。detach：`/attached_collision_object` 话题。回 home：`plan` + `execute`。
+
+### 11.3 原理：话题、服务、动作
+
+所有节点在同一个 `ROS_DOMAIN_ID` 里（P2 的容器设为 42），通过 DDS 中间件自动发现彼此；话题名、消息类型、QoS 都对得上，才会连通。
+
+![ROS 2 通信原理](media/comm/p2_3_principles.svg)
+
+1. **话题的发布者怎么知道有哪些订阅者？DDS 自动发现是怎么回事？**
+   发布者不需要知道。每个节点启动时，DDS 在同一个 `ROS_DOMAIN_ID` 的网络里广播"我是谁、发布 / 订阅哪些话题、什么类型"，彼此记下能匹配的对象，之后数据直接点对点发送。话题名、消息类型、QoS 任何一项不匹配，都会"静默收不到"，不报错。
+2. **服务调用时客户端为什么会阻塞？什么情况适合用服务？**
+   服务就是"发请求、等回复"，调用函数通常要等回复到了才返回，所以调用方停在那一行（我们的 `solveIk` 用 `future.wait_for` 加了 2 秒超时，防止一直等下去）。适合很快能答完、又必须拿到答案才能继续的事：查询、计算（IK）、修改配置（往场景里加物体）。耗时长的任务用动作。
+3. **动作底层是由哪几个服务和话题组成的？**
+   3 个服务：`send_goal`（发目标，回复接受 / 拒绝）、`cancel_goal`（取消）、`get_result`（取结果）；2 个话题：`feedback`（进度，多次）、`status`（各个目标的状态）。动作就是把这 5 个通信按约定组合起来，客户端库替你管理目标从发出到结束的整个过程。
 
 ---
 

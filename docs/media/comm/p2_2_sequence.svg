@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="850" viewBox="0 0 680 850" role="img"><title>P2 pick_place 抓取一个方块的消息时序</title><desc>布置场景、回 home、试算姿态、下降抓取</desc><style>.k-t{font:400 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-ts{font:400 12px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#5F5E5A}.k-th{font:500 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-box{fill:#F1EFE8;stroke:#B4B2A9}.k-arr{fill:none;stroke:#888780;stroke-width:1.5}.k-badge{font:500 11px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#FFFFFF}.k-purple>rect,rect.k-purple{fill:#EEEDFE;stroke:#534AB7}.k-purple>.k-th{fill:#3C3489}.k-purple>.k-ts{fill:#534AB7}.k-teal>rect,rect.k-teal{fill:#E1F5EE;stroke:#0F6E56}.k-teal>.k-th{fill:#085041}.k-teal>.k-ts{fill:#0F6E56}.k-coral>rect,rect.k-coral{fill:#FAECE7;stroke:#993C1D}.k-coral>.k-th{fill:#712B13}.k-coral>.k-ts{fill:#993C1D}.k-gray>rect,rect.k-gray{fill:#F1EFE8;stroke:#5F5E5A}.k-gray>.k-th{fill:#444441}.k-gray>.k-ts{fill:#5F5E5A}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#D85A30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="0" y="0" width="680" height="850" rx="12" fill="#FFFFFF"/>
+
+<line x1="120" y1="84" x2="120" y2="766" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="340" y1="84" x2="340" y2="766" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="560" y1="84" x2="560" y2="766" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<g class="k-purple"><rect x="45" y="40" width="150" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="120" y="62" text-anchor="middle" dominant-baseline="central">pick_place</text></g>
+<g class="k-purple"><rect x="265" y="40" width="150" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="340" y="62" text-anchor="middle" dominant-baseline="central">move_group</text></g>
+<g class="k-gray"><rect x="485" y="40" width="150" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="560" y="62" text-anchor="middle" dominant-baseline="central">控制器 + Gazebo</text></g>
+<rect x="40" y="96" width="600" height="90" rx="8" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-ts" x="52" y="112" dominant-baseline="central">布置场景</text>
+<text class="k-ts" x="230" y="116" text-anchor="middle" dominant-baseline="central">服务请求：桌子、箱子、方块</text>
+<line x1="120" y1="130" x2="338" y2="130" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="152" text-anchor="middle" dominant-baseline="central">回复：success</text>
+<line x1="340" y1="166" x2="122" y2="166" class="k-arr" marker-end="url(#arrow)"/>
+<rect x="40" y="198" width="600" height="282" rx="8" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-ts" x="52" y="214" dominant-baseline="central">回 home</text>
+<text class="k-ts" x="230" y="236" text-anchor="middle" dominant-baseline="central">/move_action：目标 home</text>
+<line x1="120" y1="250" x2="338" y2="250" class="k-arr" marker-end="url(#arrow)"/>
+<g><rect class="k-box" x="260" y="262" width="160" height="30" rx="6" stroke-width="0.5"/><text class="k-ts" x="340" y="277" text-anchor="middle" dominant-baseline="central">RRT 规划 + 加时间</text></g>
+<text class="k-ts" x="230" y="312" text-anchor="middle" dominant-baseline="central">结果：一条轨迹</text>
+<line x1="340" y1="326" x2="122" y2="326" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="348" text-anchor="middle" dominant-baseline="central">/execute_trajectory</text>
+<line x1="120" y1="362" x2="338" y2="362" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="450" y="384" text-anchor="middle" dominant-baseline="central">FollowJointTrajectory</text>
+<line x1="340" y1="398" x2="558" y2="398" class="k-arr" marker-end="url(#arrow)"/>
+<g><rect class="k-box" x="480" y="408" width="160" height="30" rx="6" stroke-width="0.5"/><text class="k-ts" x="560" y="423" text-anchor="middle" dominant-baseline="central">约 4 s · 持续反馈</text></g>
+<text class="k-ts" x="450" y="454" text-anchor="middle" dominant-baseline="central">结果：成功（一路传回）</text>
+<line x1="560" y1="468" x2="122" y2="468" class="k-arr" marker-end="url(#arrow)"/>
+<rect x="40" y="490" width="600" height="170" rx="8" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-ts" x="52" y="506" dominant-baseline="central">试算姿态</text>
+<text class="k-ts" x="230" y="524" text-anchor="middle" dominant-baseline="central">/compute_ik：起点当前或随机</text>
+<line x1="120" y1="538" x2="338" y2="538" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="560" text-anchor="middle" dominant-baseline="central">回复：一组不碰撞的关节角</text>
+<line x1="340" y1="574" x2="122" y2="574" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="596" text-anchor="middle" dominant-baseline="central">/compute_cartesian_path</text>
+<line x1="120" y1="610" x2="338" y2="610" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="632" text-anchor="middle" dominant-baseline="central">回复：fraction 是否 100%</text>
+<line x1="340" y1="646" x2="122" y2="646" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="450" y="604" text-anchor="middle" dominant-baseline="central">不行就换起点再试</text>
+<text class="k-ts" x="450" y="622" text-anchor="middle" dominant-baseline="central">（最多 30 次）</text>
+<rect x="40" y="672" width="600" height="92" rx="8" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-ts" x="52" y="688" dominant-baseline="central">下降抓取</text>
+<text class="k-ts" x="230" y="702" text-anchor="middle" dominant-baseline="central">规划过去 + 直线下降</text>
+<line x1="120" y1="716" x2="338" y2="716" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="230" y="736" text-anchor="middle" dominant-baseline="central">话题：attach 方块</text>
+<line x1="120" y1="750" x2="338" y2="750" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="450" y="716" text-anchor="middle" dominant-baseline="central">执行同"回 home"</text>
+<g><rect class="k-box" x="60" y="780" width="560" height="36" rx="6" stroke-width="0.5"/><text class="k-ts" x="340" y="798" text-anchor="middle" dominant-baseline="central">之后：抬起 → 翻箱子 → 放下 → detach → 回 home，方式同上</text></g>
+<circle cx="272" cy="262" r="9" fill="#444441"/><text class="k-badge" x="272" y="262" text-anchor="middle" dominant-baseline="central">1</text><circle cx="492" cy="408" r="9" fill="#444441"/><text class="k-badge" x="492" y="408" text-anchor="middle" dominant-baseline="central">2</text><circle cx="72" cy="780" r="9" fill="#444441"/><text class="k-badge" x="72" y="780" text-anchor="middle" dominant-baseline="central">3</text></svg>
