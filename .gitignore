@@ -57,3 +57,5 @@ ml/**/ckpt/
 MUJOCO_LOG.TXT
 ml/**/results/log_*.txt
 ml/**/adapters/
+ml/m5_robot/assets/
+ml/m5_robot/*.log
