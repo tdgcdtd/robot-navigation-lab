@@ -9,6 +9,13 @@ services:
     container_name: rnl-arm
     command: sleep infinity          # 容器启动后一直待机，等我们 exec 进去
     init: true                       # 加一个小 init 进程：自动回收退出的子进程，避免僵尸进程越积越多
+    # C 项目摄像头：USB 摄像头经 usbipd 借给 WSL 后是 /dev/video0、/dev/video1 ……
+    # 映射整个 /dev + 只放行"视频设备"（主设备号 81）：摄像头晚插、拔掉重插都不用重建容器；
+    # 如果改成 devices: /dev/video0，摄像头没 attach 时整个容器都启动不了
+    device_cgroup_rules:
+      - "c 81:* rmw"
+    group_add:
+      - "44"                         # video 组：/dev/video* 只允许 root 和 video 组读写
     network_mode: host               # 和 WSL 共用网络：P3 连真机时直接能访问机械臂 IP
     environment:
       - DISPLAY=:0                   # 图形窗口画到 WSLg 的 X 服务器上
@@ -16,6 +23,7 @@ services:
       # 用 CPU 软件渲染：22.04 自带的 Mesa 太旧，走 WSL 的 GPU（D3D12）时 RViz 一启动就崩溃（exit code -11）
       - LIBGL_ALWAYS_SOFTWARE=1
       - DOBOT_TYPE=me6               # 官方包靠这个变量选型号：E6
+      - PULSE_SERVER=unix:/mnt/wslg/PulseServer   # C 项目语音：录音走 WSLg 的 PulseAudio（Windows 麦克风）
       - ROS_DOMAIN_ID=42             # 和主系统（Lyrical）的 ROS 隔开，避免两个版本互相收到消息
       # C 项目：大模型 API。值从 docker/.env 读取（这个文件已 gitignore，密钥不进仓库）；没写就是空的
       - LLM_API_KEY=${LLM_API_KEY:-}
@@ -23,4 +31,6 @@ services:
       - LLM_MODEL=${LLM_MODEL:-deepseek-chat}
     volumes:
       - /mnt/wslg/.X11-unix:/tmp/.X11-unix  # WSLg 的显示通道
+      - /mnt/wslg:/mnt/wslg              # WSLg 的音频通道（PulseServer 在这里）
+      - /dev:/dev                        # 摄像头设备（见上面 device_cgroup_rules）
       - ../arm_ws:/home/dev/arm_ws   # 挂载：WSL 里的 arm_ws 和容器里的是同一个目录

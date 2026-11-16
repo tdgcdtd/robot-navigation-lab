@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="600" viewBox="0 0 680 600" role="img"><title>P1 点击目标后的消息时序</title><desc>从点击目标到停车的消息顺序</desc><style>.k-t{font:400 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-ts{font:400 12px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#5F5E5A}.k-th{font:500 14px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#2C2C2A}.k-box{fill:#F1EFE8;stroke:#B4B2A9}.k-arr{fill:none;stroke:#888780;stroke-width:1.5}.k-badge{font:500 11px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Noto Sans SC',sans-serif;fill:#FFFFFF}.k-purple>rect,rect.k-purple{fill:#EEEDFE;stroke:#534AB7}.k-purple>.k-th{fill:#3C3489}.k-purple>.k-ts{fill:#534AB7}.k-teal>rect,rect.k-teal{fill:#E1F5EE;stroke:#0F6E56}.k-teal>.k-th{fill:#085041}.k-teal>.k-ts{fill:#0F6E56}.k-coral>rect,rect.k-coral{fill:#FAECE7;stroke:#993C1D}.k-coral>.k-th{fill:#712B13}.k-coral>.k-ts{fill:#993C1D}.k-gray>rect,rect.k-gray{fill:#F1EFE8;stroke:#5F5E5A}.k-gray>.k-th{fill:#444441}.k-gray>.k-ts{fill:#5F5E5A}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#D85A30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="0" y="0" width="680" height="600" rx="12" fill="#FFFFFF"/>
+
+<line x1="100" y1="84" x2="100" y2="580" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="253" y1="84" x2="253" y2="580" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="406" y1="84" x2="406" y2="580" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="560" y1="84" x2="560" y2="580" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 4"/>
+<g class="k-purple"><rect x="40" y="40" width="120" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="100" y="62" text-anchor="middle" dominant-baseline="central">rviz2</text></g>
+<g class="k-purple"><rect x="193" y="40" width="120" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="253" y="62" text-anchor="middle" dominant-baseline="central">规划节点</text></g>
+<g class="k-purple"><rect x="346" y="40" width="120" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="406" y="62" text-anchor="middle" dominant-baseline="central">跟踪节点</text></g>
+<g class="k-gray"><rect x="500" y="40" width="120" height="44" rx="8" stroke-width="0.5"/><text class="k-th" x="560" y="62" text-anchor="middle" dominant-baseline="central">Gazebo</text></g>
+<text class="k-ts" x="176" y="118" text-anchor="middle" dominant-baseline="central">/goal_pose：(4, 4)</text>
+<line x1="100" y1="132" x2="251" y2="132" class="k-arr" marker-end="url(#arrow)"/>
+<g><rect class="k-box" x="173" y="152" width="160" height="36" rx="6" stroke-width="0.5"/><text class="k-ts" x="253" y="170" text-anchor="middle" dominant-baseline="central">A* + 拉直（约 0.7 ms）</text></g>
+<text class="k-ts" x="330" y="214" text-anchor="middle" dominant-baseline="central">/planned_path：4 个点</text>
+<line x1="253" y1="228" x2="404" y2="228" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="176" y="250" text-anchor="middle" dominant-baseline="central">RViz 画出绿色路径</text>
+<line x1="253" y1="264" x2="102" y2="264" class="k-arr" marker-end="url(#arrow)"/>
+<rect x="60" y="290" width="580" height="186" rx="8" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text class="k-ts" x="74" y="306" dominant-baseline="central">每 0.1 s 重复（闭环）</text>
+<g><rect class="k-box" x="316" y="318" width="180" height="36" rx="6" stroke-width="0.5"/><text class="k-ts" x="406" y="336" text-anchor="middle" dominant-baseline="central">算误差 → P 控制出速度</text></g>
+<text class="k-ts" x="483" y="370" text-anchor="middle" dominant-baseline="central">/cmd_vel：前进 + 转向</text>
+<line x1="406" y1="384" x2="558" y2="384" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="483" y="404" text-anchor="middle" dominant-baseline="central">/odometry：新位置</text>
+<line x1="560" y1="418" x2="408" y2="418" class="k-arr" marker-end="url(#arrow)"/>
+<text class="k-ts" x="483" y="440" text-anchor="middle" dominant-baseline="central">规划节点也收：记住位置</text>
+<line x1="560" y1="456" x2="255" y2="456" class="k-arr" marker-end="url(#arrow)"/>
+<g><rect class="k-box" x="316" y="496" width="180" height="36" rx="6" stroke-width="0.5"/><text class="k-ts" x="406" y="514" text-anchor="middle" dominant-baseline="central">终点 &lt; 0.1 m → 到达</text></g>
+<text class="k-ts" x="483" y="548" text-anchor="middle" dominant-baseline="central">/cmd_vel = 0：停车</text>
+<line x1="406" y1="562" x2="558" y2="562" class="k-arr" marker-end="url(#arrow)"/>
+<circle cx="185" cy="152" r="9" fill="#444441"/><text class="k-badge" x="185" y="152" text-anchor="middle" dominant-baseline="central">1</text><circle cx="328" cy="318" r="9" fill="#444441"/><text class="k-badge" x="328" y="318" text-anchor="middle" dominant-baseline="central">2</text><circle cx="328" cy="496" r="9" fill="#444441"/><text class="k-badge" x="328" y="496" text-anchor="middle" dominant-baseline="central">3</text></svg>

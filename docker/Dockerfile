@@ -48,6 +48,23 @@ RUN apt-get update && apt-get install -y \
 RUN useradd -m -u 1000 -s /bin/bash dev \
     && echo "dev ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/dev
 
+# 第 6 步（C 项目语音输入）：录音工具 + 本地语音识别
+#   pulseaudio-utils：parecord 命令，通过 WSLg 的 PulseAudio 通道拿到 Windows 的麦克风
+#   sherpa-onnx：语音识别推理库（自带 onnxruntime，不需要 PyTorch，CPU 就能跑）
+#   SenseVoice-Small：阿里开源的语音识别模型，中文效果好、速度快（int8 量化版约 230 MB）
+#   放在后面单独一层：前面几层（几 GB 的 ROS）不受影响，重新 build 只做这一步
+RUN apt-get update && apt-get install -y pulseaudio-utils python3-pip \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip3 install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple sherpa-onnx numpy \
+    && mkdir -p /opt/asr && cd /opt/asr \
+    && curl -sSL -o sv.tar.bz2 https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17.tar.bz2 \
+    && tar xjf sv.tar.bz2 && rm sv.tar.bz2 \
+    && mv sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17 sense-voice \
+    && rm -f sense-voice/model.onnx
+
+# 第 7 步（C 项目摄像头）：v4l2-ctl 查看 / 设置摄像头（分辨率、自动对焦、曝光……）。OpenCV 和 cv_bridge 在第 3 步已经有了
+RUN apt-get update && apt-get install -y v4l-utils && rm -rf /var/lib/apt/lists/*
+
 USER dev
 WORKDIR /home/dev/arm_ws
 
