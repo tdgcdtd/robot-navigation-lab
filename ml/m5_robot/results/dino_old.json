@@ -1,0 +1,4265 @@
+[
+ {
+  "kind": "present",
+  "seed": 10000,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9957734942436218,
+  "iou": 0.9693345643397749,
+  "err_mm": 1.5823460849379347
+ },
+ {
+  "kind": "present",
+  "seed": 10000,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9926239252090454,
+  "iou": 0.9281945578159747,
+  "err_mm": 1.0643920681656325
+ },
+ {
+  "kind": "absent",
+  "seed": 10000,
+  "color": "blue",
+  "score": 0.07855190336704254
+ },
+ {
+  "kind": "present",
+  "seed": 10001,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.49942073225975037,
+  "iou": 0.3952414214258324,
+  "err_mm": 18.03485384827896
+ },
+ {
+  "kind": "present",
+  "seed": 10001,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9671933054924011,
+  "iou": 0.8675349218000947,
+  "err_mm": 1.4201299706367707
+ },
+ {
+  "kind": "present",
+  "seed": 10001,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9884922504425049,
+  "iou": 0.9029514791517067,
+  "err_mm": 0.9857683731379133
+ },
+ {
+  "kind": "absent",
+  "seed": 10001,
+  "color": "green",
+  "score": 0.10496480762958527
+ },
+ {
+  "kind": "present",
+  "seed": 10002,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8921207785606384,
+  "iou": 0.9240654047139315,
+  "err_mm": 20.210731450143054
+ },
+ {
+  "kind": "present",
+  "seed": 10002,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10002,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.76277756690979,
+  "iou": 0.8888483559469197,
+  "err_mm": 1.6696319919469926
+ },
+ {
+  "kind": "present",
+  "seed": 10002,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9956327080726624,
+  "iou": 0.9217104992186361,
+  "err_mm": 0.9611770399788804
+ },
+ {
+  "kind": "present",
+  "seed": 10002,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9808696508407593,
+  "iou": 0.8617834980507785,
+  "err_mm": 1.0068082166010426
+ },
+ {
+  "kind": "absent",
+  "seed": 10002,
+  "color": "red",
+  "score": 0.08073406666517258
+ },
+ {
+  "kind": "present",
+  "seed": 10003,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.37408560514450073,
+  "iou": 0.8410469480262124,
+  "err_mm": 21.23295631891634
+ },
+ {
+  "kind": "present",
+  "seed": 10003,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9870027899742126,
+  "iou": 0.9495864620922322,
+  "err_mm": 1.0786666472275295
+ },
+ {
+  "kind": "present",
+  "seed": 10003,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.98183274269104,
+  "iou": 0.7620265633308695,
+  "err_mm": 1.8867882129321047
+ },
+ {
+  "kind": "absent",
+  "seed": 10003,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10004,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.33230897784233093,
+  "iou": 0.6626165035963056,
+  "err_mm": 40.31154332551435
+ },
+ {
+  "kind": "present",
+  "seed": 10004,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9865965247154236,
+  "iou": 0.7793755934913037,
+  "err_mm": 1.276944913051239
+ },
+ {
+  "kind": "present",
+  "seed": 10004,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9326874017715454,
+  "iou": 0.9220274765748412,
+  "err_mm": 1.0347314317315555
+ },
+ {
+  "kind": "absent",
+  "seed": 10004,
+  "color": "green",
+  "score": 0.10682684928178787
+ },
+ {
+  "kind": "present",
+  "seed": 10005,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9076147079467773,
+  "iou": 0.7474723809531137,
+  "err_mm": 1.1358152463732427
+ },
+ {
+  "kind": "present",
+  "seed": 10005,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9884496927261353,
+  "iou": 0.9272485128034171,
+  "err_mm": 0.56076737515626
+ },
+ {
+  "kind": "present",
+  "seed": 10005,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9884965419769287,
+  "iou": 0.8709497377478976,
+  "err_mm": 0.5625081705756331
+ },
+ {
+  "kind": "absent",
+  "seed": 10005,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10006,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9960933327674866,
+  "iou": 0.9447951746759683,
+  "err_mm": 1.250296687659898
+ },
+ {
+  "kind": "present",
+  "seed": 10006,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9913852214813232,
+  "iou": 0.9384653682534421,
+  "err_mm": 0.5381059951768032
+ },
+ {
+  "kind": "present",
+  "seed": 10006,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10006,
+  "color": "blue",
+  "score": 0.07602124661207199
+ },
+ {
+  "kind": "present",
+  "seed": 10007,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.854595422744751,
+  "iou": 0.7520637148529218,
+  "err_mm": 19.644986522484754
+ },
+ {
+  "kind": "present",
+  "seed": 10007,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9899678230285645,
+  "iou": 0.9466102948567715,
+  "err_mm": 1.5630855333693128
+ },
+ {
+  "kind": "absent",
+  "seed": 10007,
+  "color": "orange",
+  "score": 0.13406886160373688
+ },
+ {
+  "kind": "present",
+  "seed": 10008,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.5222020745277405,
+  "iou": 0.45649874538432417,
+  "err_mm": 19.503601710932863
+ },
+ {
+  "kind": "present",
+  "seed": 10008,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9844261407852173,
+  "iou": 0.9386779454079595,
+  "err_mm": 1.6600520685437912
+ },
+ {
+  "kind": "present",
+  "seed": 10008,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9121980667114258,
+  "iou": 0.9298204292172855,
+  "err_mm": 1.254058836224706
+ },
+ {
+  "kind": "absent",
+  "seed": 10008,
+  "color": "purple",
+  "score": 0.1465798169374466
+ },
+ {
+  "kind": "present",
+  "seed": 10009,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9902510643005371,
+  "iou": 0.9486677684545496,
+  "err_mm": 1.2350753117022535
+ },
+ {
+  "kind": "present",
+  "seed": 10009,
+  "color": "orange",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10009,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9926387071609497,
+  "iou": 0.947006532627983,
+  "err_mm": 0.7341485712112213
+ },
+ {
+  "kind": "present",
+  "seed": 10009,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.973450779914856,
+  "iou": 0.9429779088896956,
+  "err_mm": 1.5461024088150497
+ },
+ {
+  "kind": "present",
+  "seed": 10009,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9938557744026184,
+  "iou": 0.9377695892148218,
+  "err_mm": 1.6533841124623372
+ },
+ {
+  "kind": "absent",
+  "seed": 10009,
+  "color": "red",
+  "score": 0.7678796052932739
+ },
+ {
+  "kind": "present",
+  "seed": 10010,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10010,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9938109517097473,
+  "iou": 0.7884438824871612,
+  "err_mm": 0.7801242172529664
+ },
+ {
+  "kind": "present",
+  "seed": 10010,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.5533343553543091,
+  "iou": 0.9569549608376028,
+  "err_mm": 19.40778597463825
+ },
+ {
+  "kind": "present",
+  "seed": 10010,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.7201069593429565,
+  "iou": 0.9634234929160822,
+  "err_mm": 2.1987044165158585
+ },
+ {
+  "kind": "absent",
+  "seed": 10010,
+  "color": "red",
+  "score": 0.10575500875711441
+ },
+ {
+  "kind": "present",
+  "seed": 10011,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9864684343338013,
+  "iou": 0.88743264978943,
+  "err_mm": 0.8445122748490298
+ },
+ {
+  "kind": "present",
+  "seed": 10011,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9890186786651611,
+  "iou": 0.7729806516957927,
+  "err_mm": 0.5216301964597904
+ },
+ {
+  "kind": "present",
+  "seed": 10011,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9550447463989258,
+  "iou": 0.7819330624651071,
+  "err_mm": 21.3436219327271
+ },
+ {
+  "kind": "present",
+  "seed": 10011,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9766265749931335,
+  "iou": 0.913921667308346,
+  "err_mm": 1.8876921738477772
+ },
+ {
+  "kind": "absent",
+  "seed": 10011,
+  "color": "orange",
+  "score": 0.10334538668394089
+ },
+ {
+  "kind": "present",
+  "seed": 10012,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9671409130096436,
+  "iou": 0.9104820716982978,
+  "err_mm": 1.4130868986888765
+ },
+ {
+  "kind": "present",
+  "seed": 10012,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9910855889320374,
+  "iou": 0.9729579513189412,
+  "err_mm": 1.9523561932813742
+ },
+ {
+  "kind": "present",
+  "seed": 10012,
+  "color": "red",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9017921686172485,
+  "iou": 0.6311436791074914,
+  "err_mm": 25.344442103805157
+ },
+ {
+  "kind": "present",
+  "seed": 10012,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9936296343803406,
+  "iou": 0.9043864982059111,
+  "err_mm": 1.1864000023996053
+ },
+ {
+  "kind": "absent",
+  "seed": 10012,
+  "color": "blue",
+  "score": 0.1539604365825653
+ },
+ {
+  "kind": "present",
+  "seed": 10013,
+  "color": "yellow",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6419556140899658,
+  "iou": 0.9575354362989487,
+  "err_mm": 24.88675615990763
+ },
+ {
+  "kind": "present",
+  "seed": 10013,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": true,
+  "score": 0.45346328616142273,
+  "iou": 0.533598433616879,
+  "err_mm": 47.971706503388106
+ },
+ {
+  "kind": "present",
+  "seed": 10013,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9896801114082336,
+  "iou": 0.9632473641902551,
+  "err_mm": 1.5465469555148479
+ },
+ {
+  "kind": "absent",
+  "seed": 10013,
+  "color": "orange",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10014,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9467365145683289,
+  "iou": 0.9498898244150512,
+  "err_mm": 1.6225587851548353
+ },
+ {
+  "kind": "present",
+  "seed": 10014,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.992172360420227,
+  "iou": 0.9287572118070356,
+  "err_mm": 0.5294596116544092
+ },
+ {
+  "kind": "absent",
+  "seed": 10014,
+  "color": "orange",
+  "score": 0.1332361102104187
+ },
+ {
+  "kind": "present",
+  "seed": 10015,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10015,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8429608941078186,
+  "iou": 0.895046401111544,
+  "err_mm": 1.5357095211641547
+ },
+ {
+  "kind": "present",
+  "seed": 10015,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9902432560920715,
+  "iou": 0.9074779231878108,
+  "err_mm": 0.8823580537181862
+ },
+ {
+  "kind": "present",
+  "seed": 10015,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9091731905937195,
+  "iou": 0.9472977104328028,
+  "err_mm": 1.5175940202094809
+ },
+ {
+  "kind": "present",
+  "seed": 10015,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9932574033737183,
+  "iou": 0.9613312780242822,
+  "err_mm": 0.45161419060207997
+ },
+ {
+  "kind": "absent",
+  "seed": 10015,
+  "color": "purple",
+  "score": 0.13686206936836243
+ },
+ {
+  "kind": "present",
+  "seed": 10016,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8605089783668518,
+  "iou": 0.9396507227663229,
+  "err_mm": 19.59914680881888
+ },
+ {
+  "kind": "present",
+  "seed": 10016,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.38330501317977905,
+  "iou": 0.7363120198890954,
+  "err_mm": 21.178411119128214
+ },
+ {
+  "kind": "present",
+  "seed": 10016,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.983644425868988,
+  "iou": 0.9470721058495836,
+  "err_mm": 1.3570676554687147
+ },
+ {
+  "kind": "present",
+  "seed": 10016,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9946438074111938,
+  "iou": 0.9247233030118044,
+  "err_mm": 0.9803464872399595
+ },
+ {
+  "kind": "absent",
+  "seed": 10016,
+  "color": "orange",
+  "score": 0.16205529868602753
+ },
+ {
+  "kind": "present",
+  "seed": 10017,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9875121712684631,
+  "iou": 0.6766411689316053,
+  "err_mm": 40.31683213144671
+ },
+ {
+  "kind": "present",
+  "seed": 10017,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9460456967353821,
+  "iou": 0.8829302021295287,
+  "err_mm": 20.2181556423929
+ },
+ {
+  "kind": "present",
+  "seed": 10017,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9959297776222229,
+  "iou": 0.9388489497919521,
+  "err_mm": 1.1044439941410897
+ },
+ {
+  "kind": "present",
+  "seed": 10017,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9871760010719299,
+  "iou": 0.9432565385442707,
+  "err_mm": 0.9584122208154433
+ },
+ {
+  "kind": "present",
+  "seed": 10017,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.4097050726413727,
+  "iou": 0.9537249670194953,
+  "err_mm": 1.6395708872395507
+ },
+ {
+  "kind": "absent",
+  "seed": 10017,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10018,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9135986566543579,
+  "iou": 0.9327143686125301,
+  "err_mm": 20.33468374459445
+ },
+ {
+  "kind": "present",
+  "seed": 10018,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": true,
+  "score": 0.4970742464065552,
+  "iou": 0.8716972180830782,
+  "err_mm": 19.96829023595115
+ },
+ {
+  "kind": "present",
+  "seed": 10018,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9222961068153381,
+  "iou": 0.9327730173731834,
+  "err_mm": 1.735778594776538
+ },
+ {
+  "kind": "present",
+  "seed": 10018,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9914836287498474,
+  "iou": 0.9334502882110924,
+  "err_mm": 0.49682154736641104
+ },
+ {
+  "kind": "absent",
+  "seed": 10018,
+  "color": "orange",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10019,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10019,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10019,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9950602650642395,
+  "iou": 0.9568413261768067,
+  "err_mm": 0.6936589557432548
+ },
+ {
+  "kind": "present",
+  "seed": 10019,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9886922836303711,
+  "iou": 0.8769654442887935,
+  "err_mm": 0.9468285999809831
+ },
+ {
+  "kind": "absent",
+  "seed": 10019,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10020,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8026703000068665,
+  "iou": 0.8760553215795427,
+  "err_mm": 1.5191241767936996
+ },
+ {
+  "kind": "present",
+  "seed": 10020,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.7662358283996582,
+  "iou": 0.7676466435518968,
+  "err_mm": 0.9129431777979538
+ },
+ {
+  "kind": "absent",
+  "seed": 10020,
+  "color": "red",
+  "score": 0.46294480562210083
+ },
+ {
+  "kind": "present",
+  "seed": 10021,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9883792400360107,
+  "iou": 0.9122240883098619,
+  "err_mm": 0.5344632223232001
+ },
+ {
+  "kind": "present",
+  "seed": 10021,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.3054109215736389,
+  "iou": 0.8613709483741036,
+  "err_mm": 0.9963440463982935
+ },
+ {
+  "kind": "absent",
+  "seed": 10021,
+  "color": "blue",
+  "score": 0.11785674095153809
+ },
+ {
+  "kind": "present",
+  "seed": 10022,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9952883720397949,
+  "iou": 0.9322805106608371,
+  "err_mm": 1.2333163282504604
+ },
+ {
+  "kind": "present",
+  "seed": 10022,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9488816261291504,
+  "iou": 0.9721872258332345,
+  "err_mm": 1.2233905057291634
+ },
+ {
+  "kind": "present",
+  "seed": 10022,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9904555678367615,
+  "iou": 0.9409572297716061,
+  "err_mm": 1.0366191707380117
+ },
+ {
+  "kind": "present",
+  "seed": 10022,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9670722484588623,
+  "iou": 0.9195567000019381,
+  "err_mm": 0.769050236964406
+ },
+ {
+  "kind": "absent",
+  "seed": 10022,
+  "color": "red",
+  "score": 0.2215789556503296
+ },
+ {
+  "kind": "present",
+  "seed": 10023,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9479708075523376,
+  "iou": 0.9311617416691895,
+  "err_mm": 1.5435648433482485
+ },
+ {
+  "kind": "present",
+  "seed": 10023,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9866210222244263,
+  "iou": 0.9030916321288501,
+  "err_mm": 1.8244828812703504
+ },
+ {
+  "kind": "absent",
+  "seed": 10023,
+  "color": "orange",
+  "score": 0.0637957975268364
+ },
+ {
+  "kind": "present",
+  "seed": 10024,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9894753694534302,
+  "iou": 0.938103814610359,
+  "err_mm": 0.5713545239918608
+ },
+ {
+  "kind": "present",
+  "seed": 10024,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10024,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9918349981307983,
+  "iou": 0.886904834204366,
+  "err_mm": 0.8903026248620077
+ },
+ {
+  "kind": "absent",
+  "seed": 10024,
+  "color": "green",
+  "score": 0.08824151009321213
+ },
+ {
+  "kind": "present",
+  "seed": 10025,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.6724750399589539,
+  "iou": 0.9626009807389762,
+  "err_mm": 1.4324268078921631
+ },
+ {
+  "kind": "present",
+  "seed": 10025,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10025,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9883410334587097,
+  "iou": 0.9435056609856439,
+  "err_mm": 0.9779733608627592
+ },
+ {
+  "kind": "present",
+  "seed": 10025,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9941987991333008,
+  "iou": 0.9553278102658477,
+  "err_mm": 1.4208939750163077
+ },
+ {
+  "kind": "absent",
+  "seed": 10025,
+  "color": "yellow",
+  "score": 0.07136920094490051
+ },
+ {
+  "kind": "present",
+  "seed": 10026,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9278560280799866,
+  "iou": 0.8661923668286337,
+  "err_mm": 19.794866745581455
+ },
+ {
+  "kind": "present",
+  "seed": 10026,
+  "color": "purple",
+  "dim": true,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10026,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.987673819065094,
+  "iou": 0.9464362925077788,
+  "err_mm": 0.3995795366627769
+ },
+ {
+  "kind": "present",
+  "seed": 10026,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.8745175004005432,
+  "iou": 0.926286393208312,
+  "err_mm": 1.8306732093814355
+ },
+ {
+  "kind": "absent",
+  "seed": 10026,
+  "color": "blue",
+  "score": 0.3587336540222168
+ },
+ {
+  "kind": "present",
+  "seed": 10027,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10027,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9844337701797485,
+  "iou": 0.9365598139674659,
+  "err_mm": 0.9976797365004362
+ },
+ {
+  "kind": "absent",
+  "seed": 10027,
+  "color": "orange",
+  "score": 0.15218569338321686
+ },
+ {
+  "kind": "present",
+  "seed": 10028,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10028,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9565085768699646,
+  "iou": 0.9136950890974603,
+  "err_mm": 1.1242029065925643
+ },
+ {
+  "kind": "present",
+  "seed": 10028,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9945970773696899,
+  "iou": 0.9006404029955375,
+  "err_mm": 1.495784713382803
+ },
+ {
+  "kind": "absent",
+  "seed": 10028,
+  "color": "blue",
+  "score": 0.09678975492715836
+ },
+ {
+  "kind": "present",
+  "seed": 10029,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10029,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.5888304710388184,
+  "iou": 0.8667058273404298,
+  "err_mm": 0.9088578866114143
+ },
+ {
+  "kind": "absent",
+  "seed": 10029,
+  "color": "blue",
+  "score": 0.10833810269832611
+ },
+ {
+  "kind": "present",
+  "seed": 10030,
+  "color": "red",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7233871221542358,
+  "iou": 0.6785877970817442,
+  "err_mm": 40.539613403789126
+ },
+ {
+  "kind": "present",
+  "seed": 10030,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9913427829742432,
+  "iou": 0.8610696627008022,
+  "err_mm": 1.4521610987997462
+ },
+ {
+  "kind": "absent",
+  "seed": 10030,
+  "color": "orange",
+  "score": 0.10402224957942963
+ },
+ {
+  "kind": "present",
+  "seed": 10031,
+  "color": "yellow",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10031,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9916694164276123,
+  "iou": 0.943276921602768,
+  "err_mm": 2.087478708369179
+ },
+ {
+  "kind": "absent",
+  "seed": 10031,
+  "color": "purple",
+  "score": 0.1827736347913742
+ },
+ {
+  "kind": "present",
+  "seed": 10032,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9281823039054871,
+  "iou": 0.7462804875594883,
+  "err_mm": 0.418314959652767
+ },
+ {
+  "kind": "present",
+  "seed": 10032,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9810582399368286,
+  "iou": 0.9312566361477941,
+  "err_mm": 0.6254118828941905
+ },
+ {
+  "kind": "present",
+  "seed": 10032,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9120393991470337,
+  "iou": 0.8435032148069391,
+  "err_mm": 1.145736834200418
+ },
+ {
+  "kind": "present",
+  "seed": 10032,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9881610870361328,
+  "iou": 0.9562319779802291,
+  "err_mm": 1.7248214839334934
+ },
+ {
+  "kind": "absent",
+  "seed": 10032,
+  "color": "red",
+  "score": 0.4748768210411072
+ },
+ {
+  "kind": "present",
+  "seed": 10033,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9243731498718262,
+  "iou": 0.9158485675863444,
+  "err_mm": 0.8604612381651251
+ },
+ {
+  "kind": "present",
+  "seed": 10033,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9211683869361877,
+  "iou": 0.9860868220515643,
+  "err_mm": 1.4251889960101842
+ },
+ {
+  "kind": "present",
+  "seed": 10033,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9874502420425415,
+  "iou": 0.9170411129456919,
+  "err_mm": 0.8612824405463941
+ },
+ {
+  "kind": "present",
+  "seed": 10033,
+  "color": "purple",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10033,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9893549680709839,
+  "iou": 0.9694457685066228,
+  "err_mm": 1.1206029712765035
+ },
+ {
+  "kind": "absent",
+  "seed": 10033,
+  "color": "red",
+  "score": 0.9233425855636597
+ },
+ {
+  "kind": "present",
+  "seed": 10034,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9567112922668457,
+  "iou": 0.9383930816357953,
+  "err_mm": 1.8253815670248577
+ },
+ {
+  "kind": "present",
+  "seed": 10034,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9945787191390991,
+  "iou": 0.9706945155052341,
+  "err_mm": 1.2737527738166294
+ },
+ {
+  "kind": "present",
+  "seed": 10034,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9959923624992371,
+  "iou": 0.9397877485253044,
+  "err_mm": 2.0493496176418806
+ },
+ {
+  "kind": "present",
+  "seed": 10034,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9323630928993225,
+  "iou": 0.9381418291523859,
+  "err_mm": 0.9318508979710706
+ },
+ {
+  "kind": "present",
+  "seed": 10034,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9864805340766907,
+  "iou": 0.961470037192552,
+  "err_mm": 0.9029908027085881
+ },
+ {
+  "kind": "absent",
+  "seed": 10034,
+  "color": "red",
+  "score": 0.6889967918395996
+ },
+ {
+  "kind": "present",
+  "seed": 10035,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9896541237831116,
+  "iou": 0.9832140545299012,
+  "err_mm": 0.8040944099408761
+ },
+ {
+  "kind": "present",
+  "seed": 10035,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10035,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10035,
+  "color": "green",
+  "score": 0.48342639207839966
+ },
+ {
+  "kind": "present",
+  "seed": 10036,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10036,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10036,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9812398552894592,
+  "iou": 0.9572706010630965,
+  "err_mm": 1.3634651606775519
+ },
+ {
+  "kind": "present",
+  "seed": 10036,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9926835894584656,
+  "iou": 0.976386565439691,
+  "err_mm": 1.1454963553959392
+ },
+ {
+  "kind": "absent",
+  "seed": 10036,
+  "color": "green",
+  "score": 0.11236371845006943
+ },
+ {
+  "kind": "present",
+  "seed": 10037,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9691002368927002,
+  "iou": 0.8899661491482259,
+  "err_mm": 0.7157061324591187
+ },
+ {
+  "kind": "present",
+  "seed": 10037,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9290264248847961,
+  "iou": 0.9198566674162567,
+  "err_mm": 1.1617855811713411
+ },
+ {
+  "kind": "absent",
+  "seed": 10037,
+  "color": "green",
+  "score": 0.14584000408649445
+ },
+ {
+  "kind": "present",
+  "seed": 10038,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9642127156257629,
+  "iou": 0.9388043931231175,
+  "err_mm": 40.188162557690866
+ },
+ {
+  "kind": "present",
+  "seed": 10038,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9881807565689087,
+  "iou": 0.9136150646214513,
+  "err_mm": 1.7606408483798353
+ },
+ {
+  "kind": "present",
+  "seed": 10038,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9833287000656128,
+  "iou": 0.9315257933447579,
+  "err_mm": 0.3618357606323383
+ },
+ {
+  "kind": "present",
+  "seed": 10038,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9437741041183472,
+  "iou": 0.923167267456927,
+  "err_mm": 0.8461962142951931
+ },
+ {
+  "kind": "absent",
+  "seed": 10038,
+  "color": "blue",
+  "score": 0.07810241729021072
+ },
+ {
+  "kind": "present",
+  "seed": 10039,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9526598453521729,
+  "iou": 0.9356386767236493,
+  "err_mm": 18.46512996346287
+ },
+ {
+  "kind": "present",
+  "seed": 10039,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9920072555541992,
+  "iou": 0.9300473624632584,
+  "err_mm": 0.5842191706172221
+ },
+ {
+  "kind": "present",
+  "seed": 10039,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.56977778673172,
+  "iou": 0.9085866462272061,
+  "err_mm": 0.567628539746362
+ },
+ {
+  "kind": "absent",
+  "seed": 10039,
+  "color": "green",
+  "score": 0.12647786736488342
+ },
+ {
+  "kind": "present",
+  "seed": 10040,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9891246557235718,
+  "iou": 0.9651693132612595,
+  "err_mm": 1.568173301398113
+ },
+ {
+  "kind": "present",
+  "seed": 10040,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.990564227104187,
+  "iou": 0.9052743592640319,
+  "err_mm": 1.2492517625908899
+ },
+ {
+  "kind": "absent",
+  "seed": 10040,
+  "color": "blue",
+  "score": 0.16739392280578613
+ },
+ {
+  "kind": "present",
+  "seed": 10041,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.970792829990387,
+  "iou": 0.9288703728779221,
+  "err_mm": 20.703483554261513
+ },
+ {
+  "kind": "present",
+  "seed": 10041,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9788786172866821,
+  "iou": 0.9216173106257763,
+  "err_mm": 1.613893117228183
+ },
+ {
+  "kind": "present",
+  "seed": 10041,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.364847332239151,
+  "iou": 0.2495737853832349,
+  "err_mm": 21.396550606649374
+ },
+ {
+  "kind": "present",
+  "seed": 10041,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9885614514350891,
+  "iou": 0.9460480638202564,
+  "err_mm": 0.4620825315339749
+ },
+ {
+  "kind": "absent",
+  "seed": 10041,
+  "color": "orange",
+  "score": 0.11149950325489044
+ },
+ {
+  "kind": "present",
+  "seed": 10042,
+  "color": "orange",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6723994612693787,
+  "iou": 0.899809346174093,
+  "err_mm": 22.983131202209446
+ },
+ {
+  "kind": "present",
+  "seed": 10042,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9777711033821106,
+  "iou": 0.9409630200549982,
+  "err_mm": 0.4393718522049539
+ },
+ {
+  "kind": "present",
+  "seed": 10042,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9898000359535217,
+  "iou": 0.9561186339013465,
+  "err_mm": 0.9894694978455599
+ },
+ {
+  "kind": "present",
+  "seed": 10042,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9537816643714905,
+  "iou": 0.9180638624489931,
+  "err_mm": 0.39948479661761055
+ },
+ {
+  "kind": "absent",
+  "seed": 10042,
+  "color": "red",
+  "score": 0.5072174668312073
+ },
+ {
+  "kind": "present",
+  "seed": 10043,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10043,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9201905727386475,
+  "iou": 0.6756093254002717,
+  "err_mm": 40.779583330871546
+ },
+ {
+  "kind": "present",
+  "seed": 10043,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.6969428658485413,
+  "iou": 0.7817747204081388,
+  "err_mm": 0.6565097755309081
+ },
+ {
+  "kind": "absent",
+  "seed": 10043,
+  "color": "green",
+  "score": 0.12849651277065277
+ },
+ {
+  "kind": "present",
+  "seed": 10044,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9901354908943176,
+  "iou": 0.9182558295518443,
+  "err_mm": 1.4651445302224007
+ },
+ {
+  "kind": "present",
+  "seed": 10044,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10044,
+  "color": "blue",
+  "score": 0.09573961049318314
+ },
+ {
+  "kind": "present",
+  "seed": 10045,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9957089424133301,
+  "iou": 0.9065416429817205,
+  "err_mm": 1.3883226110623736
+ },
+ {
+  "kind": "present",
+  "seed": 10045,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10045,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9815766215324402,
+  "iou": 0.865520635712898,
+  "err_mm": 0.5532268145516195
+ },
+ {
+  "kind": "absent",
+  "seed": 10045,
+  "color": "blue",
+  "score": 0.08167773485183716
+ },
+ {
+  "kind": "present",
+  "seed": 10046,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.961229681968689,
+  "iou": 0.6900077041616258,
+  "err_mm": 37.54623905016308
+ },
+ {
+  "kind": "present",
+  "seed": 10046,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.3327062427997589,
+  "iou": 0.702575612253098,
+  "err_mm": 27.568792823043154
+ },
+ {
+  "kind": "present",
+  "seed": 10046,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.989261269569397,
+  "iou": 0.9544080536882571,
+  "err_mm": 1.2321957954365181
+ },
+ {
+  "kind": "present",
+  "seed": 10046,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9804832935333252,
+  "iou": 0.9734224363120365,
+  "err_mm": 1.0468047457383676
+ },
+ {
+  "kind": "absent",
+  "seed": 10046,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10047,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.97243732213974,
+  "iou": 0.896494851686683,
+  "err_mm": 1.2770583162851417
+ },
+ {
+  "kind": "present",
+  "seed": 10047,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.994965136051178,
+  "iou": 0.9517105435206465,
+  "err_mm": 0.5824970488516847
+ },
+ {
+  "kind": "absent",
+  "seed": 10047,
+  "color": "purple",
+  "score": 0.11863914877176285
+ },
+ {
+  "kind": "present",
+  "seed": 10048,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.39820870757102966,
+  "iou": 0.787706770265499,
+  "err_mm": 19.34744302701098
+ },
+ {
+  "kind": "present",
+  "seed": 10048,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9883588552474976,
+  "iou": 0.952082707806063,
+  "err_mm": 0.5471835794920482
+ },
+ {
+  "kind": "present",
+  "seed": 10048,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.5977387428283691,
+  "iou": 0.8732594926563657,
+  "err_mm": 20.862206452417777
+ },
+ {
+  "kind": "present",
+  "seed": 10048,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9075194597244263,
+  "iou": 0.7670288515842628,
+  "err_mm": 1.2041876783161318
+ },
+ {
+  "kind": "present",
+  "seed": 10048,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.6600183844566345,
+  "iou": 0.9671763362380497,
+  "err_mm": 1.4819642280194267
+ },
+ {
+  "kind": "absent",
+  "seed": 10048,
+  "color": "green",
+  "score": 0.09717237204313278
+ },
+ {
+  "kind": "present",
+  "seed": 10049,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8961920142173767,
+  "iou": 0.7208215157585812,
+  "err_mm": 0.8525463908602299
+ },
+ {
+  "kind": "present",
+  "seed": 10049,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10049,
+  "color": "blue",
+  "score": 0.09068775922060013
+ },
+ {
+  "kind": "present",
+  "seed": 10050,
+  "color": "orange",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10050,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9803138971328735,
+  "iou": 0.889742896996545,
+  "err_mm": 18.504217086673957
+ },
+ {
+  "kind": "present",
+  "seed": 10050,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9956092238426208,
+  "iou": 0.9207361561252928,
+  "err_mm": 0.7556270238670865
+ },
+ {
+  "kind": "present",
+  "seed": 10050,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9673105478286743,
+  "iou": 0.9286435066666874,
+  "err_mm": 0.7908952122311825
+ },
+ {
+  "kind": "absent",
+  "seed": 10050,
+  "color": "red",
+  "score": 0.09688360244035721
+ },
+ {
+  "kind": "present",
+  "seed": 10051,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9352602362632751,
+  "iou": 0.8450413207523085,
+  "err_mm": 20.371703075450853
+ },
+ {
+  "kind": "present",
+  "seed": 10051,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9926585555076599,
+  "iou": 0.960805427478988,
+  "err_mm": 1.1290308014545645
+ },
+ {
+  "kind": "present",
+  "seed": 10051,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9841135144233704,
+  "iou": 0.9160285456396734,
+  "err_mm": 19.553216874828554
+ },
+ {
+  "kind": "present",
+  "seed": 10051,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.8432117700576782,
+  "iou": 0.8481916420721016,
+  "err_mm": 0.30177660756444347
+ },
+ {
+  "kind": "absent",
+  "seed": 10051,
+  "color": "purple",
+  "score": 0.06886530667543411
+ },
+ {
+  "kind": "present",
+  "seed": 10052,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8545308709144592,
+  "iou": 0.9251977662289057,
+  "err_mm": 1.3734342809066888
+ },
+ {
+  "kind": "present",
+  "seed": 10052,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10052,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.991675615310669,
+  "iou": 0.9349729399770794,
+  "err_mm": 0.5521252018694667
+ },
+ {
+  "kind": "absent",
+  "seed": 10052,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10053,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.3058584928512573,
+  "iou": 0.8927960717975538,
+  "err_mm": 19.55982367389218
+ },
+ {
+  "kind": "present",
+  "seed": 10053,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9914034008979797,
+  "iou": 0.9023202071182697,
+  "err_mm": 1.5983455109381066
+ },
+ {
+  "kind": "present",
+  "seed": 10053,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.990862250328064,
+  "iou": 0.9294177746336624,
+  "err_mm": 1.1822847341578648
+ },
+ {
+  "kind": "absent",
+  "seed": 10053,
+  "color": "purple",
+  "score": 0.08288095146417618
+ },
+ {
+  "kind": "present",
+  "seed": 10054,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.990180253982544,
+  "iou": 0.9582046854466005,
+  "err_mm": 0.9862116390167214
+ },
+ {
+  "kind": "present",
+  "seed": 10054,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.47593212127685547,
+  "iou": 0.7027542301795203,
+  "err_mm": 0.3473630379900342
+ },
+ {
+  "kind": "present",
+  "seed": 10054,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9595504403114319,
+  "iou": 0.8851305491877957,
+  "err_mm": 21.687797115952254
+ },
+ {
+  "kind": "present",
+  "seed": 10054,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.968309760093689,
+  "iou": 0.9304727818805917,
+  "err_mm": 1.3104651166479095
+ },
+ {
+  "kind": "present",
+  "seed": 10054,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9886515736579895,
+  "iou": 0.91835177323696,
+  "err_mm": 0.6070497120123913
+ },
+ {
+  "kind": "absent",
+  "seed": 10054,
+  "color": "green",
+  "score": 0.0711921975016594
+ },
+ {
+  "kind": "present",
+  "seed": 10055,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7360172271728516,
+  "iou": 0.9270617134138721,
+  "err_mm": 20.945491791635565
+ },
+ {
+  "kind": "present",
+  "seed": 10055,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.7300322651863098,
+  "iou": 0.40648637890995093,
+  "err_mm": 47.508683027828745
+ },
+ {
+  "kind": "present",
+  "seed": 10055,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9916995763778687,
+  "iou": 0.9308123378026882,
+  "err_mm": 0.9957797984673784
+ },
+ {
+  "kind": "present",
+  "seed": 10055,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.3643490970134735,
+  "iou": 0.8319490349514895,
+  "err_mm": 0.43841242792164664
+ },
+ {
+  "kind": "present",
+  "seed": 10055,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9857593774795532,
+  "iou": 0.7427262660075741,
+  "err_mm": 0.6580737597064107
+ },
+ {
+  "kind": "absent",
+  "seed": 10055,
+  "color": "red",
+  "score": 0.6346082091331482
+ },
+ {
+  "kind": "present",
+  "seed": 10056,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9645337462425232,
+  "iou": 0.8360836361573044,
+  "err_mm": 20.92998700183755
+ },
+ {
+  "kind": "present",
+  "seed": 10056,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9836656451225281,
+  "iou": 0.9715458878747009,
+  "err_mm": 0.36994937305421827
+ },
+ {
+  "kind": "present",
+  "seed": 10056,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9739913940429688,
+  "iou": 0.964587119775376,
+  "err_mm": 0.7382772378071137
+ },
+ {
+  "kind": "present",
+  "seed": 10056,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9903960227966309,
+  "iou": 0.9586727093656127,
+  "err_mm": 1.0045133977119696
+ },
+ {
+  "kind": "absent",
+  "seed": 10056,
+  "color": "green",
+  "score": 0.08275668323040009
+ },
+ {
+  "kind": "present",
+  "seed": 10057,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6636337041854858,
+  "iou": 0.9089029463031828,
+  "err_mm": 20.24699318443315
+ },
+ {
+  "kind": "present",
+  "seed": 10057,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8367965817451477,
+  "iou": 0.4861876762461869,
+  "err_mm": 39.10106033319451
+ },
+ {
+  "kind": "present",
+  "seed": 10057,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9960196614265442,
+  "iou": 0.917583461561635,
+  "err_mm": 1.1514295738079507
+ },
+ {
+  "kind": "present",
+  "seed": 10057,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9119910597801208,
+  "iou": 0.9004427556541886,
+  "err_mm": 0.6718849438699623
+ },
+ {
+  "kind": "present",
+  "seed": 10057,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.3876384198665619,
+  "iou": 0.7114845667197297,
+  "err_mm": 0.639148045784978
+ },
+ {
+  "kind": "absent",
+  "seed": 10057,
+  "color": "blue",
+  "score": 0.10125850886106491
+ },
+ {
+  "kind": "present",
+  "seed": 10058,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9875645041465759,
+  "iou": 0.9495843965547474,
+  "err_mm": 0.9182749403745913
+ },
+ {
+  "kind": "present",
+  "seed": 10058,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9898986220359802,
+  "iou": 0.9421847065691856,
+  "err_mm": 0.817932082343381
+ },
+ {
+  "kind": "present",
+  "seed": 10058,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9706586599349976,
+  "iou": 0.8385542005769996,
+  "err_mm": 1.2915932402294208
+ },
+ {
+  "kind": "absent",
+  "seed": 10058,
+  "color": "green",
+  "score": 0.10369360446929932
+ },
+ {
+  "kind": "present",
+  "seed": 10059,
+  "color": "red",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8684417605400085,
+  "iou": 0.46467897062613445,
+  "err_mm": 19.39838082323517
+ },
+ {
+  "kind": "present",
+  "seed": 10059,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9935355186462402,
+  "iou": 0.9575356074045638,
+  "err_mm": 0.4938937481693183
+ },
+ {
+  "kind": "absent",
+  "seed": 10059,
+  "color": "purple",
+  "score": 0.1949278861284256
+ },
+ {
+  "kind": "present",
+  "seed": 10060,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6496655941009521,
+  "iou": 0.9238799749054811,
+  "err_mm": 30.00894282947492
+ },
+ {
+  "kind": "present",
+  "seed": 10060,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.8391851186752319,
+  "iou": 0.9292119855314902,
+  "err_mm": 1.7432704599647435
+ },
+ {
+  "kind": "absent",
+  "seed": 10060,
+  "color": "red",
+  "score": 0.40950706601142883
+ },
+ {
+  "kind": "present",
+  "seed": 10061,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7599350214004517,
+  "iou": 0.9728888782642993,
+  "err_mm": 23.614105529801524
+ },
+ {
+  "kind": "present",
+  "seed": 10061,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9280900955200195,
+  "iou": 0.9294920348306435,
+  "err_mm": 1.5310441619131905
+ },
+ {
+  "kind": "absent",
+  "seed": 10061,
+  "color": "green",
+  "score": 0.1169411763548851
+ },
+ {
+  "kind": "present",
+  "seed": 10062,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10062,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9929881691932678,
+  "iou": 0.9395405613518867,
+  "err_mm": 1.3751662585038538
+ },
+ {
+  "kind": "present",
+  "seed": 10062,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9537383913993835,
+  "iou": 0.9333938988039828,
+  "err_mm": 0.9989726330225138
+ },
+ {
+  "kind": "absent",
+  "seed": 10062,
+  "color": "purple",
+  "score": 0.10394276678562164
+ },
+ {
+  "kind": "present",
+  "seed": 10063,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8627197742462158,
+  "iou": 0.8740252376887361,
+  "err_mm": 25.79482668368446
+ },
+ {
+  "kind": "present",
+  "seed": 10063,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9890013933181763,
+  "iou": 0.9559415802643332,
+  "err_mm": 0.932209327996715
+ },
+ {
+  "kind": "absent",
+  "seed": 10063,
+  "color": "purple",
+  "score": 0.08602667599916458
+ },
+ {
+  "kind": "present",
+  "seed": 10064,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9892260432243347,
+  "iou": 0.9614836706042283,
+  "err_mm": 1.2567785781469478
+ },
+ {
+  "kind": "present",
+  "seed": 10064,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9054961800575256,
+  "iou": 0.9500826988549208,
+  "err_mm": 2.0350542235566
+ },
+ {
+  "kind": "absent",
+  "seed": 10064,
+  "color": "red",
+  "score": 0.8162839412689209
+ },
+ {
+  "kind": "present",
+  "seed": 10065,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.6992728114128113,
+  "iou": 0.8726530915740264,
+  "err_mm": 0.5673937761719855
+ },
+ {
+  "kind": "present",
+  "seed": 10065,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9069017171859741,
+  "iou": 0.9412358621267849,
+  "err_mm": 0.7287598879226755
+ },
+ {
+  "kind": "absent",
+  "seed": 10065,
+  "color": "blue",
+  "score": 0.09888597577810287
+ },
+ {
+  "kind": "present",
+  "seed": 10066,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9920126795768738,
+  "iou": 0.9143647221736771,
+  "err_mm": 1.205371812045148
+ },
+ {
+  "kind": "present",
+  "seed": 10066,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9923065304756165,
+  "iou": 0.9269178690905291,
+  "err_mm": 0.7510337849038344
+ },
+ {
+  "kind": "absent",
+  "seed": 10066,
+  "color": "orange",
+  "score": 0.17769800126552582
+ },
+ {
+  "kind": "present",
+  "seed": 10067,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9908542633056641,
+  "iou": 0.9628379071864699,
+  "err_mm": 0.7195067134624141
+ },
+ {
+  "kind": "present",
+  "seed": 10067,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.4105203449726105,
+  "iou": 0.9112170900741481,
+  "err_mm": 17.00010050112319
+ },
+ {
+  "kind": "present",
+  "seed": 10067,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9266515970230103,
+  "iou": 0.8405443183156589,
+  "err_mm": 1.384135165078194
+ },
+ {
+  "kind": "present",
+  "seed": 10067,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9897794127464294,
+  "iou": 0.9656773092281178,
+  "err_mm": 1.0349853344903712
+ },
+ {
+  "kind": "present",
+  "seed": 10067,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10067,
+  "color": "green",
+  "score": 0.07507092505693436
+ },
+ {
+  "kind": "present",
+  "seed": 10068,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.99094557762146,
+  "iou": 0.9767481046293919,
+  "err_mm": 1.992658915156468
+ },
+ {
+  "kind": "present",
+  "seed": 10068,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10068,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9881376624107361,
+  "iou": 0.947984592397081,
+  "err_mm": 1.0030095761840538
+ },
+ {
+  "kind": "present",
+  "seed": 10068,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9942664504051208,
+  "iou": 0.9694651665745655,
+  "err_mm": 0.4490248565116993
+ },
+ {
+  "kind": "present",
+  "seed": 10068,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9963531494140625,
+  "iou": 0.9390321663129735,
+  "err_mm": 0.8444297685994483
+ },
+ {
+  "kind": "absent",
+  "seed": 10068,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10069,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10069,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9748329520225525,
+  "iou": 0.770675291231969,
+  "err_mm": 0.7050668134336772
+ },
+ {
+  "kind": "present",
+  "seed": 10069,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9929169416427612,
+  "iou": 0.9754838920002719,
+  "err_mm": 1.2930694955901907
+ },
+ {
+  "kind": "absent",
+  "seed": 10069,
+  "color": "red",
+  "score": 0.34857234358787537
+ },
+ {
+  "kind": "present",
+  "seed": 10070,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9255813956260681,
+  "iou": 0.9313514590353974,
+  "err_mm": 1.1996112003787447
+ },
+ {
+  "kind": "present",
+  "seed": 10070,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9810425043106079,
+  "iou": 0.9476613708069231,
+  "err_mm": 1.050616353288885
+ },
+ {
+  "kind": "absent",
+  "seed": 10070,
+  "color": "green",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10071,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9933596253395081,
+  "iou": 0.9593881641435396,
+  "err_mm": 1.0804643837744987
+ },
+ {
+  "kind": "present",
+  "seed": 10071,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6588473916053772,
+  "iou": 0.5728645860460846,
+  "err_mm": 40.49734653063297
+ },
+ {
+  "kind": "present",
+  "seed": 10071,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9964349269866943,
+  "iou": 0.9341630406811936,
+  "err_mm": 1.3525516912556583
+ },
+ {
+  "kind": "present",
+  "seed": 10071,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "absent",
+  "seed": 10071,
+  "color": "purple",
+  "score": 0.053770121186971664
+ },
+ {
+  "kind": "present",
+  "seed": 10072,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10072,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9855300188064575,
+  "iou": 0.9543003980925568,
+  "err_mm": 1.4833473076050876
+ },
+ {
+  "kind": "present",
+  "seed": 10072,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9938032627105713,
+  "iou": 0.9501331632354579,
+  "err_mm": 0.5981356707874983
+ },
+ {
+  "kind": "present",
+  "seed": 10072,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9941008687019348,
+  "iou": 0.929987400684616,
+  "err_mm": 1.3697724281181924
+ },
+ {
+  "kind": "present",
+  "seed": 10072,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9718279242515564,
+  "iou": 0.9016044660356093,
+  "err_mm": 1.4586000528956509
+ },
+ {
+  "kind": "absent",
+  "seed": 10072,
+  "color": "red",
+  "score": 0.94101881980896
+ },
+ {
+  "kind": "present",
+  "seed": 10073,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.34432363510131836,
+  "iou": 0.36640502674706443,
+  "err_mm": 19.37039362571324
+ },
+ {
+  "kind": "present",
+  "seed": 10073,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9335461854934692,
+  "iou": 0.9219481676558365,
+  "err_mm": 19.074315570806103
+ },
+ {
+  "kind": "present",
+  "seed": 10073,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.6141213774681091,
+  "iou": 0.9415036419948101,
+  "err_mm": 2.2540862574128795
+ },
+ {
+  "kind": "present",
+  "seed": 10073,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10073,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9375069737434387,
+  "iou": 0.9286276941937912,
+  "err_mm": 0.4293918467066492
+ },
+ {
+  "kind": "absent",
+  "seed": 10073,
+  "color": "blue",
+  "score": 0.0863460823893547
+ },
+ {
+  "kind": "present",
+  "seed": 10074,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10074,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9900524020195007,
+  "iou": 0.8703507623257621,
+  "err_mm": 1.520810905675507
+ },
+ {
+  "kind": "absent",
+  "seed": 10074,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10075,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9885421991348267,
+  "iou": 0.938900112214022,
+  "err_mm": 0.8840816259379529
+ },
+ {
+  "kind": "present",
+  "seed": 10075,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9956848621368408,
+  "iou": 0.9360711199129542,
+  "err_mm": 1.1682040626481585
+ },
+ {
+  "kind": "present",
+  "seed": 10075,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.3272119462490082,
+  "iou": 0.795587707593964,
+  "err_mm": 0.5501467078143278
+ },
+ {
+  "kind": "present",
+  "seed": 10075,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9233992695808411,
+  "iou": 0.6932069650679682,
+  "err_mm": 1.5088696376142146
+ },
+ {
+  "kind": "absent",
+  "seed": 10075,
+  "color": "purple",
+  "score": 0.0924021527171135
+ },
+ {
+  "kind": "present",
+  "seed": 10076,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.961292564868927,
+  "iou": 0.9317467167208942,
+  "err_mm": 0.6758208124220159
+ },
+ {
+  "kind": "present",
+  "seed": 10076,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9963027238845825,
+  "iou": 0.9363649200534248,
+  "err_mm": 1.0533190815117301
+ },
+ {
+  "kind": "present",
+  "seed": 10076,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8862457275390625,
+  "iou": 0.9375756760024969,
+  "err_mm": 0.6297684661605082
+ },
+ {
+  "kind": "present",
+  "seed": 10076,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9924410581588745,
+  "iou": 0.9297884211887796,
+  "err_mm": 1.5969366225744843
+ },
+ {
+  "kind": "present",
+  "seed": 10076,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9761543869972229,
+  "iou": 0.8109082301671678,
+  "err_mm": 1.1887708487435418
+ },
+ {
+  "kind": "absent",
+  "seed": 10076,
+  "color": "red",
+  "score": 0.19540457427501678
+ },
+ {
+  "kind": "present",
+  "seed": 10077,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10077,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9946016073226929,
+  "iou": 0.9589720472424519,
+  "err_mm": 1.4036655442433221
+ },
+ {
+  "kind": "present",
+  "seed": 10077,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.895358145236969,
+  "iou": 0.9093120848071723,
+  "err_mm": 0.3812102875658027
+ },
+ {
+  "kind": "absent",
+  "seed": 10077,
+  "color": "purple",
+  "score": 0.10441971570253372
+ },
+ {
+  "kind": "present",
+  "seed": 10078,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9338188767433167,
+  "iou": 0.6916253347865717,
+  "err_mm": 40.290274226534216
+ },
+ {
+  "kind": "present",
+  "seed": 10078,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.4863159656524658,
+  "iou": 0.9360966683231798,
+  "err_mm": 0.7192051198883017
+ },
+ {
+  "kind": "present",
+  "seed": 10078,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9802461266517639,
+  "iou": 0.9614952938251655,
+  "err_mm": 0.41796699628325723
+ },
+ {
+  "kind": "present",
+  "seed": 10078,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9918546676635742,
+  "iou": 0.9763960178453758,
+  "err_mm": 1.5859238315071733
+ },
+ {
+  "kind": "absent",
+  "seed": 10078,
+  "color": "green",
+  "score": 0.10855992883443832
+ },
+ {
+  "kind": "present",
+  "seed": 10079,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.4778793454170227,
+  "iou": 0.9005962402368777,
+  "err_mm": 0.7847442312385982
+ },
+ {
+  "kind": "present",
+  "seed": 10079,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9889405369758606,
+  "iou": 0.9363406411633715,
+  "err_mm": 1.5973022923754048
+ },
+ {
+  "kind": "present",
+  "seed": 10079,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9947168231010437,
+  "iou": 0.9518592548889718,
+  "err_mm": 1.3928953189008644
+ },
+ {
+  "kind": "present",
+  "seed": 10079,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9957541227340698,
+  "iou": 0.9485084057514915,
+  "err_mm": 1.9547533618975788
+ },
+ {
+  "kind": "absent",
+  "seed": 10079,
+  "color": "yellow",
+  "score": 0.09823162853717804
+ },
+ {
+  "kind": "present",
+  "seed": 10080,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.994234025478363,
+  "iou": 0.9032630940339273,
+  "err_mm": 1.1989577862781118
+ },
+ {
+  "kind": "present",
+  "seed": 10080,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9901114106178284,
+  "iou": 0.9577304987444769,
+  "err_mm": 1.013448942683056
+ },
+ {
+  "kind": "absent",
+  "seed": 10080,
+  "color": "green",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10081,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9869694709777832,
+  "iou": 0.9800467085043673,
+  "err_mm": 1.2653820433782412
+ },
+ {
+  "kind": "present",
+  "seed": 10081,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9947276711463928,
+  "iou": 0.9105491721729632,
+  "err_mm": 1.3664487046435372
+ },
+ {
+  "kind": "present",
+  "seed": 10081,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.7861986756324768,
+  "iou": 0.9034062372908617,
+  "err_mm": 0.9853175219175203
+ },
+ {
+  "kind": "absent",
+  "seed": 10081,
+  "color": "blue",
+  "score": 0.34590837359428406
+ },
+ {
+  "kind": "present",
+  "seed": 10082,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9564006328582764,
+  "iou": 0.6591124738121998,
+  "err_mm": 40.272884530650735
+ },
+ {
+  "kind": "present",
+  "seed": 10082,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9643059968948364,
+  "iou": 0.8902808996818744,
+  "err_mm": 1.7661536417168402
+ },
+ {
+  "kind": "absent",
+  "seed": 10082,
+  "color": "orange",
+  "score": 0.11335944384336472
+ },
+ {
+  "kind": "present",
+  "seed": 10083,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.8337608575820923,
+  "iou": 0.735726497806534,
+  "err_mm": 38.6877009075671
+ },
+ {
+  "kind": "present",
+  "seed": 10083,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": true,
+  "score": 0.6666814088821411,
+  "iou": 0.7680076169800537,
+  "err_mm": 18.229593468535843
+ },
+ {
+  "kind": "present",
+  "seed": 10083,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9951813817024231,
+  "iou": 0.9762945903653634,
+  "err_mm": 0.5974865907219833
+ },
+ {
+  "kind": "present",
+  "seed": 10083,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9599617123603821,
+  "iou": 0.9244701677343228,
+  "err_mm": 1.5219637175950358
+ },
+ {
+  "kind": "present",
+  "seed": 10083,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9899669885635376,
+  "iou": 0.9330663320477377,
+  "err_mm": 0.9480864831278364
+ },
+ {
+  "kind": "absent",
+  "seed": 10083,
+  "color": "orange",
+  "score": 0.1422993242740631
+ },
+ {
+  "kind": "present",
+  "seed": 10084,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9949971437454224,
+  "iou": 0.9220992231719709,
+  "err_mm": 1.0790202781073124
+ },
+ {
+  "kind": "present",
+  "seed": 10084,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.992886483669281,
+  "iou": 0.9692350472368733,
+  "err_mm": 0.7063792199671654
+ },
+ {
+  "kind": "absent",
+  "seed": 10084,
+  "color": "red",
+  "score": 0.11284220218658447
+ },
+ {
+  "kind": "present",
+  "seed": 10085,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9958220720291138,
+  "iou": 0.928027547816673,
+  "err_mm": 1.398606097870465
+ },
+ {
+  "kind": "present",
+  "seed": 10085,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9581254720687866,
+  "iou": 0.9029075048116626,
+  "err_mm": 1.2613561554643455
+ },
+ {
+  "kind": "present",
+  "seed": 10085,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9912371635437012,
+  "iou": 0.962838774603801,
+  "err_mm": 1.3736055083360001
+ },
+ {
+  "kind": "present",
+  "seed": 10085,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9897220730781555,
+  "iou": 0.9922696271851381,
+  "err_mm": 0.8718712353702007
+ },
+ {
+  "kind": "absent",
+  "seed": 10085,
+  "color": "orange",
+  "score": 0.056432269513607025
+ },
+ {
+  "kind": "present",
+  "seed": 10086,
+  "color": "blue",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.6755693554878235,
+  "iou": 0.7051818579255376,
+  "err_mm": 26.357095313826328
+ },
+ {
+  "kind": "present",
+  "seed": 10086,
+  "color": "orange",
+  "dim": true,
+  "covered": true,
+  "stacked": true,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10086,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9958016276359558,
+  "iou": 0.9774817762579072,
+  "err_mm": 0.47515342341919903
+ },
+ {
+  "kind": "present",
+  "seed": 10086,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9860131144523621,
+  "iou": 0.7536473948107859,
+  "err_mm": 1.076456048030753
+ },
+ {
+  "kind": "present",
+  "seed": 10086,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9612349271774292,
+  "iou": 0.8547533795649982,
+  "err_mm": 1.5993159619784918
+ },
+ {
+  "kind": "absent",
+  "seed": 10086,
+  "color": "red",
+  "score": 0.7294350862503052
+ },
+ {
+  "kind": "present",
+  "seed": 10087,
+  "color": "purple",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7037814855575562,
+  "iou": 0.8783771120096467,
+  "err_mm": 22.388238066338975
+ },
+ {
+  "kind": "present",
+  "seed": 10087,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9328773021697998,
+  "iou": 0.9454730761926744,
+  "err_mm": 1.4368815488084805
+ },
+ {
+  "kind": "absent",
+  "seed": 10087,
+  "color": "orange",
+  "score": 0.13887092471122742
+ },
+ {
+  "kind": "present",
+  "seed": 10088,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9936316609382629,
+  "iou": 0.8913989541680922,
+  "err_mm": 0.9889017048147657
+ },
+ {
+  "kind": "present",
+  "seed": 10088,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9028850197792053,
+  "iou": 0.924149884486727,
+  "err_mm": 1.873125652053051
+ },
+ {
+  "kind": "absent",
+  "seed": 10088,
+  "color": "red",
+  "score": 0.7734106183052063
+ },
+ {
+  "kind": "present",
+  "seed": 10089,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8750818371772766,
+  "iou": 0.9164086062491057,
+  "err_mm": 1.5167217328293336
+ },
+ {
+  "kind": "present",
+  "seed": 10089,
+  "color": "green",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9929187893867493,
+  "iou": 0.9465036740953511,
+  "err_mm": 1.863991374586759
+ },
+ {
+  "kind": "present",
+  "seed": 10089,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.986984372138977,
+  "iou": 0.9568649982496865,
+  "err_mm": 0.3796031252252496
+ },
+ {
+  "kind": "absent",
+  "seed": 10089,
+  "color": "purple",
+  "score": 0.1344854235649109
+ },
+ {
+  "kind": "present",
+  "seed": 10090,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.5513878464698792,
+  "iou": 0.5410809834402487,
+  "err_mm": 40.32595951098661
+ },
+ {
+  "kind": "present",
+  "seed": 10090,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7343142628669739,
+  "iou": 0.9533292094290845,
+  "err_mm": 18.528796147749482
+ },
+ {
+  "kind": "present",
+  "seed": 10090,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9810974597930908,
+  "iou": 0.7594464356917704,
+  "err_mm": 0.6982312661110599
+ },
+ {
+  "kind": "present",
+  "seed": 10090,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9689912796020508,
+  "iou": 0.7909767260780579,
+  "err_mm": 1.1293647341668764
+ },
+ {
+  "kind": "absent",
+  "seed": 10090,
+  "color": "blue",
+  "score": 0.08795224130153656
+ },
+ {
+  "kind": "present",
+  "seed": 10091,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10091,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9925886392593384,
+  "iou": 0.9471470417388667,
+  "err_mm": 1.1821075488374853
+ },
+ {
+  "kind": "absent",
+  "seed": 10091,
+  "color": "purple",
+  "score": 0.10917060077190399
+ },
+ {
+  "kind": "present",
+  "seed": 10092,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.9378977417945862,
+  "iou": 0.4979263462594629,
+  "err_mm": 40.401938604020884
+ },
+ {
+  "kind": "present",
+  "seed": 10092,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9861893057823181,
+  "iou": 0.9718869928947392,
+  "err_mm": 0.5403788648404835
+ },
+ {
+  "kind": "present",
+  "seed": 10092,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9891728162765503,
+  "iou": 0.9380548752296887,
+  "err_mm": 0.6017197673502547
+ },
+ {
+  "kind": "present",
+  "seed": 10092,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9567235112190247,
+  "iou": 0.9472993858542891,
+  "err_mm": 1.5692260421835695
+ },
+ {
+  "kind": "absent",
+  "seed": 10092,
+  "color": "green",
+  "score": 0.06414935737848282
+ },
+ {
+  "kind": "present",
+  "seed": 10093,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9905825853347778,
+  "iou": 0.9246265635466788,
+  "err_mm": 1.413624420814894
+ },
+ {
+  "kind": "present",
+  "seed": 10093,
+  "color": "blue",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.987646222114563,
+  "iou": 0.9543164786760368,
+  "err_mm": 1.0140800362492226
+ },
+ {
+  "kind": "present",
+  "seed": 10093,
+  "color": "red",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9897337555885315,
+  "iou": 0.9550570548875913,
+  "err_mm": 1.3150653086715751
+ },
+ {
+  "kind": "absent",
+  "seed": 10093,
+  "color": "green",
+  "score": 0.12038758397102356
+ },
+ {
+  "kind": "present",
+  "seed": 10094,
+  "color": "orange",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.8771982192993164,
+  "iou": 0.9346162235044004,
+  "err_mm": 1.0342632462006858
+ },
+ {
+  "kind": "present",
+  "seed": 10094,
+  "color": "green",
+  "dim": true,
+  "covered": true,
+  "stacked": false,
+  "score": 0.588402271270752,
+  "iou": 0.8353467346297192,
+  "err_mm": 18.89825508450361
+ },
+ {
+  "kind": "present",
+  "seed": 10094,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9900867342948914,
+  "iou": 0.954834136556736,
+  "err_mm": 1.2368130592490785
+ },
+ {
+  "kind": "present",
+  "seed": 10094,
+  "color": "yellow",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9084004163742065,
+  "iou": 0.9563100388803574,
+  "err_mm": 0.8847549227372499
+ },
+ {
+  "kind": "present",
+  "seed": 10094,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9777867794036865,
+  "iou": 0.9762997632631032,
+  "err_mm": 1.748576252752543
+ },
+ {
+  "kind": "absent",
+  "seed": 10094,
+  "color": "blue",
+  "score": 0.08647549897432327
+ },
+ {
+  "kind": "present",
+  "seed": 10095,
+  "color": "red",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.7746517658233643,
+  "iou": 0.6387703766529341,
+  "err_mm": 40.48273836060618
+ },
+ {
+  "kind": "present",
+  "seed": 10095,
+  "color": "green",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.45011985301971436,
+  "iou": 0.4724223181560627,
+  "err_mm": 19.383902392022442
+ },
+ {
+  "kind": "present",
+  "seed": 10095,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.8178461790084839,
+  "iou": 0.9578463625717485,
+  "err_mm": 0.952562613682748
+ },
+ {
+  "kind": "present",
+  "seed": 10095,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.966794490814209,
+  "iou": 0.947612032139574,
+  "err_mm": 1.5245363233478237
+ },
+ {
+  "kind": "present",
+  "seed": 10095,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9845051169395447,
+  "iou": 0.8088476412958798,
+  "err_mm": 1.068484113652854
+ },
+ {
+  "kind": "absent",
+  "seed": 10095,
+  "color": "blue",
+  "score": 0.11870452761650085
+ },
+ {
+  "kind": "present",
+  "seed": 10096,
+  "color": "yellow",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.5219962000846863,
+  "iou": 0.8976200991905228,
+  "err_mm": 25.98691016885392
+ },
+ {
+  "kind": "present",
+  "seed": 10096,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9709941744804382,
+  "iou": 0.9545351068765344,
+  "err_mm": 0.4820264126393389
+ },
+ {
+  "kind": "absent",
+  "seed": 10096,
+  "color": "red",
+  "score": 0.1850699633359909
+ },
+ {
+  "kind": "present",
+  "seed": 10097,
+  "color": "orange",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10097,
+  "color": "purple",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9853894114494324,
+  "iou": 0.9481774912116179,
+  "err_mm": 1.6016898473711223
+ },
+ {
+  "kind": "present",
+  "seed": 10097,
+  "color": "blue",
+  "dim": false,
+  "covered": true,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10097,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": true,
+  "score": 0.9947407841682434,
+  "iou": 0.9106817873873099,
+  "err_mm": 0.4007002992286449
+ },
+ {
+  "kind": "absent",
+  "seed": 10097,
+  "color": "yellow",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10098,
+  "color": "red",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9906699657440186,
+  "iou": 0.9520271518598302,
+  "err_mm": 0.7747954346615273
+ },
+ {
+  "kind": "present",
+  "seed": 10098,
+  "color": "blue",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9958052635192871,
+  "iou": 0.9019744996635283,
+  "err_mm": 1.785466420487264
+ },
+ {
+  "kind": "present",
+  "seed": 10098,
+  "color": "purple",
+  "dim": true,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9891719222068787,
+  "iou": 0.8998570268462477,
+  "err_mm": 1.1122458155376933
+ },
+ {
+  "kind": "absent",
+  "seed": 10098,
+  "color": "orange",
+  "score": 0.0
+ },
+ {
+  "kind": "present",
+  "seed": 10099,
+  "color": "yellow",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9033727049827576,
+  "iou": 0.9475033125232329,
+  "err_mm": 0.3304960735532698
+ },
+ {
+  "kind": "present",
+  "seed": 10099,
+  "color": "orange",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.0,
+  "iou": 0.0,
+  "err_mm": null
+ },
+ {
+  "kind": "present",
+  "seed": 10099,
+  "color": "green",
+  "dim": false,
+  "covered": false,
+  "stacked": false,
+  "score": 0.9946793913841248,
+  "iou": 0.9187701899967476,
+  "err_mm": 1.5275075007992405
+ },
+ {
+  "kind": "absent",
+  "seed": 10099,
+  "color": "red",
+  "score": 0.10964162647724152
+ }
+]

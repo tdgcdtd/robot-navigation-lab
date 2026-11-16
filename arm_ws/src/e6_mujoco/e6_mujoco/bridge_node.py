@@ -8,6 +8,9 @@
           空闲时：MuJoCo 回报的真实关节角
           执行中：按轨迹和时间算出"此刻应该在哪"（网络往返 230 ms，做不到实时回传；执行完再用真实值校正）
 
+提供服务  /suction  (std_srvs/SetBool)  开 / 关吸盘
+          开：MuJoCo 检查吸盘有没有贴近并对准某个方块，吸住了 success=true、message=方块名；
+              没吸住 success=false、message=原因（离得多远、偏了多少）
 参数  sim_host / sim_port：MuJoCo 服务的地址（那台电脑的 Tailscale 地址）
 
 为什么不实时回传：见 robot_server.py 开头。真机械臂也是控制柜收下整条轨迹自己执行。
@@ -25,6 +28,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
+from std_srvs.srv import SetBool
 
 JOINTS = [f"joint{i}" for i in range(1, 7)]
 FINAL_TOLERANCE = 0.02  # 弧度（约 1.1°）：执行完和目标差得比这多，就算失败
@@ -96,6 +100,7 @@ class Bridge(Node):
             goal_callback=lambda goal: GoalResponse.ACCEPT,
             cancel_callback=lambda handle: CancelResponse.ACCEPT,
             callback_group=group)
+        self.create_service(SetBool, "/suction", self.on_suction, callback_group=group)
         self.get_logger().info(f"桥接节点启动，MuJoCo 在 {host}:{port}")
 
     def refresh_state(self):
@@ -120,6 +125,26 @@ class Bridge(Node):
         msg.name = JOINTS
         msg.position = [float(v) for v in q]
         self.state_pub.publish(msg)
+
+    def on_suction(self, request, response):
+        try:
+            reply = self.sim.request({"cmd": "suction", "on": bool(request.data)}, timeout=30.0)
+        except (OSError, ConnectionError, ValueError) as error:
+            response.success, response.message = False, f"MuJoCo 没有回应：{error}"
+            return response
+        held = reply.get("held")
+        if not request.data:
+            response.success, response.message = True, f"松开了 {held}" if held else "本来就没吸着东西"
+        elif held:
+            response.success, response.message = True, held
+        else:
+            # 没吸住：把离得最近的那个方块的情况报上去，方便知道是偏了还是没贴上
+            near = min(reply.get("report", {}).items(), key=lambda kv: abs(kv[1]["gap_mm"]) + kv[1]["offset_mm"], default=None)
+            response.success = False
+            response.message = "附近没有方块" if near is None else (
+                f"最近的是 {near[0]}：离吸盘面 {near[1]['gap_mm']} mm，偏 {near[1]['offset_mm']} mm，歪 {near[1]['tilt_deg']}°")
+        self.get_logger().info(f"吸盘{'开' if request.data else '关'}：{response.message}")
+        return response
 
     def execute(self, goal_handle):
         traj = goal_handle.request.trajectory

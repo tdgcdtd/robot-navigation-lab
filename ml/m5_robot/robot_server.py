@@ -7,6 +7,8 @@
 协议：一行一个 JSON（请求和回答都是）。
     {"cmd": "state"}                              → {"ok": true, "q": [6 个关节角]}
     {"cmd": "traj", "t": [...], "q": [[6]...]}    → 按时间 t（秒）走过这些路点，回报最终关节角和跟踪误差
+    {"cmd": "suction", "on": true}                → 开吸盘：贴近并对准了才吸得住，回报吸住了哪个方块（或 null）和原因
+    {"cmd": "suction", "on": false}               → 关吸盘：方块落下
     {"cmd": "render", "path": "x.png"}            → 存一张相机图片（调试用）
 
 用法：../.venv/bin/python robot_server.py [--host 监听地址] [--port 5600]
@@ -69,6 +71,14 @@ class Robot:
                                for b in range(self.model.nbody) if self.model.body(b).name.endswith("_cube")})
         if cmd == "traj":
             return self.run_trajectory(req["t"], req["q"])
+        if cmd == "suction":
+            if req["on"]:
+                held, report = world.suction_on(self.model, self.data)
+            else:
+                held, report = world.suction_off(self.model, self.data), {}
+            for _ in range(int(0.3 / self.model.opt.timestep)):      # 给物理 0.3 秒：吸住后贴稳 / 松开后落稳
+                mujoco.mj_step(self.model, self.data)
+            return dict(ok=True, on=bool(req["on"]), held=held, report=report)
         if cmd == "render":
             import imageio.v2 as imageio
             path = os.path.join(world.HERE, os.path.basename(req.get("path", "render.png")))

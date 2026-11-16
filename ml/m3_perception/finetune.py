@@ -10,6 +10,7 @@
     ../.venv/bin/python finetune.py              # 从头训
     ../.venv/bin/python finetune.py --resume     # 从 ckpt/<out>_latest 接着训
     ../.venv/bin/python finetune.py --out ft_neg  # 带负样本的数据，存到 ckpt/ft_neg
+    ../.venv/bin/python finetune.py --data ../m5_robot/dino_data --init ckpt/ft_neg --out ft_m5   # M5：适配有机械臂的新画面
     ../.venv/bin/tensorboard --logdir runs       # 看 train / val 曲线
 """
 import argparse, json, os, random, shutil, time
@@ -26,6 +27,8 @@ parser.add_argument("--lr", type=float, default=1e-5)
 parser.add_argument("--edge", type=int, default=480, help="输入短边像素数（评估时要一致）")
 parser.add_argument("--eval-every", type=int, default=125, help="每多少次更新看一次验证集并存档")
 parser.add_argument("--resume", action="store_true")
+parser.add_argument("--data", default="data", help="数据文件夹（里面有 train/、val/ 和各自的 labels.json）")
+parser.add_argument("--init", default=None, help="从哪个模型开始训（默认官方原版；M5 从 ckpt/ft_neg 接着适配新画面）")
 parser.add_argument("--out", default="final", help="模型存到 ckpt/<out>，存档 ckpt/<out>_latest，曲线 runs/<out>")
 parser.add_argument("--max-updates", type=int, default=0, help="冒烟测试用：只跑这么多次更新就停（0 = 不限制）")
 parser.add_argument("--val-n", type=int, default=0, help="冒烟测试用：验证集只用前几个（0 = 全部）")
@@ -37,8 +40,8 @@ random.seed(0); torch.manual_seed(0)
 
 proc = AutoProcessor.from_pretrained(ID)
 proc.image_processor.size = {"shortest_edge": args.edge, "longest_edge": 1333}
-train = json.load(open("data/train/labels.json"))
-val = json.load(open("data/val/labels.json"))
+train = json.load(open(f"{args.data}/train/labels.json"))
+val = json.load(open(f"{args.data}/val/labels.json"))
 if args.val_n:
     val = val[:args.val_n]
 
@@ -46,7 +49,7 @@ if args.val_n:
 def batch_of(split, item):
     """一个样本 → 模型输入 + 标签。标签里 class_labels=0：句子里只有一个短语（"xxx cube"），目标就是它。
     负样本（box 为 None）给 0 个目标：框的两项 loss 为 0，只剩分类 loss，把所有输出都往"不是它"压。"""
-    image = Image.open(f"data/{split}/{item['image']}").convert("RGB")
+    image = Image.open(f"{args.data}/{split}/{item['image']}").convert("RGB")
     inputs = proc(images=[image], text=[item["text"]], return_tensors="pt").to(DEV)
     if item["box"] is None:
         labels = [{"class_labels": torch.zeros(0, dtype=torch.long, device=DEV),
@@ -63,7 +66,7 @@ def decoder_loss(out):
 
 
 start = 0
-src = f"ckpt/{args.out}_latest" if args.resume else ID
+src = f"ckpt/{args.out}_latest" if args.resume else (args.init or ID)
 model = AutoModelForZeroShotObjectDetection.from_pretrained(src).to(DEV)
 opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
 total_updates = len(train) * args.epochs // args.accum

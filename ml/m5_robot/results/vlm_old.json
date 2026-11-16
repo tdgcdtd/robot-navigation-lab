@@ -1,0 +1,5774 @@
+[
+ {
+  "seed": 10000,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.44,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [538, 532], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [686, 598], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      538,
+      533
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      686,
+      601
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10001,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.96,
+   0.96,
+   2.307552816296953
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [505, 360], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [622, 590], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [629, 541], \"on\": \"red\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      505,
+      362
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      624,
+      594
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      629,
+      543
+     ],
+     "on": "red"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10002,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.1537764081484765,
+   1.9266551326067671,
+   1.367040599250805,
+   4.505640908905192,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [272, 398], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [280, 441], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [297, 468], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [428, 369], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [619, 579], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      270,
+      399
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      282,
+      450
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      296,
+      470
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      427,
+      367
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      621,
+      582
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10003,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   2.950254226333724,
+   2.4838679514016038,
+   1.5758172482873767
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [548, 597], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [598, 494], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [609, 452], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      549,
+      600
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      597,
+      500
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      610,
+      457
+     ],
+     "on": "blue"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10004,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   4.842478704134898,
+   0.8,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [604, 564], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [617, 406], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [612, 529], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      605,
+      574
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      613,
+      528
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      618,
+      404
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10005,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.1537764081484765,
+   1.92,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [304, 454], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [404, 602], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [490, 426], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      304,
+      456
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      404,
+      606
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      489,
+      424
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10006,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.1537764081484765,
+   0.8,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [245, 521], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [653, 516], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [754, 552], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      244,
+      522
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      654,
+      518
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      755,
+      554
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10007,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   5.28,
+   3.8929680193908607
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [651, 380], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [648, 431], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      648,
+      442
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      650,
+      388
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10008,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.96,
+   3.5090739519138094,
+   2.4838679514016038
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [485, 327], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [485, 382], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [743, 670], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      480,
+      385
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      484,
+      332
+     ],
+     "on": "green"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      743,
+      672
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10009,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.44,
+   3.8929680193908607,
+   1.1537764081484765,
+   0.0,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [333, 588], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [530, 416], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [605, 527], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [652, 681], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [671, 649], \"on\": \"orange\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      333,
+      591
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      530,
+      416
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      604,
+      529
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      653,
+      689
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      672,
+      653
+     ],
+     "on": "orange"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10010,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   2.950254226333724,
+   1.9266551326067671,
+   3.2,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [430, 531], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [433, 570], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [734, 526], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [752, 484], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      428,
+      528
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      434,
+      576
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      730,
+      522
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      753,
+      486
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10011,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.64,
+   0.0,
+   1.44,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [349, 606], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [474, 599], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [705, 462], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [722, 420], \"on\": \"green\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      349,
+      609
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      473,
+      601
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      705,
+      462
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      723,
+      420
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10012,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.96,
+   4.842478704134898,
+   0.96,
+   4.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [436, 458], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [436, 512], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [602, 462], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [753, 416], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      431,
+      517
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      435,
+      468
+     ],
+     "on": "red"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      602,
+      464
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      753,
+      418
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10013,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 1,
+  "n_stacked": 2,
+  "stacked_ok": 0,
+  "point_err": [
+   6.239999999999999,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [704, 487], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [717, 416], \"on\": \"yellow\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      695,
+      492
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      710,
+      472
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      716,
+      420
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": false
+ },
+ {
+  "seed": 10014,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   1.28
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [351, 482], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [616, 361], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      351,
+      481
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      618,
+      361
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10015,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 0,
+  "point_err": [
+   0.0,
+   1.5758172482873767,
+   0.96,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [329, 494], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [420, 402], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [488, 388], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [624, 645], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      329,
+      494
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      421,
+      399
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      488,
+      390
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      615,
+      687
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      625,
+      647
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": false
+ },
+ {
+  "seed": 10016,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.44,
+   0.96,
+   0.96,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [266, 534], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [279, 579], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [284, 599], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [599, 516], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      266,
+      536
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      279,
+      582
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      284,
+      602
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      599,
+      518
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10017,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   0.48,
+   0.8,
+   0.48,
+   1.1537764081484765,
+   1.367040599250805
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [327, 530], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [597, 582], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [606, 541], \"on\": \"red\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [632, 379], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [643, 325], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      327,
+      531
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      595,
+      583
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      607,
+      543
+     ],
+     "on": "red"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      632,
+      378
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      642,
+      326
+     ],
+     "on": "blue"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10018,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.1537764081484765,
+   5.900508452667448,
+   0.48,
+   2.4838679514016038
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [383, 410], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [684, 384], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [694, 347], \"on\": \"blue\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [705, 302], \"on\": \"green\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      383,
+      409
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      683,
+      386
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      692,
+      359
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      704,
+      307
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10019,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   3.8929680193908607,
+   5.28,
+   0.48,
+   1.367040599250805
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [334, 583], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [339, 627], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [354, 649], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [589, 367], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      333,
+      591
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      339,
+      638
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      352,
+      650
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      589,
+      368
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10020,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.8,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [547, 494], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [738, 631], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      548,
+      493
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      738,
+      634
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10021,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [324, 447], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [387, 559], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      324,
+      448
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      387,
+      560
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10022,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   2.0238577025077626,
+   1.1537764081484765,
+   0.96,
+   2.4838679514016038
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [237, 551], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [343, 561], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [405, 380], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [758, 610], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      238,
+      553
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      344,
+      565
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      405,
+      382
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      759,
+      615
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10023,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.5758172482873767,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [267, 438], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [628, 344], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      267,
+      441
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      627,
+      347
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10024,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.92,
+   0.8,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [296, 657], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [587, 529], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [595, 476], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      296,
+      661
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      586,
+      528
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      595,
+      478
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10025,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [
+   "orange"
+  ],
+  "extra": [
+   "yellow"
+  ],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.8,
+   1.28,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [478, 561], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [630, 464], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [663, 681], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [681, 641], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      477,
+      562
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      630,
+      466
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      661,
+      681
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      680,
+      645
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": false
+ },
+ {
+  "seed": 10026,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   2.7199999999999998,
+   20.170156171928863,
+   0.64,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [267, 498], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [587, 367], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [592, 391], \"on\": \"green\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [603, 299], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      266,
+      498
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      585,
+      372
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      593,
+      349
+     ],
+     "on": "green"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      603,
+      300
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10027,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.6,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [480, 418], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [476, 471], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      475,
+      473
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      478,
+      420
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10028,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.8,
+   1.9266551326067671,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [645, 527], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [767, 574], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [782, 531], \"on\": \"orange\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      644,
+      526
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      769,
+      577
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      781,
+      532
+     ],
+     "on": "orange"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10029,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.8,
+   0.64
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [589, 391], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [601, 341], \"on\": \"yellow\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      590,
+      390
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      600,
+      341
+     ],
+     "on": "yellow"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10030,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.64,
+   2.7199999999999998
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [692, 525], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [706, 491], \"on\": \"red\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      690,
+      530
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      705,
+      491
+     ],
+     "on": "red"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10031,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.0,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [741, 519], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [754, 470], \"on\": \"yellow\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      741,
+      519
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      753,
+      472
+     ],
+     "on": "yellow"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10032,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.8,
+   1.92,
+   2.4,
+   1.5758172482873767
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [305, 653], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [325, 539], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [440, 396], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [670, 634], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      305,
+      658
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      325,
+      543
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      439,
+      395
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      671,
+      637
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10033,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.48,
+   3.36,
+   1.5758172482873767,
+   1.9266551326067671,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [298, 555], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [556, 481], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [589, 404], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [637, 684], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [653, 644], \"on\": \"purple\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      299,
+      558
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      556,
+      482
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      589,
+      402
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      635,
+      687
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      653,
+      651
+     ],
+     "on": "purple"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10034,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.5758172482873767,
+   1.92,
+   1.92,
+   1.44,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [249, 434], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [472, 531], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [640, 573], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [702, 386], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [771, 576], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      250,
+      437
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      472,
+      534
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      640,
+      577
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      702,
+      387
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      771,
+      580
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10035,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.979090700296477,
+   4.32,
+   2.307552816296953
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [619, 570], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [647, 511], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [651, 450], \"on\": \"yellow\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      621,
+      574
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      644,
+      512
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      651,
+      459
+     ],
+     "on": "yellow"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10036,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   5.795446488407946,
+   3.1516344965747534,
+   1.1537764081484765,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [489, 442], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [490, 362], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [491, 409], \"on\": \"orange\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [607, 614], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      487,
+      448
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      489,
+      364
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      490,
+      421
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      608,
+      618
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10037,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.96,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [216, 670], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [596, 632], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      217,
+      674
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      596,
+      634
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10038,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.44,
+   3.073499633967767,
+   1.44,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [246, 394], \"on\": \"green\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [277, 601], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [262, 434], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [698, 552], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      246,
+      397
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      265,
+      439
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      277,
+      604
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      698,
+      555
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10039,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.44,
+   1.367040599250805,
+   3.340898082851376
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [379, 530], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [464, 516], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [470, 557], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      381,
+      529
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      464,
+      519
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      475,
+      559
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10040,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.1537764081484765,
+   1.92
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [249, 557], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [705, 440], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      249,
+      561
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      704,
+      442
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10041,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   2.0238577025077626,
+   3.5090739519138094,
+   2.4,
+   2.1466252583997982
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [436, 399], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [444, 439], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [693, 537], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [707, 500], \"on\": \"green\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      433,
+      401
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      445,
+      443
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      689,
+      542
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      707,
+      505
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10042,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.8,
+   3.595552808679077,
+   1.1537764081484765,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [284, 549], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [301, 587], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [324, 471], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [370, 371], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      285,
+      551
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      303,
+      594
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      323,
+      472
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      369,
+      373
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10043,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   2.0238577025077626,
+   3.595552808679077,
+   3.073499633967767
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [253, 617], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [277, 647], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [703, 557], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      255,
+      624
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      280,
+      652
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      702,
+      561
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10044,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.1537764081484765,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [412, 477], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [497, 597], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      411,
+      478
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      496,
+      599
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10045,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [
+   "orange"
+  ],
+  "extra": [
+   "yellow"
+  ],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   2.0238577025077626,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [350, 657], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [696, 629], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [750, 576], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      350,
+      659
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      696,
+      633
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      751,
+      580
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": false
+ },
+ {
+  "seed": 10046,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.6,
+   5.86787866268552,
+   1.5758172482873767,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [280, 622], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [297, 661], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [308, 680], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [594, 570], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      278,
+      624
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      298,
+      660
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      312,
+      669
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      595,
+      573
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10047,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.92,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [357, 494], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [414, 601], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      357,
+      495
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      605
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10048,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.5758172482873767,
+   1.5758172482873767,
+   3.4204093322291116,
+   1.6,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [249, 458], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [267, 500], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [419, 432], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [429, 479], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [783, 631], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      248,
+      461
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      266,
+      507
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      421,
+      434
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      428,
+      482
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      782,
+      633
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": true
+ },
+ {
+  "seed": 10049,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [540, 460], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [710, 574], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      540,
+      459
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      711,
+      578
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10050,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   3.4204093322291116,
+   1.44,
+   2.4,
+   4.9677359028032075
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [324, 513], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [329, 559], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [424, 513], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [430, 559], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      325,
+      520
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      331,
+      569
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      424,
+      516
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      433,
+      562
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10051,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.1537764081484765,
+   0.96,
+   2.88,
+   3.4204093322291116
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [228, 529], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [249, 567], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [606, 531], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [616, 487], \"on\": \"red\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      228,
+      531
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      248,
+      574
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      606,
+      537
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      617,
+      489
+     ],
+     "on": "red"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10052,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.92,
+   2.4838679514016038,
+   1.92
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [511, 627], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [521, 589], \"on\": \"blue\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [761, 574], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      508,
+      627
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      521,
+      593
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      762,
+      579
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10053,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   3.595552808679077,
+   1.44,
+   0.64
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [275, 463], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [287, 506], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [429, 386], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      275,
+      466
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      285,
+      513
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      428,
+      386
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10054,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.1537764081484765,
+   1.5758172482873767,
+   1.92,
+   3.2,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [272, 578], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [345, 546], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [354, 591], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [519, 396], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [662, 539], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      272,
+      582
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      344,
+      549
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      358,
+      595
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      520,
+      394
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      662,
+      540
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10055,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [
+   "green"
+  ],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 1,
+  "point_err": [
+   7.785936038781721,
+   0.8,
+   1.92,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [351, 652], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [411, 514], \"on\": \"green\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [422, 571], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [589, 349], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      350,
+      653
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      411,
+      518
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      413,
+      571
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      424,
+      587
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      589,
+      349
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": false
+ },
+ {
+  "seed": 10056,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.48,
+   0.96,
+   0.96,
+   3.84
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [370, 333], \"on\": \"blue\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [357, 616], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [380, 374], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [617, 460], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      357,
+      618
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      370,
+      334
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      380,
+      382
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      617,
+      462
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10057,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.44,
+   1.1537764081484765,
+   2.4,
+   3.1516344965747534,
+   3.4204093322291116
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [255, 582], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [404, 555], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [411, 600], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [498, 500], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [500, 555], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      255,
+      585
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      403,
+      557
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      414,
+      603
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      497,
+      507
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      498,
+      561
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10058,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   0.8,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [368, 466], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [395, 567], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [594, 456], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      369,
+      467
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      395,
+      568
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      594,
+      456
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10059,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   4.8,
+   2.88
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [391, 460], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [392, 517], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      391,
+      470
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      392,
+      523
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10060,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 0,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.6,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [569, 536], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [575, 491], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      567,
+      538
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      576,
+      490
+     ],
+     "on": "blue"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": true
+ },
+ {
+  "seed": 10061,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.48,
+   4.32
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [505, 554], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [511, 594], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      505,
+      555
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      511,
+      603
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10062,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.64,
+   4.8,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [321, 357], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [433, 414], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [435, 456], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      322,
+      357
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      432,
+      415
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      435,
+      466
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10063,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   3.5090739519138094,
+   2.4
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [357, 371], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [365, 417], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      357,
+      376
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      369,
+      422
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10064,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.96,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [396, 420], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [644, 526], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      396,
+      422
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      643,
+      530
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10065,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   3.84,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [380, 598], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [523, 370], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      380,
+      600
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      523,
+      378
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10066,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.0,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [334, 481], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [539, 594], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      334,
+      481
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      539,
+      597
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10067,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   3.8698837191833033,
+   0.0,
+   2.88,
+   0.0,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [266, 408], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [458, 499], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [491, 577], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [497, 620], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [651, 652], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      266,
+      408
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      458,
+      499
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      488,
+      584
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      497,
+      626
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      651,
+      655
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10068,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.48,
+   3.2,
+   0.48,
+   0.0,
+   1.5758172482873767
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [343, 553], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [418, 595], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [584, 581], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [594, 539], \"on\": \"orange\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [704, 442], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      343,
+      552
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      418,
+      596
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      588,
+      585
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      594,
+      539
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      703,
+      445
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10069,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   4.32,
+   1.44,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [210, 618], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [227, 657], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [586, 590], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      211,
+      622
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      227,
+      666
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      586,
+      593
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10070,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   2.88,
+   1.92
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [310, 616], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [663, 606], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      310,
+      620
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      663,
+      612
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10071,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   2.0238577025077626,
+   5.795446488407946,
+   0.48,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [300, 379], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [591, 647], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [595, 587], \"on\": \"yellow\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [760, 456], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      300,
+      380
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      592,
+      651
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      594,
+      599
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      760,
+      456
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10072,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.92,
+   0.48,
+   0.64,
+   0.96,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [250, 410], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [263, 456], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [475, 375], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [576, 498], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [725, 534], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      250,
+      412
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      263,
+      460
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      475,
+      376
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      577,
+      498
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      725,
+      536
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": true
+ },
+ {
+  "seed": 10073,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 3,
+  "stacked_ok": 3,
+  "point_err": [
+   7.7066205304270685,
+   3.4204093322291116,
+   4.2932505167995965,
+   0.96,
+   1.92
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [240, 591], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [264, 639], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [274, 661], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [586, 379], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [593, 321], \"on\": \"red\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      240,
+      595
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      258,
+      635
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      273,
+      645
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      586,
+      381
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      592,
+      328
+     ],
+     "on": "red"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10074,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   2.4,
+   4.32
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [606, 360], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [612, 304], \"on\": \"blue\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      606,
+      365
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      612,
+      313
+     ],
+     "on": "blue"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10075,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.0,
+   0.96,
+   0.0,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [334, 384], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [382, 621], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [502, 378], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [560, 561], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      334,
+      384
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      382,
+      623
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      502,
+      378
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      560,
+      564
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10076,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.64,
+   0.96,
+   0.8,
+   2.4,
+   0.64
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [310, 429], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [376, 481], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [378, 654], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [420, 411], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [756, 657], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      309,
+      430
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      377,
+      481
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      378,
+      656
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      421,
+      411
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      756,
+      662
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10077,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.48,
+   4.842478704134898,
+   9.319914162694847
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [276, 527], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [541, 510], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [542, 553], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      276,
+      528
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      539,
+      572
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      540,
+      520
+     ],
+     "on": "orange"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10078,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.44,
+   0.48,
+   0.96,
+   3.073499633967767
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [283, 647], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [331, 498], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [339, 540], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [721, 429], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      283,
+      649
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      331,
+      497
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      342,
+      545
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      721,
+      432
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10079,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.96,
+   1.5758172482873767,
+   1.1537764081484765,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [318, 449], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [391, 568], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [413, 449], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [758, 463], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      319,
+      451
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      392,
+      571
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      413,
+      449
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      758,
+      465
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10080,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.5758172482873767,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [500, 502], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [749, 515], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      500,
+      503
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      750,
+      518
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10081,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.64,
+   1.44,
+   2.0238577025077626
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [419, 617], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [438, 380], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [667, 674], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      419,
+      620
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      437,
+      380
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      668,
+      678
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10082,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.8,
+   0.64
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [651, 468], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [662, 419], \"on\": \"green\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      652,
+      468
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      663,
+      418
+     ],
+     "on": "green"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10083,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.92,
+   3.1516344965747534,
+   0.8,
+   5.28,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [246, 407], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [316, 616], \"on\": \"blue\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [331, 470], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [336, 659], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [341, 687], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      245,
+      406
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      316,
+      620
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      331,
+      472
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      338,
+      653
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      341,
+      676
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10084,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   0.8
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [314, 371], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [442, 398], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      314,
+      372
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      441,
+      399
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10085,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.64,
+   0.48,
+   0.96,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [294, 484], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [408, 409], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [524, 523], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [693, 377], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      295,
+      484
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      408,
+      411
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      524,
+      524
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      693,
+      378
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10086,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   1.1537764081484765,
+   6.223568108408553,
+   1.5758172482873767,
+   3.8929680193908607,
+   0.64
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [333, 468], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [451, 370], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [452, 421], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [453, 448], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [701, 424], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      334,
+      470
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      445,
+      430
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      450,
+      378
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      454,
+      451
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      700,
+      424
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10087,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   4.367150100465978,
+   3.073499633967767
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [276, 371], \"on\": \"purple\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [288, 422], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      275,
+      380
+     ],
+     "on": "purple"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      291,
+      427
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10088,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.48,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [390, 370], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [664, 482], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      390,
+      370
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      664,
+      483
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10089,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   1.1537764081484765,
+   2.950254226333724,
+   1.44
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [351, 622], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [535, 424], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [754, 574], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      351,
+      625
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      536,
+      422
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      755,
+      580
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10090,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   3.4613292244454295,
+   2.4838679514016038,
+   1.92,
+   5.021553544472069
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [310, 438], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [324, 474], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [560, 402], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [561, 450], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      310,
+      442
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      327,
+      480
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      557,
+      459
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      561,
+      407
+     ],
+     "on": "red"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10091,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.92,
+   3.8698837191833033
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [342, 387], \"on\": \"orange\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [352, 430], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      342,
+      391
+     ],
+     "on": "orange"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      355,
+      437
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10092,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   1.1537764081484765,
+   4.842478704134898,
+   2.950254226333724,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [301, 663], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [354, 379], \"on\": \"red\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [354, 436], \"on\": \"table\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [449, 395], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      300,
+      665
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      353,
+      389
+     ],
+     "on": "red"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      355,
+      442
+     ],
+     "on": "table"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      449,
+      394
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10093,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   2.4,
+   2.0238577025077626,
+   0.48
+  ],
+  "output": "{\"objects\": [{\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [224, 561], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [600, 475], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [661, 576], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      224,
+      566
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      600,
+      476
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      662,
+      580
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10094,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   0.96,
+   3.1516344965747534,
+   6.840818664458223,
+   1.44,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [236, 534], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [439, 349], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [483, 441], \"on\": \"green\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [484, 504], \"on\": \"table\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [647, 541], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      237,
+      536
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      439,
+      347
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      481,
+      455
+     ],
+     "on": "green"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      482,
+      510
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      647,
+      544
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10095,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 5,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 5,
+  "on_ok": 5,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   0.8,
+   0.96,
+   1.6,
+   3.8533102652135343,
+   0.96
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [597, 406], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [602, 351], \"on\": \"green\"}, {\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [622, 522], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [632, 480], \"on\": \"red\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [727, 560], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      598,
+      407
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      602,
+      353
+     ],
+     "on": "green"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      626,
+      528
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      634,
+      482
+     ],
+     "on": "red"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      727,
+      562
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10096,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 2,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 2,
+  "n_stacked": 1,
+  "stacked_ok": 1,
+  "point_err": [
+   3.8929680193908607,
+   3.595552808679077
+  ],
+  "output": "{\"objects\": [{\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [236, 569], \"on\": \"yellow\"}, {\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [254, 607], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      234,
+      576
+     ],
+     "on": "yellow"
+    },
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      255,
+      615
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10097,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 4,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 4,
+  "on_ok": 4,
+  "n_stacked": 2,
+  "stacked_ok": 2,
+  "point_err": [
+   4.9677359028032075,
+   4.32,
+   2.4838679514016038,
+   7.739767438366607
+  ],
+  "output": "{\"objects\": [{\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [314, 577], \"on\": \"blue\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [320, 624], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [743, 701], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [762, 654], \"on\": \"orange\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      314,
+      586
+     ],
+     "on": "blue"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      322,
+      634
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      737,
+      687
+     ],
+     "on": "table"
+    },
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      763,
+      659
+     ],
+     "on": "orange"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ },
+ {
+  "seed": 10098,
+  "parsed": true,
+  "dim": true,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 2,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   0.96,
+   1.92,
+   0.0
+  ],
+  "output": "{\"objects\": [{\"color\": \"red\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [581, 384], \"on\": \"table\"}, {\"color\": \"purple\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [577, 593], \"on\": \"table\"}, {\"color\": \"blue\", \"shape\": \"cube\", \"position\": \"right\", \"point\": [735, 437], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "purple",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      577,
+      597
+     ],
+     "on": "table"
+    },
+    {
+     "color": "red",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      581,
+      384
+     ],
+     "on": "table"
+    },
+    {
+     "color": "blue",
+     "shape": "cube",
+     "position": "right",
+     "point": [
+      735,
+      439
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": false,
+  "content_ok": true
+ },
+ {
+  "seed": 10099,
+  "parsed": true,
+  "dim": false,
+  "n_gt": 3,
+  "missed": [],
+  "extra": [],
+  "pos_ok": 3,
+  "on_ok": 3,
+  "n_stacked": 0,
+  "stacked_ok": 0,
+  "point_err": [
+   2.0238577025077626,
+   0.8,
+   1.1537764081484765
+  ],
+  "output": "{\"objects\": [{\"color\": \"yellow\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [231, 661], \"on\": \"table\"}, {\"color\": \"green\", \"shape\": \"cube\", \"position\": \"left\", \"point\": [339, 431], \"on\": \"table\"}, {\"color\": \"orange\", \"shape\": \"cube\", \"position\": \"center\", \"point\": [560, 555], \"on\": \"table\"}]}",
+  "answer": {
+   "objects": [
+    {
+     "color": "yellow",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      232,
+      665
+     ],
+     "on": "table"
+    },
+    {
+     "color": "green",
+     "shape": "cube",
+     "position": "left",
+     "point": [
+      340,
+      432
+     ],
+     "on": "table"
+    },
+    {
+     "color": "orange",
+     "shape": "cube",
+     "position": "center",
+     "point": [
+      561,
+      557
+     ],
+     "on": "table"
+    }
+   ]
+  },
+  "all_ok": true,
+  "content_ok": true
+ }
+]

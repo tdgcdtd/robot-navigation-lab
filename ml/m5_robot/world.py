@@ -18,20 +18,40 @@ E6_XML = os.path.join(HERE, "assets", "e6.xml")      # build_model.py 生成
 JOINTS = [f"joint{i}" for i in range(1, 7)]
 HOME = [0, 0.5337, 0.7276, 0.3548, -1.5848, 0]       # 和 e6_motion 里的 home 姿态一样
 CUBE = 0.04
+# 吸盘：装在法兰（Link6）上的一根杆，杆头是吸盘面。
+# e6_motion 的抓取技能让法兰停在离桌面 8 cm 处（kGraspHeight），方块顶面在 4 cm，
+# 所以法兰到顶面是 4 cm；吸盘面做在 3.8 cm 处：到位时离顶面还有 2 mm
+TOOL_LEN = 0.038
+SUCTION_GAP = (-0.004, 0.006)     # 吸盘面到方块顶面的距离（沿吸盘朝向，米）：在这个范围内才吸得住
+SUCTION_OFFSET = 0.010            # 吸盘中心偏离顶面中心最多这么远（米）
+SUCTION_TILT = np.deg2rad(15)     # 吸盘和顶面最多歪这么多
 COLORS = {"red": (0.85, 0.1, 0.1, 1), "blue": (0.1, 0.25, 0.85, 1), "green": (0.1, 0.65, 0.2, 1),
           "yellow": (0.95, 0.85, 0.1, 1), "orange": (0.95, 0.45, 0.1, 1), "purple": (0.45, 0.15, 0.75, 1)}
 W, H = 640, 480
 # 相机在机械臂对面、斜着往下看工作区中心：机械臂在画面远处，伸手抓方块时不容易挡住方块
 CAM_POS, CAM_TARGET = (1.05, 0.0, 0.75), (0.15, 0.0, 0.10)
+# "眼睛"相机（感知用）：在底座后上方朝前下方看工作区。和 "cam"（给人看的全景）的区别：
+# - 左右和机械臂一致（画面左 = 机械臂的左 = +y），和 world.yaml 的约定相同
+# - 离工作区近、视角窄，方块在画面里约 30 像素宽（全景相机里只有约 20）
+EYE_POS, EYE_TARGET, EYE_FOVY = (-0.12, 0.0, 0.95), (0.27, 0.0, 0.0), 36
 
 
-def build(cubes):
-    """cubes: {"red": (x, y), ...}（放在桌上）或 {"red": (x, y, z)}。返回 (model, data)。"""
+def _add_camera(wb, name, pos, target, fovy):
+    """相机看向 target。xyaxes = 相机 x 轴（朝右）、y 轴（朝上）在世界里的方向。"""
+    fwd = np.subtract(target, pos); fwd /= np.linalg.norm(fwd)
+    right = np.cross(fwd, [0, 0, 1]); right /= np.linalg.norm(right)
+    wb.add_camera(name=name, pos=pos, xyaxes=[*right, *np.cross(right, fwd)], fovy=fovy)
+
+
+def build(cubes, light=1.0):
+    """cubes: {"red": (x, y), ...}（放在桌上）或 {"red": (x, y, z)}；light：亮度系数。返回 (model, data)。"""
     spec = mujoco.MjSpec.from_file(E6_XML)
     spec.option.timestep = 0.002
     spec.visual.global_.offwidth, spec.visual.global_.offheight = W, H
     wb = spec.worldbody
-    wb.add_light(pos=[0.5, -0.3, 1.5], dir=[-0.2, 0.2, -1], diffuse=[0.7, 0.7, 0.7])
+    spec.visual.headlight.ambient = [0.35 * light] * 3
+    spec.visual.headlight.diffuse = [0.5 * light] * 3
+    wb.add_light(pos=[0.5, -0.3, 1.5], dir=[-0.2, 0.2, -1], diffuse=[0.6 * light] * 3)
     wb.add_geom(name="table", type=mujoco.mjtGeom.mjGEOM_BOX, pos=[0, 0, -0.011], size=[0.4, 0.4, 0.01],
                 rgba=[0.62, 0.47, 0.33, 1])
     wb.add_geom(name="floor", type=mujoco.mjtGeom.mjGEOM_PLANE, pos=[0, 0, -0.75], size=[3, 3, 0.1],
@@ -42,11 +62,19 @@ def build(cubes):
         b.add_freejoint()                               # 自由关节：方块可以被推、被抓、掉下去
         b.add_geom(name=f"{color}_cube", type=mujoco.mjtGeom.mjGEOM_BOX, size=[CUBE / 2] * 3,
                    rgba=COLORS[color], mass=0.03, friction=[1.0, 0.005, 0.0001])
-    # 相机：xyaxes = 相机 x 轴（朝右）、y 轴（朝上）在世界里的方向
-    fwd = np.subtract(CAM_TARGET, CAM_POS); fwd /= np.linalg.norm(fwd)
-    right = np.cross(fwd, [0, 0, 1]); right /= np.linalg.norm(right)
-    up = np.cross(right, fwd)
-    wb.add_camera(name="cam", pos=CAM_POS, xyaxes=[*right, *up], fovy=50)
+    # 吸盘杆 + 吸盘面（沿 Link6 的 z 轴往外伸；末端朝下时 z 轴朝下）
+    tool = spec.body("Link6")
+    tool.add_geom(name="tool_rod", type=mujoco.mjtGeom.mjGEOM_CYLINDER, fromto=[0, 0, 0, 0, 0, TOOL_LEN - 0.005],
+                  size=[0.006, 0, 0], rgba=[0.2, 0.2, 0.22, 1], mass=0.02)
+    tool.add_geom(name="tool_pad", type=mujoco.mjtGeom.mjGEOM_CYLINDER, fromto=[0, 0, TOOL_LEN - 0.005, 0, 0, TOOL_LEN],
+                  size=[0.012, 0, 0], rgba=[0.9, 0.5, 0.1, 1], mass=0.005)
+    tool.add_site(name="suction", pos=[0, 0, TOOL_LEN], size=[0.003, 0.003, 0.003])
+    for color in cubes:
+        # 每个方块配一个"焊接"约束，平时关着；吸住时打开，方块就跟着吸盘走
+        spec.add_equality(name=f"hold_{color}", type=mujoco.mjtEq.mjEQ_WELD, objtype=mujoco.mjtObj.mjOBJ_BODY,
+                          name1="Link6", name2=f"{color}_cube", active=False)
+    _add_camera(wb, "cam", CAM_POS, CAM_TARGET, 50)
+    _add_camera(wb, "eye", EYE_POS, EYE_TARGET, EYE_FOVY)
     # 每个关节一个位置伺服：给目标角度，它出力把关节拉过去（真机械臂的驱动器也是这样）
     for j in JOINTS:
         spec.add_actuator(name=j, target=j, trntype=mujoco.mjtTrn.mjTRN_JOINT,
@@ -93,12 +121,86 @@ def set_joints(model, data, q):
     mujoco.mj_forward(model, data)
 
 
-def render(model, data):
+def suction_on(model, data):
+    """开吸盘。只有"贴近 + 对准 + 没歪"的方块才吸得住。返回 (吸住的方块名或 None, 各方块的检查结果)。
+
+    判断方法：找方块上正对吸盘的那个面，量三个数——
+      gap    吸盘面到这个面的距离（沿吸盘朝向）
+      offset 吸盘中心偏离面中心多远
+      tilt   吸盘和这个面歪了多少度
+    """
+    p = data.site("suction").xpos
+    axis = data.site("suction").xmat.reshape(3, 3)[:, 2]          # 吸盘朝向（世界坐标）
+    report, best = {}, None
+    for b in range(model.nbody):
+        name = model.body(b).name
+        if not name.endswith("_cube"):
+            continue
+        R = data.xmat[b].reshape(3, 3)
+        normals = np.concatenate([R.T, -R.T])                       # 方块 6 个面的朝外方向
+        n = normals[np.argmin(normals @ axis)]                      # 正对吸盘的面：朝向和吸盘朝向最相反
+        d = data.xpos[b] + n * CUBE / 2 - p
+        gap = float(d @ axis)
+        offset = float(np.linalg.norm(d - gap * axis))
+        tilt = float(np.arccos(np.clip(-n @ axis, -1, 1)))
+        ok = SUCTION_GAP[0] <= gap <= SUCTION_GAP[1] and offset <= SUCTION_OFFSET and tilt <= SUCTION_TILT
+        report[name] = dict(gap_mm=round(gap * 1000, 1), offset_mm=round(offset * 1000, 1),
+                            tilt_deg=round(float(np.rad2deg(tilt)), 1), ok=bool(ok))
+        if ok and (best is None or offset < report[best]["offset_mm"] / 1000):
+            best = name
+    if best:
+        _weld(model, data, best)
+    return best, report
+
+
+def _weld(model, data, cube_name):
+    """把方块按"现在相对吸盘的位置"焊住（不是拉到某个固定位置：吸歪了就歪着带走）。"""
+    eq = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_EQUALITY, "hold_" + cube_name.removesuffix("_cube"))
+    b1, b2 = model.body("Link6").id, model.body(cube_name).id
+    R1 = data.xmat[b1].reshape(3, 3)
+    q1, q2, rel = np.zeros(4), np.zeros(4), np.zeros(4)
+    mujoco.mju_mat2Quat(q1, data.xmat[b1]); mujoco.mju_mat2Quat(q2, data.xmat[b2])
+    mujoco.mju_negQuat(q1, q1); mujoco.mju_mulQuat(rel, q1, q2)
+    model.eq_data[eq, 0:3] = 0                                      # 焊点：方块中心
+    model.eq_data[eq, 3:6] = R1.T @ (data.xpos[b2] - data.xpos[b1])   # 方块相对 Link6 的位置
+    model.eq_data[eq, 6:10] = rel                                   # ……和朝向
+    data.eq_active[eq] = 1
+
+
+def suction_off(model, data):
+    """关吸盘：所有焊接约束关掉，方块交还给重力。返回刚才吸着的方块名（没有则 None）。"""
+    held = None
+    for eq in range(model.neq):
+        if data.eq_active[eq]:
+            held = model.equality(eq).name.removeprefix("hold_") + "_cube"
+        data.eq_active[eq] = 0
+    return held
+
+
+def render(model, data, camera="cam"):
     r = mujoco.Renderer(model, H, W)
-    r.update_scene(data, camera="cam")
+    r.update_scene(data, camera=camera)
     rgb = r.render()
     r.close()
     return rgb
+
+
+def render_all(model, data, camera="eye"):
+    """感知用：彩色图、深度图、分割图（每个像素属于哪个方块，-1 = 不是方块）、相机参数。和 M3 的 scene.render 同一套约定。"""
+    r = mujoco.Renderer(model, H, W)
+    r.update_scene(data, camera=camera)
+    rgb = r.render()
+    r.enable_depth_rendering(); depth = r.render(); r.disable_depth_rendering()
+    r.enable_segmentation_rendering(); seg_raw = r.render(); r.disable_segmentation_rendering()
+    r.close()
+    names = [model.body(b).name for b in range(model.nbody) if model.body(b).name.endswith("_cube")]
+    seg = np.full((H, W), -1)
+    for i, n in enumerate(names):
+        seg[seg_raw[..., 0] == model.geom(n).id] = i
+    cam = model.camera(camera).id
+    f = (H / 2) / np.tan(np.deg2rad(model.cam_fovy[cam]) / 2)
+    info = {"f": f, "cx": W / 2, "cy": H / 2, "pos": data.cam_xpos[cam].copy(), "R": data.cam_xmat[cam].reshape(3, 3).copy()}
+    return rgb, depth, seg, info, names
 
 
 if __name__ == "__main__":

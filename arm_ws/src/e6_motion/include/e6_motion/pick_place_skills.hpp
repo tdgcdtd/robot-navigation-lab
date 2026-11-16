@@ -25,13 +25,15 @@
 #include <moveit_msgs/srv/get_position_ik.hpp>
 #include <random_numbers/random_numbers.h>
 #include <rclcpp/rclcpp.hpp>
+#include <std_srvs/srv/set_bool.hpp>
 
 namespace e6_motion
 {
 
 // ---------- 场景参数（单位：米，坐标系：dummy_link） ----------
 constexpr double kCubeSize = 0.04;
-// 末端（Link6 法兰）相对方块中心的高度。还没有夹爪，假想夹爪长 6 cm：法兰停在方块顶面上方 6 cm
+// 抓取时末端（Link6 法兰）离桌面的高度：方块中心（2 cm）再往上 6 cm = 8 cm，也就是法兰停在方块顶面上方 4 cm。
+// MuJoCo 仿真里的吸盘杆按这个高度做成 3.8 cm 长（ml/m5_robot/world.py 的 TOOL_LEN）
 constexpr double kGraspHeight = kCubeSize / 2 + 0.06;
 constexpr double kApproachHeight = kGraspHeight + 0.10;  // 接近点：再高 10 cm，从这里直线下降
 // 直线移动 10 cm 时，正常每个关节只转 30° 左右；超过 90° 说明 IK 跳到了另一组解
@@ -69,7 +71,8 @@ public:
 
   PickPlace(const rclcpp::Node::SharedPtr & node, MoveGroupInterface & arm)
   : logger_(node->get_logger()), arm_(arm),
-    ik_client_(node->create_client<moveit_msgs::srv::GetPositionIK>("/compute_ik")) {}
+    ik_client_(node->create_client<moveit_msgs::srv::GetPositionIK>("/compute_ik")),
+    suction_client_(node->create_client<std_srvs::srv::SetBool>("/suction")) {}
 
   bool moveHome(const std::string & step)
   {
@@ -115,6 +118,13 @@ public:
 
   bool attach(const std::string & object_id)
   {
+    // 有吸盘（MuJoCo 仿真，e6_mujoco 的 bridge_node 提供 /suction 服务）：先真的去吸。
+    // 吸盘只在"贴近 + 对准"时才吸得住；没吸住就如实失败，不能在 MoveIt 里假装抓到了
+    std::string reason;
+    if (!suction(true, reason)) {
+      RCLCPP_ERROR(logger_, "抓取 %s 失败：吸盘没吸住（%s）", object_id.c_str(), reason.c_str());
+      return false;
+    }
     // 把方块"挂"到 Link6 上：之后规划时，方块跟着末端一起动，也会一起做碰撞检测
     const bool ok = arm_.attachObject(object_id, arm_.getEndEffectorLink());
     RCLCPP_INFO(logger_, ok ? "已抓住 %s" : "抓取 %s 失败", object_id.c_str());
@@ -123,12 +133,32 @@ public:
 
   bool detach(const std::string & object_id)
   {
+    std::string reason;
+    suction(false, reason);  // 关吸盘不会"失败"：就算刚才没吸着东西，关掉也没坏处
     const bool ok = arm_.detachObject(object_id);
     RCLCPP_INFO(logger_, ok ? "已放下 %s" : "放下 %s 失败", object_id.c_str());
     return ok;
   }
 
 private:
+  // 开 / 关吸盘。没有 /suction 服务（纯 RViz 的假硬件、Gazebo）时直接算成功，行为和以前一样。
+  bool suction(bool on, std::string & reason)
+  {
+    if (!suction_client_->wait_for_service(std::chrono::milliseconds(500))) {
+      return true;
+    }
+    auto request = std::make_shared<std_srvs::srv::SetBool::Request>();
+    request->data = on;
+    auto future = suction_client_->async_send_request(request);  // 回复由 spinner 线程处理，这里只等 future
+    if (future.wait_for(std::chrono::seconds(30)) != std::future_status::ready) {
+      reason = "吸盘服务 30 秒没有回应";
+      return false;
+    }
+    const auto response = future.get();
+    reason = response->message;
+    return response->success;
+  }
+
   // 试算：找一个"能到达 above、并且能从 above 直线下降到 down"的姿态（6 个关节角）
   //   1. 用不同的起点求 IK（第一个起点 = 当前姿态，之后随机），move_group 会顺便检查碰撞
   //   2. 假装机械臂已经在这个姿态，试算直线下降（只计算、不执行）
@@ -238,6 +268,7 @@ private:
   rclcpp::Logger logger_;
   MoveGroupInterface & arm_;
   rclcpp::Client<moveit_msgs::srv::GetPositionIK>::SharedPtr ik_client_;
+  rclcpp::Client<std_srvs::srv::SetBool>::SharedPtr suction_client_;
   random_numbers::RandomNumberGenerator rng_;
 };
 
