@@ -48,6 +48,6 @@
 - [x] 里程碑 5：完成（2026-11-16 ~ 11-19）—— 机械臂+桌面+相机全进 MuJoCo，跨机连 Windows MoveIt 2 + 物理吸盘 + DINO 二次微调（`ft_m5` 100%）+ 全本地“看→想→定位→做→再看”闭环（`swap` / `stack` / `mixed` 全过，`mjpython` 实时 3D 窗口）
 - [~] 里程碑 6：进行中（2026-11-19 起）—— 开源 VLA（`LeRobot` + `SmolVLA` + `π0.5`，Google Colab 200 CU 云端微调 + Mac 实时 3D 闭环）
   - [x] ① 预习通关：端到端 VLA vs M5 分层架构、模仿学习、Action Chunking、连续 Flow Matching vs 离散 Token、多视角与域随机化
-  - [x] ② 双视角数据集采集完成：`ml/m6_vla/`（`eye` + 避障 `wrist`，灯光域随机化 `0.85~1.15`），160 条 `9600` 帧全部通过物理验收（平均误差 `0.016 mm`，已打好 `31 MB` 单文件 Colab 上传包 `e6_colab_bundle.zip`）
-  - [x] ③ 转换、Colab 训练脚本与闭环评测上线：`convert_to_lerobot.py`、`eval_vla.py`（`expert` 基线 `seed=1000` `8/8 = 100%`）、`colab_train_vla.ipynb`（L4 `SmolVLA` + A100 `π0.5` LoRA）
-  - [ ] ④ 待做：上 Colab 跑通 `SmolVLA`（L4）与 `π0.5` LoRA（A100）→ 下载 `SmolVLA` 回 Mac 跑实时 3D 窗口闭环 → 与 M5 对比 & 双向提问结项
+  - [x] ② 双视角数据集采集完成：`ml/m6_vla/`（`eye` + 避障 `wrist`，灯光域随机化 `0.85~1.15`），**320 条 `19,200` 帧**全部通过物理验收（平均误差 `0.016 mm`，已打好 `55.30 MB` 单文件 Colab 上传包 `e6_colab_bundle.zip`）
+  - [x] ③ 转换、最佳效果 Colab 脚本与闭环评测上线：`convert_to_lerobot.py`（`320/320` 帧校验通过）、`eval_vla.py`（默认 `n_action_steps=5`，`expert` 基线 `seed=1000` `8/8 = 100%`）、`colab_train_vla.ipynb`（`SmolVLA` 20k 步 + `π0.5` LoRA `r=32` 6k 步 + 多检查点 MuJoCo 实地选优）
+  - [ ] ④ 待做：上 Colab 跑通 `SmolVLA`（~8–17 CU）与 `π0.5` LoRA（~20–26 CU）→ 下载冠军 `SmolVLA` 回 Mac 跑实时 3D 窗口闭环 → 与 M5 对比 & 双向提问结项

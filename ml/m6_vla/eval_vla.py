@@ -222,8 +222,8 @@ def main():
     ap.add_argument("--light-range", nargs=2, type=float, default=[1.0, 1.0],
                     metavar=("MIN", "MAX"), help="评测光照强度范围")
     ap.add_argument("--device", default="auto", help="auto / cuda / mps / cpu")
-    ap.add_argument("--n-action-steps", type=int, default=10,
-                    help="每次重看画面前连续执行的动作步数（10 Hz 下 10 步 = 1 秒重看一次）")
+    ap.add_argument("--n-action-steps", type=int, default=5,
+                    help="每次重看画面前连续执行的动作步数（10 Hz 下 5 步 = 0.5 秒重看一次）")
     ap.add_argument("--max-steps", type=int, default=80, help="单回合最大控制步数")
     ap.add_argument("--gui", action="store_true", help="打开 MuJoCo 3D 实时窗口（需用 mjpython 运行）")
     ap.add_argument("--save-video", default=None, help="可选：保存前若干回合的 cam|eye|wrist 对比 mp4")
