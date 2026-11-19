@@ -9,6 +9,8 @@
     {"cmd": "traj", "t": [...], "q": [[6]...]}    → 按时间 t（秒）走过这些路点，回报最终关节角和跟踪误差
     {"cmd": "suction", "on": true}                → 开吸盘：贴近并对准了才吸得住，回报吸住了哪个方块（或 null）和原因
     {"cmd": "suction", "on": false}               → 关吸盘：方块落下
+    {"cmd": "camera"}                             → "眼睛"相机拍一张（彩色 + 深度 + 相机参数），存成 npz，回报路径
+    {"cmd": "reset", "cubes": {"red": [x, y], ...}} → 换一个桌面摆放（演示用）
     {"cmd": "render", "path": "x.png"}            → 存一张相机图片（调试用）
 
 用法：../.venv/bin/python robot_server.py [--host 监听地址] [--port 5600]
@@ -36,10 +38,26 @@ def tailscale_ip():
 
 
 class Robot:
-    def __init__(self, cubes):
+    def __init__(self, cubes, gui=True):
         self.model, self.data = world.build(cubes)
         self.adr = world.joint_addr(self.model)
         self.lock = threading.Lock()      # 仿真世界只有一个：同一时刻只处理一个请求
+        self.viewer = None
+        if gui:
+            try:
+                import mujoco.viewer
+                self.viewer = mujoco.viewer.launch_passive(self.model, self.data)
+                self.viewer.cam.lookat[:] = world.CAM_TARGET
+                self.viewer.cam.distance = 1.15
+                self.viewer.cam.azimuth = 180
+                self.viewer.cam.elevation = -35
+                self.viewer.sync()
+            except RuntimeError as e:
+                print(f"提示：要用实时 3D 窗口请用 ../.venv/bin/mjpython robot_server.py 启动（{e}）；继续无窗口运行", flush=True)
+
+    def _sync_viewer(self):
+        if self.viewer is not None and self.viewer.is_running():
+            self.viewer.sync()
 
     def q(self):
         return self.data.qpos[self.adr].copy()
@@ -49,6 +67,7 @@ class Robot:
         t, q = np.asarray(t, float), np.asarray(q, float)
         dt, track = self.model.opt.timestep, 0.0
         start_gap = float(np.abs(q[0] - self.q()).max())      # 轨迹起点和机械臂现在的位置差多少
+        t0 = time.monotonic()
         for k in range(int(round((t[-1] + SETTLE) / dt))):
             now = min(k * dt, t[-1])
             target = np.array([np.interp(now, t, q[:, j]) for j in range(6)])   # 路点之间线性插值
@@ -56,6 +75,12 @@ class Robot:
             mujoco.mj_step(self.model, self.data)
             if k * dt <= t[-1]:
                 track = max(track, float(np.abs(self.q() - target).max()))
+            if self.viewer is not None and k % 10 == 0:
+                self._sync_viewer()
+                gap = k * dt - (time.monotonic() - t0)
+                if gap > 0:
+                    time.sleep(gap)
+        self._sync_viewer()
         return dict(ok=True, q=self.q().tolist(), start_gap=start_gap, track_err=track,
                     final_err=float(np.abs(self.q() - q[-1]).max()), duration=float(t[-1]))
 
@@ -78,7 +103,25 @@ class Robot:
                 held, report = world.suction_off(self.model, self.data), {}
             for _ in range(int(0.3 / self.model.opt.timestep)):      # 给物理 0.3 秒：吸住后贴稳 / 松开后落稳
                 mujoco.mj_step(self.model, self.data)
+            self._sync_viewer()
             return dict(ok=True, on=bool(req["on"]), held=held, report=report)
+        if cmd == "camera":
+            # "眼睛"相机拍一张：彩色 + 深度 + 相机参数，存成 npz 给本机的感知程序（只在 Mac 本地用，所以传路径不传数据）
+            rgb, depth, _, cam, _ = world.render_all(self.model, self.data, "eye")
+            path = os.path.join(world.HERE, "eye_latest.npz")
+            np.savez(path, rgb=rgb, depth=depth, f=cam["f"], cx=cam["cx"], cy=cam["cy"], pos=cam["pos"], R=cam["R"])
+            return dict(ok=True, path=path)
+        if cmd == "reset":
+            # 换一个桌面摆放（演示 / 测试用）：重建仿真世界，机械臂回 home
+            self.model, self.data = world.build({c: tuple(p) for c, p in req["cubes"].items()})
+            self.adr = world.joint_addr(self.model)
+            for _ in range(int(0.5 / self.model.opt.timestep)):
+                mujoco.mj_step(self.model, self.data)
+            if self.viewer is not None and self.viewer.is_running():
+                self.viewer._get_sim().load(self.model, self.data, "")
+                self.viewer._m, self.viewer._d = self.model, self.data
+                self._sync_viewer()
+            return dict(ok=True)
         if cmd == "render":
             import imageio.v2 as imageio
             path = os.path.join(world.HERE, os.path.basename(req.get("path", "render.png")))
@@ -113,6 +156,14 @@ def client_loop(robot, conn, addr):
 
 def serve(robot, hosts, port):
     """每个连接一个线程（桥接节点一个、Mac 上的感知程序一个……），共用同一个仿真世界。"""
+    if robot.viewer is not None:
+        def refresh_viewer():
+            while robot.viewer.is_running():
+                with robot.lock:
+                    robot._sync_viewer()
+                time.sleep(0.03)
+        threading.Thread(target=refresh_viewer, daemon=True).start()
+
     def listen(host):
         srv = socket.socket()
         srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -130,7 +181,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default=None)
     ap.add_argument("--port", type=int, default=5600)
+    ap.add_argument("--no-gui", action="store_true")
     args = ap.parse_args()
-    robot = Robot({"red": (0.30, 0.06), "blue": (0.30, -0.06)})      # 和 e6_llm/config/world.yaml 一样的摆放
-    # 两个地址：Tailscale（给 Windows 上的桥接节点）+ 本机回环（给 Mac 上自己的程序）
-    serve(robot, [args.host] if args.host else sorted({tailscale_ip(), "127.0.0.1"}), args.port)
+    robot = Robot({"red": (0.30, 0.06), "blue": (0.30, -0.06)}, gui=not args.no_gui)      # 和 e6_llm/config/world.yaml 一样的摆放
+    # 监听全部网卡（支持手机热点局域网 / Tailscale / 本机回环）
+    serve(robot, [args.host] if args.host else ["0.0.0.0"], args.port)

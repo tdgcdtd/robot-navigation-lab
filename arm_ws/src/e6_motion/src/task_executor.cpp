@@ -8,8 +8,11 @@
 //   "pick_place red_cube left_zone"   把 red_cube 放到 left_zone
 //   "home"                            回 home
 //   "pick_place red_cube aside"       把 red_cube 挪到旁边的空地（具体放哪由这里找，见 findFreeSpot）
+//   "observe red_cube 0.31 0.05 0.06" 相机看到 red_cube 中心真实在 (x, y, z)：更新位置（没有就新建）。ML M5 的闭环用
+//   "forget red_cube"                 相机看不到 red_cube 了：从场景里删掉
 //
 // 分工：大模型决定"做什么"（比如交换 = 先挪开一个），这里决定"放在哪"（几何问题交给代码，不让大模型报坐标）。
+// 物体位置的来源：一开始读 world.yaml；有相机时（ML M5）由 observe 指令用看到的真实位置覆盖。
 // 每次物体位置变了，就把"谁在哪"发到 /world_state，planner 写进提示词 —— 大模型只知道你告诉它的东西。
 //
 // 为什么不直接收大模型的原话？大模型偶尔会说错。执行端只认这两种固定格式、只认配置文件里有的名字，
@@ -63,14 +66,16 @@ struct Place
   std::string label;  // 中文名，只用于打印
   double x = 0.0;
   double y = 0.0;
+  double z = kCubeSize / 2;  // 方块中心高度：放在桌上是 2 cm，叠在另一个方块上是 6 cm
   std::vector<double> color;  // RGB，0–1，只有物体用（RViz 里的颜色）
 };
 
 struct Command
 {
-  std::string action;  // "pick_place" 或 "home"
+  std::string action;  // "pick_place"、"home"、"observe"、"forget"
   std::string object;
   std::string target;
+  double x = 0.0, y = 0.0, z = 0.0;  // observe 用
 };
 
 // 解析一条指令文本。格式不对（多了 / 少了单词、未知动作）→ 返回空
@@ -82,6 +87,14 @@ std::optional<Command> parseCommand(const std::string & text)
   if (cmd.action == "pick_place") {
     in >> cmd.object >> cmd.target;
     if (cmd.target.empty()) {
+      return std::nullopt;
+    }
+  } else if (cmd.action == "observe") {
+    if (!(in >> cmd.object >> cmd.x >> cmd.y >> cmd.z)) {
+      return std::nullopt;
+    }
+  } else if (cmd.action == "forget") {
+    if (!(in >> cmd.object)) {
       return std::nullopt;
     }
   } else if (cmd.action != "home") {
@@ -153,7 +166,7 @@ public:
     scene.push_back(e6_motion::makeBox("table", frame, 0.0, 0.0, -0.011, 0.8, 0.8, 0.02));
     for (const auto & [id, obj] : objects_) {
       arm_.detachObject(id);  // 上次中途失败、方块还挂在手上的话，先放下
-      scene.push_back(e6_motion::makeBox(id, frame, obj.x, obj.y, kCubeSize / 2,
+      scene.push_back(e6_motion::makeBox(id, frame, obj.x, obj.y, obj.z,
         kCubeSize, kCubeSize, kCubeSize));
       if (obj.color.size() == 3) {
         moveit_msgs::msg::ObjectColor c;
@@ -219,6 +232,12 @@ private:
 
   bool execute(const Command & cmd)
   {
+    if (cmd.action == "observe") {
+      return observe(cmd.object, cmd.x, cmd.y, cmd.z);
+    }
+    if (cmd.action == "forget") {
+      return forget(cmd.object);
+    }
     if (cmd.action == "home") {
       report("开始：回 home");
       const bool ok = task_.moveHome("回 home");
@@ -226,6 +245,43 @@ private:
       return ok;
     }
     return pickPlace(cmd.object, cmd.target);
+  }
+
+  // 相机看到的真实位置：更新（或新建）物体，同时更新 MoveIt 的规划场景（碰撞检测用的是真实位置）
+  bool observe(const std::string & object_id, double x, double y, double z)
+  {
+    // 合理性检查：不完全相信上游（感知也会出错）。桌面范围内、高度在 1~3 层方块之间才接受
+    if (std::abs(x) > 0.4 || std::abs(y) > 0.4 || z < kCubeSize / 4 || z > 3 * kCubeSize) {
+      report("拒绝：" + object_id + " 的位置不合理");
+      return false;
+    }
+    Place & obj = objects_[object_id];
+    if (obj.label.empty()) {
+      obj.label = object_id;
+    }
+    obj.x = x;
+    obj.y = y;
+    obj.z = z;
+    // 碰撞盒略缩 2 mm，避免上下叠放或深度误差 1 mm 时 FCL 贴面误判碰撞
+    const double box_size = kCubeSize - 0.002;
+    const bool ok = e6_motion::applyCollisionObjects(node_,
+      {e6_motion::makeBox(object_id, arm_.getPlanningFrame(), x, y, z, box_size, box_size, box_size)});
+    publishWorldState();
+    return ok;
+  }
+
+  bool forget(const std::string & object_id)
+  {
+    if (objects_.erase(object_id) == 0) {
+      return true;
+    }
+    moveit_msgs::msg::CollisionObject obj;
+    obj.id = object_id;
+    obj.header.frame_id = arm_.getPlanningFrame();
+    obj.operation = moveit_msgs::msg::CollisionObject::REMOVE;
+    const bool ok = e6_motion::applyCollisionObjects(node_, {obj});
+    publishWorldState();
+    return ok;
   }
 
   bool pickPlace(const std::string & object_id, const std::string & target_id)
@@ -265,19 +321,27 @@ private:
     const std::string what = "把" + obj.label + "放到" + tgt.label;
 
     report("开始：" + what);
-    const bool ok =
-      task_.approachAndDescend(downPose(obj.x, obj.y, kApproachHeight),
-        downPose(obj.x, obj.y, kGraspHeight), object_id + " 接近") &&
+    // 抓取高度跟着方块的真实高度走：叠在别的方块上面的，法兰就停得高一层
+    const double lift = obj.z - kCubeSize / 2;
+    bool ok =
+      task_.approachAndDescend(downPose(obj.x, obj.y, kApproachHeight + lift),
+        downPose(obj.x, obj.y, kGraspHeight + lift), object_id + " 接近") &&
       task_.attach(object_id) &&
-      task_.moveStraight(downPose(obj.x, obj.y, kApproachHeight), object_id + " 抬起") &&
+      task_.moveStraight(downPose(obj.x, obj.y, kApproachHeight + lift), object_id + " 抬起") &&
       task_.approachAndDescend(downPose(tgt.x, tgt.y, kApproachHeight),
         downPose(tgt.x, tgt.y, kGraspHeight), object_id + " 到放置点") &&
       task_.detach(object_id) &&
       task_.moveStraight(downPose(tgt.x, tgt.y, kApproachHeight), object_id + " 放下后抬起");
+    if (!ok) {
+      task_.detach(object_id);
+    }
+    // 无论成功或失败都回 home，防止机械臂停在半空中遮挡后上方 eye 相机的视线
+    ok = task_.moveHome(object_id + " 回 home") && ok;
 
     if (ok) {
       obj.x = tgt.x;  // 记住物体的新位置：下次再说"把红色方块放回右边"，就从这里抓
       obj.y = tgt.y;
+      obj.z = kCubeSize / 2;  // 放下的地方都是桌面
       publishWorldState();
     }
     report((ok ? "完成：" : "失败：") + what);

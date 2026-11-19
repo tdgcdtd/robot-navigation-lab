@@ -22,6 +22,7 @@ setup(
     entry_points={
         "console_scripts": [
             "bridge_node = e6_mujoco.bridge_node:main",
+            "relay_node = e6_mujoco.relay_node:main",
         ],
     },
 )

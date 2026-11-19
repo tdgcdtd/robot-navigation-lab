@@ -46,6 +46,28 @@ class VLM:
         return text, parse(text)
 
 
+    def chat(self, system, user, max_tokens=400):
+        """纯文字对话（不看图），用来做任务规划。
+
+        LoRA 的效果是"原权重 + scale × 小矩阵"。规划时把 scale 临时改成 0，模型就变回原版 Qwen3-VL
+        （LoRA 只学过"看图写场景 JSON"，带着它做规划反而可能变差）；用完改回去。
+        这样内存里始终只有一个 4B 模型，不用再加载一个规划模型。
+        """
+        loras = [m for _, m in self.model.named_modules() if hasattr(m, "lora_a") and hasattr(m, "scale")]
+        saved = [m.scale for m in loras]
+        for m in loras:
+            m.scale = 0.0
+        try:
+            prompt = apply_chat_template(self.processor, self.model.config,
+                                         [{"role": "system", "content": system}, {"role": "user", "content": user}],
+                                         num_images=0)
+            out = generate(self.model, self.processor, prompt, max_tokens=max_tokens, temperature=0.0, verbose=False)
+        finally:
+            for m, s in zip(loras, saved):
+                m.scale = s
+        return out.text if hasattr(out, "text") else str(out)
+
+
 def parse(text):
     """从输出里抠出 JSON。程序要的是"每次都能解析"，解析不了就算这次失败（返回 None）。"""
     m = re.search(r"\{.*\}", text, re.S)        # 模型常在 JSON 外面包 ```json ... ``` 或加一句话

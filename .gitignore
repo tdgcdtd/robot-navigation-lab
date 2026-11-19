@@ -60,4 +60,5 @@ ml/**/adapters/
 ml/m5_robot/assets/
 ml/m5_robot/*.log
 ml/m5_robot/*.png
+ml/m5_robot/*.npz
 ml/m5_robot/dino_data/
