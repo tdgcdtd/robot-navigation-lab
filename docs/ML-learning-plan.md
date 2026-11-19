@@ -46,3 +46,8 @@
 - [x] 里程碑 3：完成（11-09）—— 开放词汇感知 + 微调 Grounding DINO base（`ml/m3_perception/`）：零样本在 5 类场景检测 64%（480 分辨率），用仿真自动标注数据全量微调后 100%；加负样本后拒绝不存在的颜色/物体 3% → 100%。遗留：不会按形状拒绝、"a can" 变差、只在仿真里验证
 - [x] 里程碑 4：完成（11-10）—— LoRA 微调 Qwen3-VL-4B（`ml/m4_vlm/`，8 bit 原模型 + 语言和视觉两部分挂 LoRA）：同 100 个测试场景，场景全对 13% → 93%，叠放 24/94 → 93/94，point 误差 12 → 1 像素
 - [x] 里程碑 5：完成（2026-11-16 ~ 11-19）—— 机械臂+桌面+相机全进 MuJoCo，跨机连 Windows MoveIt 2 + 物理吸盘 + DINO 二次微调（`ft_m5` 100%）+ 全本地“看→想→定位→做→再看”闭环（`swap` / `stack` / `mixed` 全过，`mjpython` 实时 3D 窗口）
+- [~] 里程碑 6：进行中（2026-11-19 起）—— 开源 VLA（`LeRobot` + `SmolVLA` + `π0.5`，Google Colab 200 CU 云端微调 + Mac 实时 3D 闭环）
+  - [x] ① 预习通关：端到端 VLA vs M5 分层架构、模仿学习、Action Chunking、连续 Flow Matching vs 离散 Token、多视角与域随机化
+  - [x] ② 双视角数据集采集完成：`ml/m6_vla/`（`eye` + 避障 `wrist`，灯光域随机化 `0.85~1.15`），160 条 `9600` 帧全部通过物理验收（平均误差 `0.016 mm`，已打好 `31 MB` 单文件 Colab 上传包 `e6_colab_bundle.zip`）
+  - [x] ③ 转换、Colab 训练脚本与闭环评测上线：`convert_to_lerobot.py`、`eval_vla.py`（`expert` 基线 `seed=1000` `8/8 = 100%`）、`colab_train_vla.ipynb`（L4 `SmolVLA` + A100 `π0.5` LoRA）
+  - [ ] ④ 待做：上 Colab 跑通 `SmolVLA`（L4）与 `π0.5` LoRA（A100）→ 下载 `SmolVLA` 回 Mac 跑实时 3D 窗口闭环 → 与 M5 对比 & 双向提问结项
