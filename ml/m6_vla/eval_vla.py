@@ -52,28 +52,29 @@ def _load_json_from_ckpt(checkpoint, filename):
 
 
 def _import_factory():
-    try:
-        from lerobot.policies.factory import get_policy_class, make_pre_post_processors
-        return get_policy_class, make_pre_post_processors
-    except ImportError:
-        from lerobot.common.policies.factory import get_policy_class, make_pre_post_processors
-        return get_policy_class, make_pre_post_processors
+    for mod in ("lerobot.policies", "lerobot.policies.factory", "lerobot.common.policies.factory"):
+        try:
+            m = __import__(mod, fromlist=["get_policy_class", "make_pre_post_processors"])
+            return getattr(m, "get_policy_class"), getattr(m, "make_pre_post_processors")
+        except (ImportError, AttributeError):
+            continue
+    raise ImportError("无法导入 lerobot 策略工厂，请确认已安装 lerobot[training]")
 
 
 def _fallback_policy_class(policy_type):
-    if policy_type == "smolvla":
-        from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
-        return SmolVLAPolicy
-    if policy_type == "pi05":
+    candidates = {
+        "smolvla": [("lerobot.policies.smolvla", "SmolVLAPolicy"), ("lerobot.policies.smolvla.modeling_smolvla", "SmolVLAPolicy")],
+        "pi05": [("lerobot.policies.pi05", "PI05Policy"), ("lerobot.policies.pi05.modeling_pi05", "PI05Policy")],
+        "pi0": [("lerobot.policies.pi0", "PI0Policy"), ("lerobot.policies.pi0.modeling_pi0", "PI0Policy")],
+    }.get(policy_type)
+    if not candidates:
+        raise ValueError(f"未知的 policy_type: {policy_type}")
+    for mod, cls_name in candidates:
         try:
-            from lerobot.policies.pi05.modeling_pi05 import PI05Policy
-        except ImportError:
-            from lerobot.policies.pi05 import PI05Policy
-        return PI05Policy
-    if policy_type == "pi0":
-        from lerobot.policies.pi0.modeling_pi0 import PI0Policy
-        return PI0Policy
-    raise ValueError(f"未知的 policy_type: {policy_type}")
+            return getattr(__import__(mod, fromlist=[cls_name]), cls_name)
+        except (ImportError, AttributeError):
+            continue
+    raise ImportError(f"无法加载策略类 {policy_type}，请确认已安装对应依赖")
 
 
 def _detect_camera_mapping(checkpoint, policy_config):

@@ -100,12 +100,12 @@ def _ensure_quantile_stats(dst_dir, state_stats, action_stats):
 
 
 def _import_lerobot_dataset():
-    try:
-        from lerobot.datasets.lerobot_dataset import LeRobotDataset
-        return LeRobotDataset
-    except ImportError:
-        from lerobot.common.datasets.lerobot_dataset import LeRobotDataset
-        return LeRobotDataset
+    for mod in ("lerobot.datasets", "lerobot.datasets.lerobot_dataset", "lerobot.common.datasets.lerobot_dataset"):
+        try:
+            return getattr(__import__(mod, fromlist=["LeRobotDataset"]), "LeRobotDataset")
+        except (ImportError, AttributeError):
+            continue
+    raise ImportError("无法导入 LeRobotDataset，请确认已安装 lerobot[dataset]")
 
 
 def main():
@@ -142,12 +142,12 @@ def main():
             "observation.images.eye": {
                 "dtype": "video",
                 "shape": (img_size, img_size, 3),
-                "names": ["height", "width", "channels"],
+                "names": ["height", "width", "channel"],
             },
             "observation.images.wrist": {
                 "dtype": "video",
                 "shape": (img_size, img_size, 3),
-                "names": ["height", "width", "channels"],
+                "names": ["height", "width", "channel"],
             },
             "observation.state": {
                 "dtype": "float32",
