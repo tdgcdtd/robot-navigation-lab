@@ -18,6 +18,7 @@ import inspect
 import json
 import os
 import shutil
+import time
 from pathlib import Path
 
 import imageio.v2 as imageio
@@ -108,12 +109,35 @@ def _import_lerobot_dataset():
     raise ImportError("无法导入 LeRobotDataset，请确认已安装 lerobot[dataset]")
 
 
+def _build_create_kwargs(dataset_cls, vcodec, workers):
+    """按当前 LeRobot 版本签名自动注入 H.264、流式编码与多线程参数。"""
+    params = inspect.signature(dataset_cls.create).parameters
+    extra = {}
+    if "vcodec" in params:
+        extra["vcodec"] = vcodec
+    elif "rgb_encoder" in params:
+        try:
+            from lerobot.configs.video import RGBEncoderConfig
+            extra["rgb_encoder"] = RGBEncoderConfig(vcodec=vcodec)
+        except Exception:
+            extra["rgb_encoder"] = {"vcodec": vcodec}
+    if "streaming_encoding" in params:
+        extra["streaming_encoding"] = True
+    if "encoder_threads" in params:
+        extra["encoder_threads"] = min(4, workers)
+    if "image_writer_threads" in params:
+        extra["image_writer_threads"] = workers
+    return extra
+
+
 def main():
     here = Path(__file__).resolve().parent
     ap = argparse.ArgumentParser(description="转换 E6 原始数据集为 LeRobotDataset")
     ap.add_argument("--src", type=Path, default=here / "data" / "e6_pick", help="原始数据集目录")
     ap.add_argument("--dst", type=Path, default=here / "data" / "lerobot_e6_pick", help="输出 LeRobot 数据集目录")
     ap.add_argument("--repo-id", default="local/e6_pick", help="LeRobot 数据集标识名")
+    ap.add_argument("--vcodec", default="h264", help="视频编码器，默认 h264 避免 SVT-AV1 在 CPU 上慢 10 倍")
+    ap.add_argument("--workers", type=int, default=8, help="图像写入/编码线程数")
     ap.add_argument("--dry-run", action="store_true", help="仅校验文件并打印分位点统计，不调用 lerobot")
     ap.add_argument("--overwrite", action="store_true", help="若目标目录已存在则先清空重建")
     args = ap.parse_args()
@@ -160,6 +184,8 @@ def main():
                 "names": JOINT_AND_SUCTION_NAMES,
             },
         }
+        extra_kwargs = _build_create_kwargs(LeRobotDataset, args.vcodec, args.workers)
+        print(f"⚙️ LeRobotDataset.create 优化参数: {extra_kwargs}", flush=True)
         dataset = LeRobotDataset.create(
             repo_id=args.repo_id,
             fps=fps,
@@ -167,9 +193,11 @@ def main():
             features=features,
             root=args.dst,
             use_videos=True,
+            **extra_kwargs,
         )
         add_frame_takes_task = "task" in inspect.signature(dataset.add_frame).parameters
 
+    t0 = time.monotonic()
     for idx in range(n_episodes):
         eye_frames, wrist_frames, states, actions, prompt = _load_and_validate_episode(args.src, idx, img_size)
         all_states.append(states)
@@ -191,9 +219,12 @@ def main():
                     dataset.add_frame(frame)
             dataset.save_episode()
 
-        if (idx + 1) % 40 == 0 or idx + 1 == n_episodes:
+        if (idx + 1) % 10 == 0 or idx + 1 == n_episodes:
+            elapsed = time.monotonic() - t0
+            eta = elapsed / (idx + 1) * (n_episodes - (idx + 1))
             mode = "校验" if args.dry_run else "写入"
-            print(f"[{mode} {idx + 1}/{n_episodes}] 累计 {total_frames} 帧", flush=True)
+            print(f"[{mode} {idx + 1}/{n_episodes}] 累计 {total_frames} 帧 | 已耗时 {elapsed:.1f}s | 预计剩余 {eta:.1f}s",
+                  flush=True)
 
     states_cat = np.concatenate(all_states, axis=0)
     actions_cat = np.concatenate(all_actions, axis=0)
