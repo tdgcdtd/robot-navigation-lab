@@ -11,6 +11,7 @@
   MUJOCO_GL=egl python eval_vla.py --checkpoint outputs/pi05_lora_e6/pretrained_model --episodes 20 --device cuda --save-video rollout.mp4
 """
 import argparse
+import contextlib
 import json
 import time
 from pathlib import Path
@@ -153,7 +154,14 @@ def _load_lerobot_runner(checkpoint, device_arg, n_action_steps):
         )
 
     cam_map = _detect_camera_mapping(checkpoint, policy.config)
-    print(f"[模型] 已加载 {policy_type} 于 {device}，相机映射: {cam_map}", flush=True)
+    use_bf16 = device.type == "cuda"
+    amp_ctx = (
+        (lambda: torch.autocast("cuda", dtype=torch.bfloat16))
+        if use_bf16
+        else contextlib.nullcontext
+    )
+    dtype_label = "bfloat16" if use_bf16 else "float32"
+    print(f"[模型] 已加载 {policy_type} 于 {device}（{dtype_label}），相机映射: {cam_map}", flush=True)
 
     class _Runner:
         def reset(self, env, color, zone):
@@ -161,6 +169,17 @@ def _load_lerobot_runner(checkpoint, device_arg, n_action_steps):
                 policy.reset()
 
         def predict(self, env, state, prompt, step_idx):
+            use_fast_queue = (
+                getattr(policy.config, "n_obs_steps", 1) == 1
+                and hasattr(policy, "_queues")
+                and len(policy._queues.get("action", ())) > 0
+            )
+            if use_fast_queue:
+                with torch.inference_mode():
+                    raw_act = policy._queues["action"].popleft()
+                    act = postprocess(raw_act.float())
+                return act.detach().float().cpu().numpy().reshape(-1)[:7]
+
             eye_rgb, wrist_rgb = env.render_cameras()
             views = {"eye": eye_rgb, "wrist": wrist_rgb}
             obs = {
@@ -172,9 +191,10 @@ def _load_lerobot_runner(checkpoint, device_arg, n_action_steps):
                 obs[target_key] = img_t.to(device)
             with torch.inference_mode():
                 batch = preprocess(obs)
-                raw_act = policy.select_action(batch)
-                act = postprocess(raw_act)
-            return act.detach().cpu().numpy().reshape(-1)[:7]
+                with amp_ctx():
+                    raw_act = policy.select_action(batch)
+                act = postprocess(raw_act.float())
+            return act.detach().float().cpu().numpy().reshape(-1)[:7]
 
     return _Runner(), policy_type
 

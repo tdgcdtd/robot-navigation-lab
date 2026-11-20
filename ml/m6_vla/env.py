@@ -139,10 +139,11 @@ class E6PickEnv:
             mujoco.mj_step(self.model, self.data)
 
         want_suction = bool(action[6] > 0.5)
-        if want_suction and not self.suction_active:
-            self.held, _ = world.suction_on(self.model, self.data)
+        if want_suction:
             self.suction_active = True
-        elif not want_suction and self.suction_active:
+            if self.held is None:
+                self.held, _ = world.suction_on(self.model, self.data)
+        elif self.suction_active:
             world.suction_off(self.model, self.data)
             self.suction_active = False
             self.held = None
